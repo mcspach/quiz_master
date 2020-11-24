@@ -1,5 +1,5 @@
 class CompanyQuizzesController < ApplicationController
-  
+
   def index
   end
 
