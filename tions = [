@@ -1,0 +1,39 @@
+=> [{[33m:question[0m=>[31m[1;31m"[0m[31mWhat structure supporting the fifth wheel skid plate should be checked for cracks or breaks?[1;31m"[0m[31m[0m,
+  [33m:answers[0m=>
+   [{[33m:content[0m=>[31m[1;31m"[0m[31mKingpin[1;31m"[0m[31m[0m, [33m:is_correct[0m=>[1;36mfalse[0m},
+    {[33m:content[0m=>[31m[1;31m"[0m[31mPlatform[1;31m"[0m[31m[0m, [33m:is_correct[0m=>[1;36mtrue[0m, [33m:explanation[0m=>[31m[1;31m"[0m[31mSliding pintle[1;31m"[0m[31m[0m},
+    {[33m:content[0m=>[31m[1;31m"[0m[31mAbsence of required emergency kit[1;31m"[0m[31m[0m, [33m:is_correct[0m=>[1;36mfalse[0m},
+    {[33m:content[0m=>[31m[1;31m"[0m[31mApron[1;31m"[0m[31m[0m, [33m:is_correct[0m=>[1;36mfalse[0m}]},
+ {[33m:question[0m=>
+   [31m[1;31m"[0m[31mDuring a hydraulic brake check you must pump the brake pedal____times and then hold it down for______seconds. The brake pedal should not move (depress) for five seconds.[1;31m"[0m[31m[0m,
+  [33m:answers[0m=>
+   [{[33m:content[0m=>[31m[1;31m"[0m[31m3, 5[1;31m"[0m[31m[0m, [33m:is_correct[0m=>[1;36mfalse[0m},
+    {[33m:content[0m=>[31m[1;31m"[0m[31m5, 10[1;31m"[0m[31m[0m, [33m:is_correct[0m=>[1;36mtrue[0m, [33m:explanation[0m=>[31m[1;31m"[0m[31mSliding pintle[1;31m"[0m[31m[0m},
+    {[33m:content[0m=>[31m[1;31m"[0m[31m7, 12[1;31m"[0m[31m[0m, [33m:is_correct[0m=>[1;36mfalse[0m},
+    {[33m:content[0m=>[31m[1;31m"[0m[31m10, 15[1;31m"[0m[31m[0m, [33m:is_correct[0m=>[1;36mfalse[0m}]},
+ {[33m:question[0m=>[31m[1;31m"[0m[31mFailure to perform an air brake check will result in an automatic failure of the vehicle inspection test.[1;31m"[0m[31m[0m,
+  [33m:answers[0m=>[{[33m:content[0m=>[31m[1;31m"[0m[31mTrue[1;31m"[0m[31m[0m, [33m:is_correct[0m=>[1;36mtrue[0m, [33m:explanation[0m=>[31m[1;31m"[0m[31mTo be inserted[1;31m"[0m[31m[0m}, {[33m:content[0m=>[31m[1;31m"[0m[31mFalse[1;31m"[0m[31m[0m, [33m:is_correct[0m=>[1;36mfalse[0m}]},
+ {[33m:question[0m=>
+   [31m[1;31m"[0m[31mAn external inspection of the steering box and hoses will include checking that the steering box is securely mounted and not leaking more than 4 ounces of fluid per hour.[1;31m"[0m[31m[0m,
+  [33m:answers[0m=>[{[33m:content[0m=>[31m[1;31m"[0m[31mTrue[1;31m"[0m[31m[0m, [33m:is_correct[0m=>[1;36mtrue[0m}, {[33m:content[0m=>[31m[1;31m"[0m[31mFalse[1;31m"[0m[31m[0m, [33m:is_correct[0m=>[1;36mtrue[0m, [33m:explanation[0m=>[31m[1;31m"[0m[31mTo be inserted[1;31m"[0m[31m[0m}]},
+ {[33m:question[0m=>[31m[1;31m"[0m[31mWhat releases the fifth wheel locking jaws so the trailer can be coupled?[1;31m"[0m[31m[0m,
+  [33m:answers[0m=>
+   [{[33m:content[0m=>[31m[1;31m"[0m[31mApron[1;31m"[0m[31m[0m, [33m:is_correct[0m=>[1;36mfalse[0m},
+    {[33m:content[0m=>[31m[1;31m"[0m[31mDrawbar[1;31m"[0m[31m[0m, [33m:is_correct[0m=>[1;36mfalse[0m},
+    {[33m:content[0m=>[31m[1;31m"[0m[31mLocking pins[1;31m"[0m[31m[0m, [33m:is_correct[0m=>[1;36mfalse[0m},
+    {[33m:content[0m=>[31m[1;31m"[0m[31mRelease arms[1;31m"[0m[31m[0m,
+     [33m:is_correct[0m=>[1;36mtrue[0m,
+     [33m:explanation[0m=>
+      [31m[1;31m"[0m[31mThe release arm allows you to disengage the fifth-wheel locking jaws so you can uncouple the trailer. During your pre-trip inspection, check that the release arm is in the engaged position and the safety latch (if so equipped) is in place.[1;31m"[0m[31m[0m}]},
+ {[33m:question[0m=>[31m[1;31m"[0m[31mWhat do you inspect to make sure that all are present and show no signs of looseness such as rust trails or shiny threads?[1;31m"[0m[31m[0m,
+  [33m:answers[0m=>
+   [{[33m:content[0m=>[31m[1;31m"[0m[31mLug nuts[1;31m"[0m[31m[0m,
+     [33m:is_correct[0m=>[1;36mtrue[0m,
+     [33m:explanation[0m=>
+      [31m[1;31m"[0m[31mDuring your pre-trip inspection, check that all lug nuts are present and accounted for, tightly fastened, and free of cracks or distortions.[1;31m"[0m[31m[0m},
+    {[33m:content[0m=>[31m[1;31m"[0m[31mRims[1;31m"[0m[31m[0m, [33m:is_correct[0m=>[1;36mfalse[0m},
+    {[33m:content[0m=>[31m[1;31m"[0m[31mSpacers[1;31m"[0m[31m[0m, [33m:is_correct[0m=>[1;36mfalse[0m},
+    {[33m:content[0m=>[31m[1;31m"[0m[31mNone of the above[1;31m"[0m[31m[0m,
+     [33m:is_correct[0m=>[1;36mtrue[0m,
+     [33m:explanation[0m=>
+      [31m[1;31m"[0m[31mThe release arm allows you to disengage the fifth-wheel locking jaws so you can uncouple the trailer. During your pre-trip inspection, check that the release arm is in the engaged position and the safety latch (if so equipped) is in place.[1;31m"[0m[31m[0m}]}]
