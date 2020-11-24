@@ -1,9 +1,5 @@
 class CompanyQuizzesController < ApplicationController
 
-  def index
-    @company_quizzes = CompanyQuiz.all
-  end
-
   def new
     @company_quiz = CompanyQuiz.new
   end
