@@ -17,13 +17,13 @@ class UsersController < ApplicationController
 
     @remaining_points = 3600 - @current_possible_points
     
-    
     # make a score for each subject area in a variable
     # interate through quiz results
-    # find the subject_area of the quix_result
+    # find the subject_area of the quiz_result
     # add the score from that quiz to that variable
     # find the score for each subject area
     # put subject areas in order of goodness
+
     # percentage incorrect
     # percentage correct
     # percentage complete
