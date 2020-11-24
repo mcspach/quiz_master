@@ -15,5 +15,4 @@ Rails.application.routes.draw do
   get "/quiz_results/:id",                  to: "quiz_results#show"
   get "/users/:id/rewards",                 to: "users#rewards"
   get "/companies/:id/company_quizzes",     to: "companies#company_quizzes"
-  
 end
