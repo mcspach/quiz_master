@@ -9,7 +9,7 @@ class User < ApplicationRecord
   has_many :quizzes, through: :quiz_results
 
   # Enables password storage
-  has_secure_password
+  # has_secure_password
 
   validates :phone_number, presence: true, uniqueness: true
   validates :first_name, presence: true
