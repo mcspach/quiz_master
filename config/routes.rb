@@ -14,15 +14,5 @@ Rails.application.routes.draw do
   get "/subject_areas",                     to: "subject_areas#index"
   get "/quiz_results/:id",                  to: "quiz_results#show"
   get "/users/:id/rewards",                 to: "users#rewards"
-  get "/companies/:id/company_quizzes",     to: "company_quizzes#index"
-
-  # get 'subject_areas/index'
-  # get 'quiz_results/new'
-  # get 'quiz_results/show'
-  # get 'companies/leaderboard'
-  # get 'companies/company_quizzes'
-  # get 'company_quizzes/index'
-  # get 'company_quizzes/new'
-  # get 'company_quizzes/create'
-  
+  get "/companies/:id/company_quizzes",     to: "companies#company_quizzes"
 end
