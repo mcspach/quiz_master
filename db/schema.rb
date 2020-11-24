@@ -10,10 +10,70 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_23_215221) do
+ActiveRecord::Schema.define(version: 2020_11_24_001211) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "answers", force: :cascade do |t|
+    t.text "content"
+    t.boolean "is_correct"
+    t.bigint "question_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["question_id"], name: "index_answers_on_question_id"
+  end
+
+  create_table "companies", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "company_quizzes", force: :cascade do |t|
+    t.bigint "company_id", null: false
+    t.bigint "quiz_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["company_id"], name: "index_company_quizzes_on_company_id"
+    t.index ["quiz_id"], name: "index_company_quizzes_on_quiz_id"
+  end
+
+  create_table "questions", force: :cascade do |t|
+    t.bigint "quiz_id", null: false
+    t.text "content"
+    t.text "explanation"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["quiz_id"], name: "index_questions_on_quiz_id"
+  end
+
+  create_table "quiz_results", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "quiz_id", null: false
+    t.integer "score"
+    t.integer "possible_score"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["quiz_id"], name: "index_quiz_results_on_quiz_id"
+    t.index ["user_id"], name: "index_quiz_results_on_user_id"
+  end
+
+  create_table "quizzes", force: :cascade do |t|
+    t.string "type"
+    t.bigint "subject_area_id", null: false
+    t.string "title"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["subject_area_id"], name: "index_quizzes_on_subject_area_id"
+  end
+
+  create_table "subject_areas", force: :cascade do |t|
+    t.string "title"
+    t.text "content"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -27,4 +87,11 @@ ActiveRecord::Schema.define(version: 2020_11_23_215221) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "answers", "questions"
+  add_foreign_key "company_quizzes", "companies"
+  add_foreign_key "company_quizzes", "quizzes"
+  add_foreign_key "questions", "quizzes"
+  add_foreign_key "quiz_results", "quizzes"
+  add_foreign_key "quiz_results", "users"
+  add_foreign_key "quizzes", "subject_areas"
 end
