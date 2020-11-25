@@ -1,4 +1,8 @@
 class UsersController < ApplicationController
+  has_many :quiz_results, dependent: :destroy
+  has_many :quizzes, through: :quiz_results
+  belongs_to :company
+
 
   def stats
     @user = current_user

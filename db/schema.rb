@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_24_001404) do
+ActiveRecord::Schema.define(version: 2020_11_25_003958) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -60,7 +60,7 @@ ActiveRecord::Schema.define(version: 2020_11_24_001404) do
   end
 
   create_table "quizzes", force: :cascade do |t|
-    t.string "type"
+    t.string "quiz_type"
     t.bigint "subject_area_id", null: false
     t.string "title"
     t.datetime "created_at", precision: 6, null: false
