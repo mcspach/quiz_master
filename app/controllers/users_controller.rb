@@ -5,17 +5,16 @@ class UsersController < ApplicationController
     @current_points = 0
     @user.quiz_results.each do |result|
       points = result.score * 100
-      return @current_score += points if result.quiz.type == "campaign"
+      return @current_points += points if result.quiz.quiz_type == "campaign"
     end
 
     @current_possible_points = 0
     @user.quiz_results.each do |possible|
       possible_points = possible.possible_score * 100
-      return @current_possible_points += possible_points if result.quiz.type == "campaign"
+      return @current_possible_points += possible_points if result.quiz.quiz_type == "campaign"
     end
 
     @remaining_points = 3600 - @current_possible_points
-    
     # This is all for the stats page
 
     # make a score for each subject area in a variable
@@ -70,7 +69,7 @@ class UsersController < ApplicationController
     @current_points = 0
     @user.quiz_results.each do |result|
       points = result.score * 100
-      return @current_score += points
+      return @current_points += points
     end
     @current_possible_points = 0
     @user.quiz_results.each do |possible|
