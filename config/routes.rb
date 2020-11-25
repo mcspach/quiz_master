@@ -10,8 +10,8 @@ Rails.application.routes.draw do
   get "/companies/:id/company_quizzes/new", to: "company_quizzes#new"
   post "/companies/:id/company_quizzes",    to: "company_quizzes#create"
   get "/users/:id/stats",                   to: "users#stats"
-  get "/companies/:id/leaderboard",         to: "comapanies#leaderboard"
-  get "/home",                              to: "users#home"
+  get "/companies/:id/leaderboard",         to: "companies#leaderboard"
+  get "/home",                              to: "users#home", as: :home
   get "/quiz_results/new",                  to: "quiz_results#new"
   post "/quiz_results",                     to: "quiz_results#create"
   get "/subject_areas",                     to: "subject_areas#index"
