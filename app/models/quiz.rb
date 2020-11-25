@@ -7,5 +7,5 @@ class Quiz < ApplicationRecord
   has_many :users, through: :quiz_results
 
   validates :title, presence: true, uniqueness: true
-  validates :type, inclusion: { in: %w(burst campaign) }
+  validates :type, inclusion: { in: ['burst', 'campaign'] }
 end
