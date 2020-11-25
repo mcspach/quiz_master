@@ -1,3 +1,15 @@
-<div class="banner" >
-    <h1 class="safely-banner text-white text-center pt-2 pb-1">Safely.ai</h1>
+<div class="navbar navbar-expand-sm navbar-light safely-banner" >
+    <div class="banner-title">
+        <h1 class="text-white text-center pt-2 pb-1">Safely.ai</h1>
+    </div>
+
+    <div class="banner-link">
+      <% if user_signed_in? %>
+          <%= link_to destroy_user_session_path, class: "nav-link", method: :delete do %>
+            <i class="fas fa-sign-out-alt logout"></i>
+          <% end %>
+      <% else %>
+          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+      <% end %>
+    </div>
 </div>
