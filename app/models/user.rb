@@ -15,5 +15,5 @@ class User < ApplicationRecord
   # validates :phone_number, presence: true, uniqueness: true
   validates :first_name, presence: true
   validates :last_name, presence: true
-  validates :role, inclusion: { in: %w(manager driver) }
+  validates :role, inclusion: { in: %w[manager driver] }
 end
