@@ -11,12 +11,12 @@
     answers: [
       {
         content: "Kingpin",
-        is_correct: false 
+        is_correct: false
       },
       {
         content: "Platform",
         is_correct: true,
-        explanation: "Sliding pintle" 
+        explanation: "Sliding pintle"
       },
       {
         content: "Absence of required emergency kit",
@@ -24,7 +24,7 @@
       },
       {
         content: "Apron",
-        is_correct: false 
+        is_correct: false
       }
     ]},
     {
@@ -32,12 +32,12 @@
     answers: [
       {
         content: "3, 5",
-        is_correct: false 
+        is_correct: false
       },
       {
         content: "5, 10",
         is_correct: true,
-        explanation: "Sliding pintle" 
+        explanation: "Sliding pintle"
       },
       {
         content: "7, 12",
@@ -45,7 +45,7 @@
       },
       {
         content: "10, 15",
-        is_correct: false 
+        is_correct: false
       }
     ]},
     {
@@ -54,11 +54,11 @@
       {
         content: "True",
         is_correct: true,
-        explanation: "To be inserted" 
+        explanation: "To be inserted"
       },
       {
         content: "False",
-        is_correct: false 
+        is_correct: false
       }
     ]},
     {
@@ -71,7 +71,7 @@
       {
         content: "False",
         is_correct: true,
-        explanation: "To be inserted" 
+        explanation: "To be inserted"
       }
     ]},
     {
@@ -79,7 +79,7 @@
     answers: [
       {
         content: "Apron",
-        is_correct: false 
+        is_correct: false
       },
       {
         content: "Drawbar",
@@ -92,7 +92,7 @@
       {
         content: "Release arms",
         is_correct: true,
-        explanation: "The release arm allows you to disengage the fifth-wheel locking jaws so you can uncouple the trailer. During your pre-trip inspection, check that the release arm is in the engaged position and the safety latch (if so equipped) is in place." 
+        explanation: "The release arm allows you to disengage the fifth-wheel locking jaws so you can uncouple the trailer. During your pre-trip inspection, check that the release arm is in the engaged position and the safety latch (if so equipped) is in place."
       }
     ]},
     {
@@ -101,7 +101,7 @@
       {
         content: "Lug nuts",
         is_correct: true,
-        explanation: "During your pre-trip inspection, check that all lug nuts are present and accounted for, tightly fastened, and free of cracks or distortions." 
+        explanation: "During your pre-trip inspection, check that all lug nuts are present and accounted for, tightly fastened, and free of cracks or distortions."
       },
       {
         content: "Rims",
@@ -114,7 +114,7 @@
       {
         content: "None of the above",
         is_correct: true,
-        explanation: "The release arm allows you to disengage the fifth-wheel locking jaws so you can uncouple the trailer. During your pre-trip inspection, check that the release arm is in the engaged position and the safety latch (if so equipped) is in place." 
+        explanation: "The release arm allows you to disengage the fifth-wheel locking jaws so you can uncouple the trailer. During your pre-trip inspection, check that the release arm is in the engaged position and the safety latch (if so equipped) is in place."
       }
     ]},
     {
@@ -123,11 +123,11 @@
       {
         content: "True",
         is_correct: true,
-        explanation: "To be inserted" 
+        explanation: "To be inserted"
       },
       {
       content: "False",
-      is_correct: false 
+      is_correct: false
       }
     ]},
     {
@@ -144,7 +144,7 @@
       {
         content: "The windshield and mirrors",
         is_correct: true,
-        explanation: "Windshields and mirrors should be clean and free of damage, illegal stickers, or obstructions that could impede visibility." 
+        explanation: "Windshields and mirrors should be clean and free of damage, illegal stickers, or obstructions that could impede visibility."
       },
       {
         content: "None of the above",
@@ -156,12 +156,12 @@
     answers: [
       {
         content: "True",
-        is_correct: true 
+        is_correct: true
       },
       {
         content: "False",
         is_correct: false,
-        explanation: "To be inserted" 
+        explanation: "To be inserted"
       }
     ]},
     {
@@ -182,7 +182,7 @@
       {
         content: "Shock absorbers",
         is_correct: true,
-        explanation: "During your pre-trip inspection, check the shock absorbers on every axle of your vehicle (including the trailers if any) to be sure that they are securely mounted and not leaking." 
+        explanation: "During your pre-trip inspection, check the shock absorbers on every axle of your vehicle (including the trailers if any) to be sure that they are securely mounted and not leaking."
       }
     ]},
     {
@@ -190,12 +190,12 @@
     answers: [
       {
         content: "True",
-        is_correct: true 
+        is_correct: true
       },
       {
         content: "False",
         is_correct: false,
-        explanation: "To be inserted" 
+        explanation: "To be inserted"
       }
     ]},
     {
@@ -208,7 +208,7 @@
       },
       {
         content: "False",
-        is_correct: false 
+        is_correct: false
       }
     ]},
     {
@@ -221,7 +221,7 @@
       {
         content: "Steering box",
         is_correct: false,
-        explanation: "When you turn the steering wheel, the steering box translates this motion into turning the front wheels. During your pre-trip inspection, check that the steering box is in good condition, securely mounted, and not leaking. Also check that no nuts, bolts, or cotter keys are missing." 
+        explanation: "When you turn the steering wheel, the steering box translates this motion into turning the front wheels. During your pre-trip inspection, check that the steering box is in good condition, securely mounted, and not leaking. Also check that no nuts, bolts, or cotter keys are missing."
       },
       {
         content: "Suspension",
@@ -229,7 +229,7 @@
       },
       {
         content: "Steering play",
-        is_correct: false 
+        is_correct: false
         }
       ]},
     {
@@ -242,7 +242,7 @@
       {
         content: "False",
         is_correct: true,
-        explanation: "To be inserted" 
+        explanation: "To be inserted"
       }
     ]},
     {
@@ -262,7 +262,7 @@
       },
       {
         content: "Platform",
-        is_correct: false 
+        is_correct: false
         }
       ]},
     {
@@ -282,7 +282,7 @@
       },
       {
         content: "Power steering",
-        is_correct: false 
+        is_correct: false
         }
       ]},
     {
@@ -295,7 +295,7 @@
       },
       {
         content: "Gap",
-        is_correct: false 
+        is_correct: false
       },
       {
         content: "Locking jaws",
@@ -303,7 +303,7 @@
       },
       {
         content: "Sliding pintle",
-        is_correct: false 
+        is_correct: false
       }
     ]},
     {
@@ -316,7 +316,7 @@
       {
         content: "Tandem release arm / locking pins",
         is_correct: true,
-        explanation: "If so equipped, make sure that the locking pins are locked in place and the release arm is secured." 
+        explanation: "If so equipped, make sure that the locking pins are locked in place and the release arm is secured."
       },
       {
         content: "Landing gear",
@@ -324,7 +324,7 @@
       },
       {
         content: "Suspension system",
-        is_correct: false 
+        is_correct: false
         }
     ]},
       {
@@ -344,7 +344,7 @@
       },
       {
         content: "Hydraulic braeks",
-        is_correct: false 
+        is_correct: false
       }
     ]},
     {
@@ -638,8 +638,8 @@
         is_correct: false
       }
     ]}
-] 
-  
+]
+
 
 burst_questions = [
   {
@@ -647,11 +647,11 @@ burst_questions = [
   answers: [
     {
       content: "You should go ahead and park there because the customer is always right.",
-      is_correct: false 
+      is_correct: false
     },
     {
       content: "You should skip this stop because it's too hazardous",
-      is_correct: true 
+      is_correct: true
     },
     {
       content: "You should phone your shift manager, explain the situation and get their instructions of how to proceed.",
@@ -660,7 +660,7 @@ burst_questions = [
     },
     {
       content: "All of the above.",
-      is_correct: false 
+      is_correct: false
     }
   ]},
   {
@@ -668,16 +668,18 @@ burst_questions = [
   answers: [
     {
       content: "True",
-      is_correct: false 
+      is_correct: false
     },
     {
       content: "False",
       is_correct: true,
-      explanation: "In the majority of cases, there is no single cause of an incident but rather an accumulation of many small factors which led to the incident." 
+      explanation: "In the majority of cases, there is no single cause of an incident but rather an accumulation of many small factors which led to the incident."
     }
   ]}
 ]
 
-
-
 puts campaign_questions
+
+puts "creating company"
+Company.create(name: "Popeyes");
+puts "all done!"
