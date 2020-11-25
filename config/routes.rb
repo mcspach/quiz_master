@@ -9,13 +9,13 @@ Rails.application.routes.draw do
 
   get "/companies/:id/company_quizzes/new", to: "company_quizzes#new"
   post "/companies/:id/company_quizzes",    to: "company_quizzes#create"
-  get "/users/:id/stats",                   to: "users#stats"
-  get "/companies/:id/leaderboard",         to: "companies#leaderboard"
+  get "/users/:id/stats",                   to: "users#stats", as: :stats_user
+  get "/companies/:id/leaderboard",         to: "companies#leaderboard", as: :leaderboard
   get "/home",                              to: "users#home", as: :home
   get "/quiz_results/new",                  to: "quiz_results#new"
   post "/quiz_results",                     to: "quiz_results#create"
-  get "/subject_areas",                     to: "subject_areas#index"
+  get "/subject_areas",                     to: "subject_areas#index", as: :library
   get "/quiz_results/:id",                  to: "quiz_results#show"
-  get "/users/:id/rewards",                 to: "users#rewards"
-  get "/companies/:id/company_quizzes",     to: "companies#company_quizzes"
+  get "/users/:id/rewards",                 to: "users#rewards", as: :rewards_user
+  get "/companies/:id/company_quizzes",     to: "companies#company_quizzes", as: :company_quizzes
 end
