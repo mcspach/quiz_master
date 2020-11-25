@@ -1,8 +1,29 @@
-<h1>QuizResults#new</h1>
-<p>Find me in app/views/quiz_results/new.html.erb</p>
+<h1>Take Today's Quiz</h1>
 
-Quiz.questions - iterate
+<div>
+  <%= image_tag("animation_300_khxvp3bt.gif") %>
+</div>
 
-1. create simple form
-2. f.label question
-3. f.input :answer
+<% @quiz.questions.each_with_index do |question, index| %>
+
+  <div class="question success <%= "active" if index == 0 %>" >
+    <div class="content">
+      <p><%= question.content %></p>
+    </div>
+    <div class="answers">
+      <ul>
+      <% question.answers.each do |answer| %>
+        <li>
+          <label for="question-<%= question.id %>-answer-<%= answer.id %>"><%= answer.content %></label> 
+          <input type="radio" name="question-<%= question.id %>" value="<%= answer.is_correct %>" id="question-<%= question.id %>-answer-<%= answer.id %>" />
+        </li>
+      <% end %>
+      </ul>
+    </div>
+    <div class="actions">
+      <button>Submit</button>
+      <button style="display: none;">Continue</button>
+    </div>
+  </div>
+
+<% end %>
