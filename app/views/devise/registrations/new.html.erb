@@ -21,7 +21,7 @@
     <%= f.input :password_confirmation,
                 required: true,
                 input_html: { autocomplete: "new-password" } %>
-    <%= f.association :company, :as => :hidden, :input_html => { :value => "Casella" }  %>
+    <%= f.association :company, prompt: 'Select Company'%>
     <%= f.input :role, :as => :hidden, :input_html => { :value => "driver" }  %>
     <!-- = f.input :title, :as => :hidden, :input_html => { :value => "some value" } -->
   </div>
