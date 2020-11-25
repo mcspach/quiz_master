@@ -518,7 +518,7 @@ end
 puts '12 Quizzes with Q&A Created'
 
 #Create User
-user1 = User.new(
+user1 = User.create!( 
   first_name: 'Matthew',
   last_name: 'Spach',
   password: '123456',
@@ -528,9 +528,6 @@ user1 = User.new(
   location: 'California',
   role: 'driver'
 )
-puts 'User New, not yet saved'
-
-user1.save!
 
 puts 'User Created'
 
