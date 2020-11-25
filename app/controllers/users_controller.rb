@@ -81,6 +81,6 @@ class UsersController < ApplicationController
 
   def home
     @user = current_user
-    @quiz_id = CompanyQuiz.sample.quiz
+    @quiz_id = CompanyQuiz.all.sample.quiz
   end
 end

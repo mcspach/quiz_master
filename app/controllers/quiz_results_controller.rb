@@ -1,8 +1,8 @@
 class QuizResultsController < ApplicationController
   def new
     @score = 0
-    @possible_score = params([:quiz]).questions.count
-    @quiz_result = QuizResult.new(score: @score, possible_score: @possible_score)
+    @quiz = Quiz.find(params[:format])
+    # @quiz_result = QuizResult.new(score: @score, possible_score: @possible_score)
   end
 
   def show

@@ -4,15 +4,12 @@ class CompaniesController < ApplicationController
     @drivers = @company.users.where(role: driver)
     @drivers.map do |driver|
       { driver: driver.first_name.capitalise + driver.last_name.capitalise,
-<<<<<<< HEAD
         points: driver.get_points}
     end
     # @drivers.order(:points ASC)
-=======
         points: driver.get_points }
     end
     @drivers.order('points ASC')
->>>>>>> ce3ddeb7e851f2cae58dbdda6fde9ba83030013b
   end
 
   def company_quizzes
@@ -22,5 +19,20 @@ class CompaniesController < ApplicationController
 
   def company_params
     params.require(:company).permit(:name)
+  end
+
+  def get_points
+    @user = current_user
+    @current_points = 0
+    @user.quiz_results.each do |result|
+      points = result.score * 100
+      return @current_score += points
+    end
+    @current_possible_points = 0
+    @user.quiz_results.each do |possible|
+      possible_points = possible.possible_score * 100
+      return @current_possible_points += possible_points
+    end
+    @remaining_points = 3600 - @current_possible_points
   end
 end
