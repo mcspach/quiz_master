@@ -3,4 +3,25 @@
   width: 100%;
   font-family: 'Comfortaa', cursive;
   font-weight: 500;
+  justify-content: flex-end;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-title {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.banner-link {
+  position: absolute;
+  right: 0;
+}
+
+.logout {
+  color: white;
 }

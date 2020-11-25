@@ -1,7 +1,10 @@
 
 <%= render 'shared/banner' %>
-
-
+<div class="container">
+  <div class="row justify-content-center">
+    <%= image_tag("question_robot.gif") %>
+  </div>
+</div>
 <div>
   <%= link_to "Submit", quiz_results_new_path(@quiz_id) %>
 </div>
