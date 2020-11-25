@@ -1,5 +1,5 @@
 class SubjectArea < ApplicationRecord
-  validates :title, presence: true
+  validates :title, inclusion: { in: ["Pre-Inspection", "Post-Inspection", "Distracted Driving", "Proper Procedure"] }
   validates :content, presence: true
 
   has_many :quizzes
