@@ -524,8 +524,11 @@ user1 = User.new(
   company: company,
   location: 'California',
   role: 'driver'
-)
-user1.save
+) 
+puts 'User New, not yet saved'
+
+user1.save!
+
 puts 'User Created'
 
 
