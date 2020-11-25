@@ -24,11 +24,11 @@ puts 'deleted everything'
 campaign_questions = [
   {
   question: "What structure supporting the fifth wheel skid plate should be checked for cracks or breaks?",
-  explanation: "Sliding pintle", 
+  explanation: "Sliding pintle",
   answers: [
     {
       content: "Kingpin",
-      is_correct: false 
+      is_correct: false
     },
     {
       content: "Platform",
@@ -40,7 +40,7 @@ campaign_questions = [
     },
     {
       content: "Apron",
-      is_correct: false 
+      is_correct: false
     }
   ]},
   {
@@ -49,11 +49,11 @@ campaign_questions = [
   answers: [
     {
       content: "3, 5",
-      is_correct: false 
+      is_correct: false
     },
     {
       content: "5, 10",
-      is_correct: true, 
+      is_correct: true,
     },
     {
       content: "7, 12",
@@ -61,7 +61,7 @@ campaign_questions = [
     },
     {
       content: "10, 15",
-      is_correct: false 
+      is_correct: false
     }
   ]},
   {
@@ -70,11 +70,11 @@ campaign_questions = [
   answers: [
     {
       content: "True",
-      is_correct: true, 
+      is_correct: true,
     },
     {
       content: "False",
-      is_correct: false 
+      is_correct: false
     }
   ]},
   {
@@ -96,7 +96,7 @@ campaign_questions = [
   answers: [
     {
       content: "Apron",
-      is_correct: false 
+      is_correct: false
     },
     {
       content: "Drawbar",
@@ -108,7 +108,7 @@ campaign_questions = [
     },
     {
       content: "Release arms",
-      is_correct: true, 
+      is_correct: true,
     }
   ]},
   {
@@ -117,7 +117,7 @@ campaign_questions = [
   answers: [
     {
       content: "Lug nuts",
-      is_correct: true 
+      is_correct: true
     },
     {
       content: "Rims",
@@ -141,7 +141,7 @@ campaign_questions = [
     },
     {
       content: "Hydraulic braeks",
-      is_correct: false 
+      is_correct: false
     }
   ]},
   {
@@ -518,7 +518,7 @@ end
 puts '12 Quizzes with Q&A Created'
 
 #Create User
-user1 = User.new( 
+user1 = User.new(
   first_name: 'Matthew',
   last_name: 'Spach',
   password: '123456',
@@ -527,7 +527,7 @@ user1 = User.new(
   company: company,
   location: 'California',
   role: 'driver'
-) 
+)
 puts 'User New, not yet saved'
 
 user1.save!
@@ -542,7 +542,7 @@ puts 'User Created'
     quiz: Quiz.all.sample,
   )
 end
-puts '8 Company_Quizzes created, week 8 quiz should be available to complete'  
+puts '8 Company_Quizzes created, week 8 quiz should be available to complete'
 
 #Create Quiz Results
 CompanyQuiz.all.each do |cq|
@@ -554,7 +554,3 @@ CompanyQuiz.all.each do |cq|
   )
 end
 puts '7 Q_Results Created for user1, its week 8 in the Quarter'
-
-puts "creating company"
-Company.create(name: "Casella");
-puts "all done!"
