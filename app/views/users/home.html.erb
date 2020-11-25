@@ -1,5 +1,11 @@
 
 
+<%= render 'shared/banner' %>
+
+<div>
+  <%= link_to "Submit", quiz_results_new_path(@quiz_id) %>
+
+
 
 <h1>Welcome, <%= @user.first_name.capitalize %>!</h1> 
 <div class="robot"><%= image_tag("question_robot.gif") %></div>
@@ -26,3 +32,9 @@
     </div>
   <% end %>
 </div>
+
+
+<!--
+<iframe src="http://www.youtube.com/embed/W7qWa52k-nE"
+        allow="encrypted-media" width="95%" height="315" frameborder="0" allowfullscreen allowTransparency="true" >
+</iframe> -->
