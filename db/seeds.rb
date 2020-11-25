@@ -5,14 +5,19 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-#delete eveything
-User.destroy_all
-Company.destroy_all
+# delete eveything
+# DO NOT CHANGE THE ORDER!!!!!!!!!!
+CompanyQuiz.destroy_all
 Answer.destroy_all
 Question.destroy_all
+QuizResult.destroy_all
 Quiz.destroy_all
+User.destroy_all
+Company.destroy_all
 SubjectArea.destroy_all
-CompanyQuiz.destroy_all
+# DO NOT CHANGE THE ORDER!!!!!!!!!!!
+
+
 
 puts 'deleted everything'
 
@@ -432,8 +437,6 @@ campaign_questions = [
   ]}
 ]
 
-
-
 burst_questions = [
   {
   question: "What should you do if a customer requires you to stop in a spot which is high-risk - for example, on an incline with two way surrounding traffic?",
@@ -518,7 +521,7 @@ puts '12 Quizzes with Q&A Created'
 user1 = User.new( 
   first_name: 'Matthew',
   last_name: 'Spach',
-  encrypted_password: '123456',
+  password: '123456',
   email: 'matt@example.com',
   phone_number: '1-559-355-0338',
   company: company,
