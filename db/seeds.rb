@@ -555,7 +555,11 @@ CompanyQuiz.all.each do |cq|
 end
 puts '7 Q_Results Created for user1, its week 8 in the Quarter'
 
+<<<<<<< HEAD
 puts "creating companies"
 Company.create(name: "Popeyes");
+=======
+puts "creating company"
+>>>>>>> ce3ddeb7e851f2cae58dbdda6fde9ba83030013b
 Company.create(name: "Casella");
 puts "all done!"
