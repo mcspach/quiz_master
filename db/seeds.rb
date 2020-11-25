@@ -681,5 +681,5 @@ burst_questions = [
 puts campaign_questions
 
 puts "creating company"
-Company.create(name: "Popeyes");
+Company.create(name: "Casella");
 puts "all done!"
