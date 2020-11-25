@@ -11,7 +11,8 @@ class User < ApplicationRecord
   # Enables password storage
   # has_secure_password
 
-  validates :phone_number, presence: true, uniqueness: true
+  #  DONT FORGET TO UNCOMMENT THIS BELOW
+  # validates :phone_number, presence: true, uniqueness: true
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates :role, inclusion: { in: %w(manager driver) }
