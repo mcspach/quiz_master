@@ -15,7 +15,6 @@ class UsersController < ApplicationController
     end
 
     @remaining_points = 3600 - @current_possible_points
-    
     # This is all for the stats page
 
     # make a score for each subject area in a variable
