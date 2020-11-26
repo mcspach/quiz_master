@@ -125,7 +125,7 @@ campaign_questions = [
     },
   ]},
     {
-  question: "If the wheel has a sight glass, check that the oil level is adequate. Otherwise, look for leaks around the",
+  question: "If the wheel has a sight glass, check that the oil level is adequate. Otherwise, look for leaks around the:",
   explanation: "As part of your pre-trip inspection of the wheels, check the axle seals and the hub oil/grease seals for leaks. Look for oil or grease on the wheels and any visible evidence of cracks or leaks. If the wheel has a sight glass, you can visually confirm that the oil level is adequate.",
   answers: [
     {
@@ -144,6 +144,53 @@ campaign_questions = [
       is_correct: false
     }
   ]},
+  {
+    question: "On the steering linkage you must check for joints and sockets that are worn or loose and that there are no missing bolts, nuts, or cotter keys.",
+    explanation: "To be inserted",
+    answers: [
+      {
+        content: "True",
+        is_correct: true
+      },
+      {
+        content: "False",
+        is_correct: true,
+      }
+    ]},
+    {
+  question: "_________ should be clean with no dirt, illegal stickers, obstructions, or damage.",
+  explanation: "Windshields and mirrors should be clean and free of damage, illegal stickers, or obstructions that could impede visibility.",
+  answers: [
+    {
+      content: "The lighting indicators",
+      is_correct: false
+    },
+    {
+      content: "The headlights",
+      is_correct: false      },
+    {
+      content: "The windshield and mirrors.",
+      is_correct: true
+    },
+    {
+      content: "None of the above.",
+      is_correct: false
+    }
+  ]},
+  {
+  question: "It is unnecessary to check the slack adjusters when checking the brake system.",
+  explanation: "To be inserted",
+  answers: [
+    {
+      content: "True",
+      is_correct: true
+    },
+    {
+      content: "False",
+      is_correct: false
+    }
+  ]}
+
   {
   question: "What common errors can cause you to fail a vehicle inspection?",
   explanation: "To be inserted",
@@ -187,7 +234,7 @@ campaign_questions = [
     }
   ]},
   {
-  question: "You are looking for puddles on the ground and dripping fluids on the underside of the engine and transmission. What are you checking for?",
+  question: "What are you looking for on the underside of the engine and transmission?",
   explanation: "As part of your engine inspection, check the ground below the engine compartment for puddles or dripping liquids.",
   answers: [
     {
@@ -427,14 +474,187 @@ campaign_questions = [
   explanation: "To be inserted",
   answers: [
     {
+      content: "True",
+      is_correct: false
+    },
+    {
       content: "False",
+      is_correct: true
+    }
+  ]},
+  {
+  question: "________ are gas or hydraulic devices that cushion the vehicle's ride and stabilize the vehicle.",
+  explanation: "During your pre-trip inspection, check the shock absorbers on every axle of your vehicle (including the trailers if any) to be sure that they are securely mounted and not leaking.",
+  answers: [
+    {
+      content: "Springs",
+      is_correct: false
+    },
+    {
+      content: "Brakes",
+      is_correct: false
+    },
+    {
+      content: "Mounts",
+      is_correct: false
+    },
+    {
+      content: "Shock absorbers",
+      is_correct: true
+    }
+  ]},
+  {
+  question: "Should you be prepared to perform the same brake components inspection of every axle (power unit and trailer, if equipped)?",
+  explanation: "To be inserted",
+  answers: [
+    {
+      content: "True",
       is_correct: true
     },
     {
-      content: "True",
+      content: "False",
       is_correct: false
     }
-  ]}
+  ]},
+  {
+  question: "What transforms steering column action into wheel action?",
+  explanation: "When you turn the steering wheel, the steering box translates this motion into turning the front wheels. During your pre-trip inspection, check that the steering box is in good condition, securely mounted, and not leaking. Also check that no nuts, bolts, or cotter keys are missing.",
+  answers: [
+    {
+      content: "Steering linkage",
+      is_correct: false
+    },
+    {
+      content: "Steering box",
+      is_correct: true
+    },
+    {
+      content: "Suspension",
+      is_correct: false
+    },
+    {
+      content: "Steering play",
+      is_correct: false
+    }
+  ]},
+  {
+  question: "Listen for air leaks when checking the air/electric lines. Hoses and electrical lines should not be cut but can be spliced.",
+  explanation: "To be inserted",
+  answers: [
+    {
+      content: "True",
+      is_correct: false
+    },
+    {
+      content: "False",
+      is_correct: true
+    }
+  ]},
+  {
+  question: "What should you check to be sure it is solid, clear of objects, and securely bolted to the tractor frame?",
+  explanation: "Check that the steps leading up to the cab and catwalk (if any) are clear of obstructions and secured to the tractor frame.",
+  answers: [
+    {
+      content: "Apron",
+      is_correct: false
+    },
+    {
+      content: "Kingpin",
+      is_correct: false
+    },
+    {
+      content: "Catwalk",
+      is_correct: true
+    },
+    {
+      content: "PLatform",
+      is_correct: false
+    }
+  ]},
+  {
+  question: "What maintains air pressure in the air brake system?",
+  explanation: "The air compressor maintains air pressure for the air brakes by pumping air into the air storage tanks. If your vehicle's air compressor is belt driven, make sure that its drive belt is snug. A belt that is too loose might slip and not drive the air compressor properly.",
+  answers: [
+    {
+      content: "Alternator",
+      is_correct: false
+    },
+    {
+      content: "Water pump",
+      is_correct: false
+    },
+    {
+      content: "Air compressor",
+      is_correct: true
+    },
+    {
+      content: "Power steering",
+      is_correct: false
+    }
+  ]},
+  {
+  question: "What should be fully engaged with no loose or missing pins in the slide mechanism of the sliding fifth wheel?",
+  explanation: "On many vehicles, the fifth wheel is designed to slide forward and backward on slider rails. If that is so on your vehicle, check the sliding fifth wheel locking pins. Make sure that none of them are loose or missing and that all of them are fully engaged.",
+  answers: [
+    {
+      content: "Locking pins",
+      is_correct: true
+    },
+    {
+      content: "Gap",
+      is_correct: false
+    },
+    {
+      content: "Locking jaws",
+      is_correct: false
+    },
+    {
+      content: "Sliding pintle",
+      is_correct: false
+    }
+  ]},  
+  {
+  question: "What is the sliding mechanism and locking device for tandem axles on trailers?",
+  explanation: "If so equipped, make sure that the locking pins are locked in place and the release arm is secured.",
+  answers: [
+    {
+      content: "Frame",
+      is_correct: false
+    },
+    {
+      content: "Tandem release arm / locking pins",
+      is_correct: true
+    },
+    {
+      content: "Landing gear",
+      is_correct: false
+    },
+    {
+      content: "Suspension system",
+      is_correct: false
+    }
+  ]},
+  {
+  question: "If the wheel has a sight glass, check that the oil level is adequate. Otherwise, look for leaks around the:",
+  explanation: "As part of your pre-trip inspection of the wheels, check the axle seals and the hub oil/grease seals for leaks. Look for oil or grease on the wheels and any visible evidence of cracks or leaks. If the wheel has a sight glass, you can visually confirm that the oil level is adequate.",
+  answers: [
+    {
+      content: "Rims",
+      is_correct: false
+    },
+    {
+      content: "Battery",
+      is_correct: false
+    },
+    {
+      content: "Hub oil seals and axle seals",
+      is_correct: true
+    },
+    {
+      content: "Hydraulic breaks",
+      is_correct: false
+    }
+  ]},
 ]
 
 burst_questions = [
@@ -471,7 +691,54 @@ burst_questions = [
       is_correct: true,
       explanation: "In the majority of cases, there is no single cause of an incident but rather an accumulation of many small factors which led to the incident."
     }
-  ]}
+  ]},
+  {
+  question: "When parking in a hazardous area - for example, on an incline - the gear shift should be left in reverse.",
+  answers: [
+    {
+      content: "True",
+      is_correct: false
+    },
+    {
+      content: "False",
+      is_correct: true,
+      explanation: "The gear shift should not be left in reverse when parking on an incline."
+    }
+  ]},
+  {
+  question: "Who bears liability for an accident when the driver of the company was at fault?",
+  answers: [
+    {
+      content: "The driver.",
+      is_correct: false
+    },
+    {
+      content: "The driver's supervising manager.",
+      is_correct: true
+    },
+    {
+      content: "The company's directors.",
+      is_correct: false
+    },
+    {
+      content: "All of the above.",
+      is_correct: true,
+      explanation: "Under state and federal legislation, even if the company driver was at fault, legal liability can extend up the company's chain of command to include other company employees, including its directors."
+    }
+  ]},
+  {
+    question: "You should only think about safety risks in situations which look risky.",
+    answers: [
+      {
+        content: "True",
+        is_correct: false
+      },
+      {
+        content: "False",
+        is_correct: true,
+        explanation: "The data shows that the majority of safety incidents happen in what are perceived as 'safe situations'. This can lead to complacency which is a significant cause of incidents. So, you should also consider risks when everything 'seems right'."
+      }
+    ]}
 ]
 
 #Create a company
