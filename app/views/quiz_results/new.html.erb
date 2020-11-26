@@ -23,7 +23,7 @@
     /*top: 40%;*/
   }
 
-  label{
+  .answer-content{
     width: 90%;
   }
 
@@ -62,7 +62,7 @@
         <div class="answer-box">
         <% question.answers.each do |answer| %>
             <div class="answer-item py-3 pl-4">
-              <label for="question-<%= question.id %>-answer-<%= answer.id %>"><%= answer.content %></label>
+              <label class="answer-content" for="question-<%= question.id %>-answer-<%= answer.id %>"><%= answer.content %></label>
               <input type="radio" name="question-<%= question.id %>" value="<%= answer.is_correct %>" id="question-<%= question.id %>-answer-<%= answer.id %>" />
             </div>
         <% end %>
