@@ -54,7 +54,11 @@
     <div class="actions"> 
     <%# this entire div needs to stay the same-ish size, but fit either one or two buttons. %>
       <button class="btn submit-button">Submit</button>
-      <button class="btn next-button d-none">Next Question</button>
+      <% if question == @quiz.questions.last %> 
+        <button class="btn next-button d-none">See Results</button>
+      <% else %>
+        <button class="btn next-button d-none">Next Question</button>
+      <% end %>
       <button id="video" class="btn show-explanation d-none" data-toggle="modal" data-target="#explanation-modal-<%= question.id %>">Show Explanation</button>
     </div>
   </div>
