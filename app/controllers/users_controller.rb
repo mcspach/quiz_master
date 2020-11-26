@@ -77,6 +77,9 @@ class UsersController < ApplicationController
       return @current_possible_points += possible_points
     end
     @remaining_points = 3600 - @current_possible_points
+    @div_points = (@remaining_points / 3600)
+    @current_possible_points = 100
+    @current_points_percentage = 20 # (@current_points * 100) / @current_possible_points
   end
 
   def home
