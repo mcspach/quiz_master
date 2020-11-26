@@ -2,9 +2,90 @@
 <p>Find me in app/views/users/rewards.html.erb</p>
 
 <%# Your user instance variables %>
-<%# 
+<%#
 @user
 @current_points
 @current_possible_points
 @remaining_points
 %>
+
+<style>
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #F9BC11;
+  border-radius: 8px;
+  justify-content: space-between;
+  height: fit-content;
+  padding-bottom: 5px;
+  width: 90%;
+  margin:0 auto;
+}
+
+.item{
+  flex: 0 50%;
+  /*height: 25px;*/
+  box-sizing:border-box;
+  border-radius: 8px;
+  border: 1px solid black;
+  background-color: #25C1A9;
+  margin: 5px;
+  /*height: fit-content;*/
+  height: 100px;
+  padding-left: 10px;
+  padding-top: 8px;
+  color:white;
+  font-size: 24px;
+}
+
+h2{
+  font-weight: bold;
+}
+
+</style>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-6 p-1">
+      <div class="item">
+        <h2>Your rank</h2>
+        <span>34th</span>
+      </div>
+    </div>
+
+    <div class="col-6 p-1">
+      <div class="item">
+        <h2>Team rank</h2>
+        <span>5th</span>
+      </div>
+    </div>
+
+    <div class="col-6 p-1">
+      <div class="item">
+        <h2>Points today</h2>
+        <span>2 points</span>
+      </div>
+    </div>
+
+    <div class="col-6 p-1">
+      <div class="item">
+        <h2>Quiz</h2>
+        <span>2 of 12</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
