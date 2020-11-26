@@ -8,7 +8,7 @@
 
 <% @quiz.questions.each_with_index do |question, index| %>
 
-  <div class="question success <%= "active" if index == 0 %>" >
+  <div class="question success <%= "d-none" if index != 0 %>" >
     <div class="content">
       <p><%= question.content %></p>
     </div>
@@ -23,9 +23,10 @@
       </ul>
     </div>
     <div class="actions">
-      <button>Submit</button>
+      <button class="submit-button">Submit</button>
       <button style="display: none;">Continue</button>
     </div>
   </div>
-
 <% end %>
+
+<%= javascript_pack_tag 'question_answer' %>
