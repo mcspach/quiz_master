@@ -1,32 +1,82 @@
+
+<style>
+  body{
+    color:black;
+  }
+
+  .answer-box{
+    list-style-type: none;
+  }
+
+  .answer-item{
+    margin-bottom: 15px;
+    background-color: #E5F7FF;
+    border-radius: 8px;
+    box-shadow: 3px 5px 3px grey;
+  }
+
+  .content{
+    box-shadow: 0 16px 16px grey;
+    border-radius: 8px;
+    background-color:white;
+    /*position: absolute;*/
+    /*top: 40%;*/
+  }
+
+  label{
+    width: 90%;
+  }
+
+  .robot-gif{
+    height: 90%;
+  }
+
+  .questions-answers{
+    position: relative;
+    top: -80px;
+    /*height:60vh;*/
+    height: fit-content;
+  }
+
+  .today-quiz{
+    height: fit-content;
+  }
+
+</style>
+
 <%= render 'shared/banner' %>
+<div class="container">
 
-<h1>Take Today's Quiz</h1>
+  <h1 class="today-quiz">Take Today's Quiz</h1>
 
-<div>
-  <%= image_tag("animation_300_khxvp3bt.gif") %>
-</div>
+  <%= image_tag("question_robot.gif", class:"robot-gif")%>
 
-<% @quiz.questions.each_with_index do |question, index| %>
 
-  <div class="question success <%= "d-none" if index != 0 %>" >
-    <div class="content">
-      <p><%= question.content %></p>
+  <div class="questions-answers">
+    <% @quiz.questions.each_with_index do |question, index| %>
+    <div class="question success mr-2 <%= "d-none" if index != 0 %>" >
+      <div class="content mb-4 py-3">
+        <p><%= question.content %></p>
+      </div>
+      <div class="answers">
+        <div class="answer-box">
+        <% question.answers.each do |answer| %>
+            <div class="answer-item py-3 pl-4">
+              <label for="question-<%= question.id %>-answer-<%= answer.id %>"><%= answer.content %></label>
+              <input type="radio" name="question-<%= question.id %>" value="<%= answer.is_correct %>" id="question-<%= question.id %>-answer-<%= answer.id %>" />
+            </div>
+        <% end %>
+        </div>
+      </div>
+      <div class="actions">
+        <button class="submit-button">Submit</button>
+        <button style="display: none;">Continue</button>
+      </div>
     </div>
-    <div class="answers">
-      <ul>
-      <% question.answers.each do |answer| %>
-        <li>
-          <label for="question-<%= question.id %>-answer-<%= answer.id %>"><%= answer.content %></label> 
-          <input type="radio" name="question-<%= question.id %>" value="<%= answer.is_correct %>" id="question-<%= question.id %>-answer-<%= answer.id %>" />
-        </li>
-      <% end %>
-      </ul>
-    </div>
-    <div class="actions">
-      <button class="submit-button">Submit</button>
-      <button style="display: none;">Continue</button>
-    </div>
+  <% end %>
   </div>
-<% end %>
 
-<%= javascript_pack_tag 'question_answer' %>
+
+  <%= javascript_pack_tag 'question_answer' %>
+
+</div>
