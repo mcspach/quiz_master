@@ -1,16 +1,19 @@
 <%= render 'shared/banner' %>
 <div class="container">
+  <h1>Welcome, <%= @user.first_name.capitalize %>!</h1> 
   <div class="row justify-content-center pt-3 robot">
     <%= image_tag("question_robot.gif") %>
   </div>
 </div>
 <div>
-
-  <%= link_to "Submit", quiz_results_new_path(@quiz_id) %>
+<% if current_user.quiz_results.last.quiz == CompanyQuiz.last.quiz %>
+<div class="btn"> <%= link_to "Start Quiz", quiz_results_new_path(@quiz_id) %></div>
+<% else %>
+<div class="btn" style="background-color: white; color: black">
+  <p><strong>Good Work!</strong></p><p>You don't have any quizzes right now.</p>
 </div>
+<% end %>
 
-<h1>Welcome, <%= @user.first_name.capitalize %>!</h1> 
-<div class="btn"> <%= link_to "Start Quiz", quiz_results_new_path %></div>
 
 <div style="display:flex">
 <%# flexbox with direction: row and evenly spaced %>
