@@ -11,11 +11,35 @@
 <% @quiz.questions.each_with_index do |question, index| %>
 
   <div class="question-success <%= "d-none" if index != 0 %>" >
-    <div class="content">
-      <p><%= question.content %></p>
-      <div class="q-message correct-message d-none"><p>That's right.</p></div>
-      <div class="q-message incorrect-message d-none"><p>Sorry, that's not correct.</p></div>
+    
+  <div class="content">
+    <p><%= question.content %></p>
+    <div class="q-message correct-message d-none"><p>That's right.</p></div>
+    <div class="q-message incorrect-message d-none"><p>Sorry, that's not correct.</p></div>
+  </div>
+
+  <div class="modal fade" id="explanation-modal-<%= question.id %>" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Explanation</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <iframe  src="https://www.youtube.com/embed/JkO84--N9Ew"
+          frameborder="0" class="video" allow="autoplay" allowfullscreen>
+          </iframe>
+          <p><%= question.explanation %></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
     </div>
+  </div>
+
     <div class="answers">
       <ul>
       <% question.answers.each do |answer| %>
@@ -26,12 +50,12 @@
       <% end %>
       </ul>
     </div>
+
     <div class="actions"> 
     <%# this entire div needs to stay the same-ish size, but fit either one or two buttons. %>
       <button class="btn submit-button">Submit</button>
       <button class="btn next-button d-none">Next Question</button>
-      <button class="btn d-none">Show Explanation</button>
-      <button class="btn d-none">Hide Explanation</button>
+      <button id="video" class="btn show-explanation d-none" data-toggle="modal" data-target="#explanation-modal-<%= question.id %>">Show Explanation</button>
     </div>
   </div>
 <% end %>
