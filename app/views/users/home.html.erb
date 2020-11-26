@@ -1,41 +1,30 @@
 <%= render 'shared/banner' %>
 <div class="container">
-  <div class="row justify-content-center">
+  <div class="row justify-content-center robot">
     <%= image_tag("question_robot.gif") %>
   </div>
 </div>
 <div>
-  <%= link_to "Submit", quiz_results_new_path(@quiz_id) %>
-</div>
-
-<%= render 'shared/banner' %>
-
-<div>
-  <%= link_to "Submit", quiz_results_new_path(@quiz_id) %>
-
-
 
 <h1>Welcome, <%= @user.first_name.capitalize %>!</h1> 
-<div class="robot"><%= image_tag("question_robot.gif") %></div>
-<div class="btn"> <%= link_to "Start Quiz", quiz_results_new_path %></div>
-
+<div class="submit-btn"> <%= link_to "Start Quiz", quiz_results_new_path, class: "btn btn-lg" %></div>
 <div style="display:flex">
 <%# flexbox with direction: row and evenly spaced %>
   <%= link_to  rewards_user_path(current_user) do%>
     <div > 
-      <h1><i class="fas fa-money-bill-wave"></i></h1>
+      <h1><i class="fas fa-money-bill-wave icon"></i></h1>
       <p>Rewards</p>
     </div>
   <% end %>
   <%= link_to  leaderboard_path(current_user.company) do%>
     <div>
-      <h1><i class="fas fa-trophy"></i></h1>
+      <h1><i class="fas fa-trophy icon"></i></h1>
       <p>Leaderboard</p>
     </div> 
   <% end %>
   <%= link_to  library_path do%>
     <div>
-      <h1><i class="fas fa-photo-video"></i></h1>
+      <h1><i class="fas fa-photo-video icon"></i></h1>
       <p>Library</p>
     </div>
   <% end %>
