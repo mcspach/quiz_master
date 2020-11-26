@@ -1,9 +1,9 @@
 <%= render 'shared/banner' %>
 
-<h1>Take Today's Quiz</h1>
+<h1>Today's Quiz</h1>
 
-<div>
-  <%= image_tag("animation_300_khxvp3bt.gif") %>
+<div class="robot">
+  <%= image_tag("robot_question.gif") %>
 </div>
 
 <% @quiz.questions.each_with_index do |question, index| %>
@@ -11,6 +11,8 @@
   <div class="question success <%= "d-none" if index != 0 %>" >
     <div class="content">
       <p><%= question.content %></p>
+      <div class="q-message correct-message d-none"><p>That's right.</p></div>
+      <div class="q-message incorrect-message d-none"><p>Sorry, that's not correct.</p></div>
     </div>
     <div class="answers">
       <ul>
@@ -22,9 +24,12 @@
       <% end %>
       </ul>
     </div>
-    <div class="actions">
-      <button class="submit-button">Submit</button>
-      <button style="display: none;">Continue</button>
+    <div class="actions"> 
+    <%# this entire div needs to stay the same-ish size, but fit either one or two buttons. %>
+      <button class="btn submit-button">Submit</button>
+      <button class="btn next-button d-none">Next Question</button>
+      <button class="btn d-none">Show Explanation</button>
+      <button class="btn d-none">Hide Explanation</button>
     </div>
   </div>
 <% end %>
