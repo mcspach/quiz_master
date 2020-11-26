@@ -189,8 +189,7 @@ campaign_questions = [
       content: "False",
       is_correct: false
     }
-  ]}
-
+  ]},
   {
   question: "What common errors can cause you to fail a vehicle inspection?",
   explanation: "To be inserted",

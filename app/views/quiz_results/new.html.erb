@@ -6,9 +6,11 @@
   <%= image_tag("robot_question.gif") %>
 </div>
 
+<div class="question-answers">
+
 <% @quiz.questions.each_with_index do |question, index| %>
 
-  <div class="question success <%= "d-none" if index != 0 %>" >
+  <div class="question-success <%= "d-none" if index != 0 %>" >
     <div class="content">
       <p><%= question.content %></p>
       <div class="q-message correct-message d-none"><p>That's right.</p></div>
@@ -35,3 +37,5 @@
 <% end %>
 
 <%= javascript_pack_tag 'question_answer' %>
+
+</div>
