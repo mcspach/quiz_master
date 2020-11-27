@@ -14,8 +14,8 @@
       <div class="question-success <%= "d-none" if index != 0 %>" >
         <div class="content mb-4 py-3 pl-3">
           <p><%= question.content %></p>
-          <div class="q-message correct-message d-none"><p>That's right.</p></div>
-          <div class="q-message incorrect-message d-none"><p>Sorry, that's not correct.</p></div>
+          <div class="q-message correct-message d-none pr-3"><p style="background-color: rgba(32, 199, 79, 0.6);border-radius: 8px; color: white; box-shadow: 3px 5px 3px grey">That's correct!</p></div>
+          <div class="q-message incorrect-message d-none pr-3"><p style="background-color: #CC3F36;border-radius: 8px; color: white; box-shadow: 3px 5px 3px grey">Sorry, that's not correct.</p></div>
         </div>
 
         <div class="modal fade" id="explanation-modal-<%= question.id %>" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -57,7 +57,7 @@
           <% if question == @quiz.questions.last %>
             <button class="btn next-button d-none">See My Results</button>
           <% else %>
-            <button class="btn next-button d-none">Next Question</button>
+            <button class="btn next-button d-none" >Next Question</button>
           <% end %>
           <button id="video" class="btn show-explanation d-none" data-toggle="modal" data-target="#explanation-modal-<%= question.id %>">Show Explanation</button>
         </div>
