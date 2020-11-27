@@ -51,7 +51,7 @@
         <%# this entire div needs to stay the same-ish size, but fit either one or two buttons. %>
           <button class="btn submit-button">Submit</button>
           <% if question == @quiz.questions.last %>
-            <%= link_to "See My Results", "/quiz_results/25", class: "btn next-button d-none"%>
+            <%= link_to "See My Results", results_path, class: "btn next-button d-none"%>
           <% else %>
             <button class="btn next-button d-none" >Next Question</button>
           <% end %>
