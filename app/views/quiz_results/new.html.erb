@@ -55,7 +55,7 @@
         <%# this entire div needs to stay the same-ish size, but fit either one or two buttons. %>
           <button class="btn submit-button">Submit</button>
           <% if question == @quiz.questions.last %>
-            <button class="btn next-button d-none">See My Results</button>
+            <%= link_to "See My Results", "/quiz_results/25", class: "btn next-button d-none"%> 
           <% else %>
             <button class="btn next-button d-none" >Next Question</button>
           <% end %>
@@ -67,3 +67,4 @@
 </div>
   </div>
 
+##Create form, posting results of to quiz_results create method, then redirecting to quiz_results_show page
