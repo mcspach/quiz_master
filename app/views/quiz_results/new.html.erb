@@ -2,14 +2,10 @@
 
 <%= render 'shared/banner' %>
   <div class="container">
-
   <h1 class="today-quiz">Take Today's Quiz</h1>
-
-  <div class="row justify-content-center">
   <div class="robot-image question"><%= image_tag("robot_question.gif", class:"robot-gif robot")%></div>
   <div class="robot-image say_yes d-none"><%= image_tag("say_yes.gif", class:"robot-gif robot")%></div>
-  <div class="robot-image say_no d-none"><%= image_tag("say_no.gif", class:"robot-gif robot")%></div>    
-
+  <div class="robot-image say_no d-none"><%= image_tag("say_no.gif", class:"robot-gif robot")%></div>
   <div class="question-answers">
     <% @quiz.questions.each_with_index do |question, index| %>
       <div class="question-success <%= "d-none" if index != 0 %>" >
@@ -18,8 +14,6 @@
           <div class="q-message correct-message d-none pr-3"><p style="background-color: rgba(32, 199, 79, 0.6);border-radius: 8px; color: white; box-shadow: 3px 5px 3px grey">That's correct!</p></div>
           <div class="q-message incorrect-message d-none pr-3"><p style="background-color: #CC3F36;border-radius: 8px; color: white; box-shadow: 3px 5px 3px grey">Sorry, that's not correct.</p></div>
         </div>
-
-        
         <div class="modal fade" id="explanation-modal-<%= question.id %>" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
@@ -29,7 +23,7 @@
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
-              <div class="explanation-background">
+              <div class="explanation-backround">
               <div class="modal-body">
                 <iframe  src="https://www.youtube.com/embed/JkO84--N9Ew"
                 frameborder="0" class="video" allow="autoplay" allowfullscreen>
@@ -53,16 +47,13 @@
             <% end %>
           </div>
         </div>
-
-    </div>
-
         <div class="actions">
         <%# this entire div needs to stay the same-ish size, but fit either one or two buttons. %>
           <button class="btn submit-button">Submit</button>
           <% if question == @quiz.questions.last %>
-            <%= link_to "See My Results", results_path, class: "btn next-button d-none"%> 
+            <%= link_to "See My Results", "/quiz_results/25", class: "btn next-button d-none"%>
           <% else %>
-            <button class="btn next-button d-none">Next Question</button>
+            <button class="btn next-button d-none" >Next Question</button>
           <% end %>
           <button id="video" class="btn show-explanation d-none" data-toggle="modal" data-target="#explanation-modal-<%= question.id %>">Show Explanation >></button>
         </div>
@@ -70,4 +61,20 @@
     <% end %>
   <%= javascript_pack_tag 'question_answer' %>
 </div>
-  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

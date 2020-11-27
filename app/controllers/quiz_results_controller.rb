@@ -5,6 +5,11 @@ class QuizResultsController < ApplicationController
     @quiz_result = QuizResult.new(score: @score, possible_score: @possible_score)
   end
 
+  def index
+    @user = current_user
+    @quiz_results = QuizResult.where(user: @user)
+  end
+
   def show
     @quiz_result = QuizResult.find(params[:id])
   end
