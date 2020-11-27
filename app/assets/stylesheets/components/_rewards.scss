@@ -1,3 +1,4 @@
+
 .rewards-header {
   color: #3E505A;
   text-align: center;
@@ -19,6 +20,11 @@
 
 .possible-points {
   padding-left: 6px;
+}
+
+.yellow-box {
+  display: flex;
+  flex-wrap: wrap;
   background-color: #F9BC11;
   border-radius: 0 8px 8px 0;
   height: 60px;

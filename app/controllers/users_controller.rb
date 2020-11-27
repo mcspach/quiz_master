@@ -76,14 +76,17 @@ class UsersController < ApplicationController
       possible_points = possible.possible_score * 100
       return @current_possible_points += possible_points
     end
+
     @remaining_points = 3600 - @current_possible_points
     @div_points = (@remaining_points / 3600)
     @current_possible_points = 100
     @current_points_percentage = 20 # (@current_points * 100) / @current_possible_points
+    @remaining_points = (3600 - @current_possible_points)
+
   end
 
   def home
     @user = current_user
-    @quiz_id = CompanyQuiz.all.sample.quiz
+    @quiz_id = CompanyQuiz.last.quiz
   end
 end
