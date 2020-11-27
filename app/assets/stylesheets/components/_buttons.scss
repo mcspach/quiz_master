@@ -6,11 +6,9 @@
   color:         #ffffff;
   text-align:    center;
   width: 80%;
- }
-body {
-  background-color: white;
+  justify-self: center;
   font-family: Roboto;
-}
+ }
 
 a {
   color: white;
@@ -23,4 +21,18 @@ a:hover {
   background-color: #AAD9DD;
   box-shadow: 0 0 1.5px white;
   color: white
+}
+
+.show-explanation {
+  background-color: white;
+  color: #3E505A;
+  font-family: Roboto;
+  box-shadow: none;
+  margin-top: 6px;
+  width: 400px;
+  padding-right: 200px;
+}
+
+.stats-button {
+  justify-content: center;
 }
