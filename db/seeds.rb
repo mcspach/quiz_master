@@ -612,7 +612,7 @@ campaign_questions = [
       content: "Sliding pintle",
       is_correct: false
     }
-  ]},  
+  ]},
   {
   question: "What is the sliding mechanism and locking device for tandem axles on trailers?",
   explanation: "If so equipped, make sure that the locking pins are locked in place and the release arm is secured.",
@@ -785,7 +785,7 @@ end
 puts '12 Quizzes with Q&A Created'
 
 #Create User
-user1 = User.create!( 
+user1 = User.create!(
   first_name: 'Matthew',
   last_name: 'Spach',
   password: '123456',
