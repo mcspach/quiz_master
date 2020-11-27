@@ -12,7 +12,7 @@
           <p>Pre-Inspection</p>
         </div>
         <div class="bubble bub-green">
-          <h4>75%</h4>
+          <h4>94%</h4>
         </div>
     </div>
   
@@ -23,34 +23,36 @@
           <p>Proper Procedure</p>
         </div>
         <div class="bubble bub-red">
-          <h4>50%</h4>
+          <h4>68%</h4>
         </div>
     </div>
 
   </div>
 
   <div class="flex-percentage">
-    <p>Correct answer rate this quarter:</p>
-    <div class="percentage">
-      <h2>75%</h2>
+    <div class="percent-group d-flex flex-column align-items-center">
+      <h5>Correct answer rate this quarter:</h5>
+      <div class="percentage">
+        <h2><%= @percent_correct %>%</h2>
+     </div>
     </div>
-    <p>Quiz completion rate this quarter:</p>
-    <div class="percentage">
-      <h2>90%</h2>
+    <div class="percent-group d-flex flex-column align-items-center">
+      <h5>Quiz completion rate this quarter:</h5>
+      <div class="percentage">
+        <h2><%= @percent_complete %>%</h2>
+      </div>
     </div>
   </div>
-
-  <div class="btn"> <%= link_to "Leaderboard", leaderboard_path %></div>
-
+  <div class="butt_leader"><%= link_to "Leaderboard", leaderboard_path, class:"btn btn-large btn-block" %></div>
+  
 </div>
 
+percent_correct = <%= @percent_correct %>
+percent_complete = <%= @percent_complete %>
 
 <%# Your user instance variables %>
 <%# 
 @user
-@current_points
-@current_possible_points
-@remaining_points
 @pre_inspection_score
 @post_inspection_score
 @distracted_driving_score
@@ -61,3 +63,5 @@
 @percent_incorrect
 @percent_complete
 %>
+
+
