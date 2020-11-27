@@ -7,14 +7,14 @@
   <h1>Welcome, <%= @user.first_name.capitalize %>!</h1> 
   <div class="row justify-content-center pt-3 robot">
 
-    <%= image_tag("robot_question.gif") %>
+    <%= image_tag("say_hi.gif") %>
   </div>
 </div>
 <div>
 
 <div class="btn"> <%= link_to "Start Quiz", quiz_results_new_path(@quiz_id) %></div>
-<div class="btn mb-4" style="background-color: #25c1a9; color: white; font-size: 20px">
-  <p><strong>Good Work!</strong></p><p>You don't have any quizzes right now.</p>
+<%# <div class="btn mb-4" style="background-color: #25c1a9; color: white; font-size: 20px">
+  <p><strong>Good Work!</strong></p><p>You don't have any quizzes right now.</p> %>
 </div>
 
 

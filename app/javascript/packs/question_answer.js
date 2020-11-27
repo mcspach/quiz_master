@@ -20,6 +20,12 @@ document.querySelectorAll(".submit-button").forEach(submitButton => {
 
       score = score + 1;
 
+      const image = event.target.parentElement.parentElement.parentElement.previousElementSibling.previousElementSibling.previousElementSibling 
+        image.classList.toggle("d-none");
+
+      const imageYes = event.target.parentElement.parentElement.parentElement.previousElementSibling.previousElementSibling
+      imageYes.classList.toggle("d-none");
+
       const radio = question.querySelector('input:checked')
         radio.classList.toggle('color-correct');
 
@@ -28,7 +34,12 @@ document.querySelectorAll(".submit-button").forEach(submitButton => {
 
     } else {
 
-      // toggle 'color-incorrect' class for the radio button thats chosen
+      const image = event.target.parentElement.parentElement.parentElement.previousElementSibling.previousElementSibling.previousElementSibling 
+        image.classList.toggle("d-none");
+      
+      const imageNo = event.target.parentElement.parentElement.parentElement.previousElementSibling 
+      imageNo.classList.toggle("d-none");
+
       const radio = question.querySelector('input:checked')
         radio.classList.toggle('color-incorrect');
 
@@ -39,7 +50,6 @@ document.querySelectorAll(".submit-button").forEach(submitButton => {
   });
 })
 
-//insert modal eventListener
 
 document.querySelectorAll(".next-button").forEach(nextButton => {
   nextButton.addEventListener("click", (event) => {
