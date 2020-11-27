@@ -15,11 +15,20 @@
     <div class="points-you-can-earn">
       <h1 class="rewards-header">With 3,000 points you could earn...</h1>
     </div>
-    <div class="reward-pics">
-      <%= image_tag("coffee.png") %>
-      <%= image_tag("donut.png") %>
-      <%= image_tag("beer.png") %>
-      <%= image_tag("hammer.png") %>
+    <div class="row prizes-box">
+      <div class="col-6">
+        <%= image_tag("coffee.png", class: "reward-img") %>
+      </div>
+      <div class="col-6">
+        <%= image_tag("donut.png", class: "reward-img") %>
+      </div>
+      <div class="col-6 pt-4">
+       <%= image_tag("beer.png", class: "reward-img") %>
+     </div>
+     <div class="col-6 pt-4">
+      <%= image_tag("hammer.png", class: "reward-img") %>
+    </div>
+    <div class="btn reward-btn"> <%= link_to "Home", home_path %></div>
   </div>
 </div>
 
