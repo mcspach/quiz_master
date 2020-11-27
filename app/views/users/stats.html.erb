@@ -1,7 +1,36 @@
 <%= render 'shared/banner' %>
 
-<h1>Users#stats</h1>
-<p>Find me in app/views/users/stats.html.erb</p>
+<div class='container'>
+
+<h1>Stats</h1>
+
+<div class="yellow-bg">
+
+    <div class="item">
+        <div class="subject-text">
+          <h5>Your Strongest Subject</h5>
+          <p>Pre-Inspection</p>
+        </div>
+        <div class="bubble bub-green">
+          <h4>75%</h4>
+        </div>
+    </div>
+  
+
+    <div class="item">
+        <div class="subject-text">
+          <h5>Your Weakest Subject</h5>
+          <p>Proper Procedure</p>
+        </div>
+        <div class="bubble bub-red">
+          <h4>50%</h4>
+        </div>
+    </div>
+
+  </div>
+
+</div>
+
 
 <%# Your user instance variables %>
 <%# 
@@ -9,4 +38,13 @@
 @current_points
 @current_possible_points
 @remaining_points
+@pre_inspection_score
+@post_inspection_score
+@distracted_driving_score
+@proper_procedure_score
+@best_subject
+@worst_subject
+@percent_correct
+@percent_incorrect
+@percent_complete
 %>
