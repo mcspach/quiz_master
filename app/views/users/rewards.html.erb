@@ -1,15 +1,17 @@
 <%= render 'shared/banner' %>
 <div class="container">
-  <h1 class="rewards-header">Prizes</h1>
+  <h1 class="rewards-header">Rewards</h1>
 
   <%# <% column-1 = (current_points/(current_points+max_available_points)*12 %>
   <%# <% column-2 = (max_available_points/(current_points+max_available_points)*12 %>
   <div class="points-bar" style="height: 60px; width: 300px; margin: 0 auto; display: flex">
-    <div class="current-points" style="width: <%=40%>%">
-      <p>Current Points <%=@current_points%></p>
+    <div class="current-points">
+      <p>Current Points </p>
+      <p><strong><%= @current_points %></strong></p>
     </div>
-     <div class="possible-points" style="width: <%=100 - 40%>%">
-        <p>Possible Points 300<%=@remaining_points%></p>
+     <div class="possible-points" style="width: <%= @div_points %>%">
+        <p>Points Available </p>
+        <p><strong><%= @remaining_points %></strong></p>
       </div>
   </div>
     <div class="points-you-can-earn">
@@ -30,5 +32,12 @@
     </div>
     <div class="btn reward-btn"> <%= link_to "Home", home_path %></div>
   </div>
+
+<%# user: <%= @user.first_name %>
+<%# current_points: <%= @current_points %>
+<%# current_possible_points: <%= @current_possible_points %>
+<%# remaining_points: <%= @remaining_points %>
+<%# div_points: <%= @div_points %>
+
 </div>
 
