@@ -67,5 +67,14 @@ document.querySelectorAll(".next-button").forEach(nextButton => {
     const sButton = question.querySelector('.submit-button')
       sButton.classList.remove("d-none");
 
+    const image = event.target.parentElement.parentElement.parentElement.previousElementSibling.previousElementSibling.previousElementSibling 
+    image.classList.remove("d-none");
+    
+    const imageYes = event.target.parentElement.parentElement.parentElement.previousElementSibling.previousElementSibling
+    imageYes.classList.add("d-none");
+
+    const imageNo = event.target.parentElement.parentElement.parentElement.previousElementSibling 
+    imageNo.classList.add("d-none");
+
   })
 })
