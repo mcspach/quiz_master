@@ -1,0 +1,38 @@
+  .answer-box{
+    list-style-type: none;
+  }
+
+  .answer-item{
+    margin-bottom: 15px;
+    background-color: #E5F7FF;
+    border-radius: 8px;
+    box-shadow: 3px 5px 3px grey;
+  }
+
+  .content{
+    box-shadow: 0 16px 16px grey;
+    border-radius: 8px;
+    background-color:white;
+    /*position: absolute;*/
+    /*top: 40%;*/
+  }
+
+  .answer-content{
+    width: 90%;
+  }
+
+  .robot-gif{
+    height: 90%;
+    margin: 0 auto;
+  }
+
+  .questions-answers{
+    position: relative;
+    top: -80px;
+    /*height:60vh;*/
+    height: fit-content;
+  }
+
+  .today-quiz{
+    height: fit-content;
+  }
