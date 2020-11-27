@@ -7,6 +7,7 @@
   text-align: center;
   width: 80%;
   margin-bottom: 4px;
+  font-family: Roboto;
  }
 
 a {
@@ -17,4 +18,18 @@ a {
   background-color: #AAD9DD;
   box-shadow: 2px 2px 4px #F9BC11;
   color: white
+}
+
+.show-explanation {
+  background-color: white;
+  color: #3E505A;
+  font-family: Roboto;
+  box-shadow: none;
+  margin-top: 6px;
+  width: 400px;
+  padding-right: 200px;
+}
+
+.stats-button {
+  justify-content: center;
 }
