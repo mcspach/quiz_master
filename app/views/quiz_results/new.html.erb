@@ -1,82 +1,62 @@
-
-<style>
-  body{
-    color:black;
-  }
-
-  .answer-box{
-    list-style-type: none;
-  }
-
-  .answer-item{
-    margin-bottom: 15px;
-    background-color: #E5F7FF;
-    border-radius: 8px;
-    box-shadow: 3px 5px 3px grey;
-  }
-
-  .content{
-    box-shadow: 0 16px 16px grey;
-    border-radius: 8px;
-    background-color:white;
-    /*position: absolute;*/
-    /*top: 40%;*/
-  }
-
-  .answer-content{
-    width: 90%;
-  }
-
-  .robot-gif{
-    height: 90%;
-  }
-
-  .questions-answers{
-    position: relative;
-    top: -80px;
-    /*height:60vh;*/
-    height: fit-content;
-  }
-
-  .today-quiz{
-    height: fit-content;
-  }
-
-</style>
-
 <%= render 'shared/banner' %>
-<div class="container">
+  <div class="container">
 
   <h1 class="today-quiz">Take Today's Quiz</h1>
-
-  <%= image_tag("question_robot.gif", class:"robot-gif")%>
-
-
-  <div class="questions-answers">
-    <% @quiz.questions.each_with_index do |question, index| %>
-    <div class="question success mr-2 <%= "d-none" if index != 0 %>" >
-      <div class="content mb-4 py-3">
-        <p><%= question.content %></p>
-      </div>
-      <div class="answers">
-        <div class="answer-box">
-        <% question.answers.each do |answer| %>
-            <div class="answer-item py-3 pl-4">
-              <label class="answer-content" for="question-<%= question.id %>-answer-<%= answer.id %>"><%= answer.content %></label>
-              <input type="radio" name="question-<%= question.id %>" value="<%= answer.is_correct %>" id="question-<%= question.id %>-answer-<%= answer.id %>" />
-            </div>
-        <% end %>
-        </div>
-      </div>
-      <div class="actions">
-        <button class="submit-button">Submit</button>
-        <button style="display: none;">Continue</button>
-      </div>
-    </div>
-  <% end %>
+  <div class="row">
+    <%= image_tag("robot_question.gif", class:"robot-gif robot")%>
   </div>
 
 
-  <%= javascript_pack_tag 'question_answer' %>
+  <div class="question-answers">
+    <% @quiz.questions.each_with_index do |question, index| %>
+      <div class="question-success <%= "d-none" if index != 0 %>" >
+        <div class="content mb-4 py-3 pl-3">
+          <p><%= question.content %></p>
+          <div class="q-message correct-message d-none"><p>That's right.</p></div>
+          <div class="q-message incorrect-message d-none"><p>Sorry, that's not correct.</p></div>
+        </div>
 
+        <div class="modal fade" id="explanation-modal-<%= question.id %>" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Explanation</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <iframe  src="https://www.youtube.com/embed/JkO84--N9Ew"
+                frameborder="0" class="video" allow="autoplay" allowfullscreen>
+                </iframe>
+                <p><%= question.explanation %></p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="answers">
+          <div class="answer-box">
+            <% question.answers.each do |answer| %>
+              <div class="answer-item py-2 pl-4 pr-1">
+                <label class="answer-content" for="question-<%= question.id %>-answer-<%= answer.id %>"><%= answer.content %></label>
+                <input type="radio" name="question-<%= question.id %>" value="<%= answer.is_correct %>" id="question-<%= question.id %>-answer-<%= answer.id %>" />
+              </div>
+            <% end %>
+          </div>
+        </div>
+
+        <div class="actions">
+        <%# this entire div needs to stay the same-ish size, but fit either one or two buttons. %>
+          <button class="btn submit-button">Submit</button>
+          <button class="btn next-button d-none">Next Question</button>
+          <button id="video" class="btn show-explanation d-none" data-toggle="modal" data-target="#explanation-modal-<%= question.id %>">Show Explanation</button>
+        </div>
+      </div>
+    <% end %>
+  <%= javascript_pack_tag 'question_answer' %>
 </div>
+  </div>
