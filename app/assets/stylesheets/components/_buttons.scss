@@ -1,24 +1,18 @@
 .btn {
-  background:    #25c1a9;
+  background: #25c1a9;
   border-radius: 8px;
   box-shadow: 2px 2px 4px #444444;
-  padding:       20px 45px;
-  color:         #ffffff;
-  text-align:    center;
+  padding: 20px 45px;
+  color:#ffffff;
+  text-align: center;
   width: 80%;
+  margin-bottom: 4px;
  }
-body {
-  background-color: white;
-  font-family: Roboto;
-}
 
 a {
   color: white;
 }
 
-a:hover {
-  color: white;
-}
 .btn:hover {
   background-color: #AAD9DD;
   box-shadow: 2px 2px 4px #F9BC11;
