@@ -5,10 +5,12 @@ class QuizResultsController < ApplicationController
   end
 
   def create
-    @quiz = Quiz.find(params[:quiz_id])
     @quiz_result = QuizResult.new
+    @quiz = Quiz.last
     @quiz_result.user = current_user
     @quiz_result.quiz = @quiz
+    @quiz_result.score = (params[:score])
+    @quiz_result.possible_score = @quiz.questions.count
     if @quiz_result.save!
       redirect_to results_path
     else
@@ -28,5 +30,7 @@ class QuizResultsController < ApplicationController
 
   private 
 
-  params.require(:quiz_result).
+  def quiz_result_params
+    params.require(:quiz_result).permit(:quiz_id, :score, :possible_score, :user_id)
+  end
 end

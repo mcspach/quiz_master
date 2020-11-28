@@ -5,14 +5,12 @@ class CompanyQuizzesController < ApplicationController
   end
 
   def create
+    @company_quiz = CompanyQuiz.new
+    @company_quiz.company = params([:company])
     if CompanyQuiz.all.empty?
-      @company_quiz = CompanyQuiz.new
-      @company_quiz.company = params([:company])
-      @companyquiz.quiz_id = (CompanyQuiz.last.quiz_id + 1)
+      @company_quiz.quiz_id = Quiz.first
     else
-      @company_quiz = CompanyQuiz.new
-      @company_quiz.company = params([:company])
-      @companyquiz.quiz_id = Quiz.first
+      @company_quiz.quiz_id = (CompanyQuiz.last.quiz_id + 1)
     end
     @company_quiz.save!
   end
