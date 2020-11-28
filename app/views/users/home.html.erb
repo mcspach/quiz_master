@@ -1,13 +1,11 @@
 
 <%= render 'shared/banner' %>
 <div class="container">
-
-  <h1>Welcome, <%= @user.first_name.capitalize %>!</h1> 
-
+  <h1>Welcome, <%= @user.first_name.capitalize %>!</h1>
   <div class="row justify-content-center pt-3 robot">
     <%= image_tag("say_hi.gif") %>
+    <div class="btn"> <%= link_to "Start Quiz", quiz_results_new_path(@quiz_id) %></div>
   </div>
-  <div class="btn"> <%= link_to "Start Quiz", quiz_results_new_path(@quiz_id) %></div>
 </div>
 
 <%# <div class="btn mb-4" style="background-color: #25c1a9; color: white; font-size: 20px">
@@ -18,7 +16,7 @@
   <div class="row justify-content-around">
   <%# flexbox with direction: row and evenly spaced %>
     <%= link_to  rewards_user_path(current_user) do%>
-      <div > 
+      <div >
         <%= image_tag("medal.png", class: "medal-img")%>
         <p class="pl-3 text-dark">Rewards</p>
       </div>
@@ -27,7 +25,7 @@
       <div>
         <%= image_tag("competition.png", class: "trophy-img")%>
         <p class="pl-1 text-dark">Leaderboard</p>
-      </div> 
+      </div>
     <% end %>
     <%= link_to  library_path do%>
       <div>
