@@ -1,25 +1,6 @@
 <style>
 
-
-
-  .list-row{
-    border: 1px solid black;
-    padding-left: 25px;
-    background-color: #25C1A9;
-    border-radius: 8px;
-    height: 50px;
-  }
-
-  table{
-    width: 90vw;
-  }
-
-  tr{
-    margin-bottom: 15px;
-    border-collapse: separate;
-    border-spacing: 0 20px;
-  }
-
+  /*Styling for split button on top*/
   .individual-team-choice{
     height: 55px;
     width: 200px;
@@ -27,7 +8,6 @@
     border-radius:25px;
     border: 4px solid #25C1A9;
   }
-
 
   .individual{
     border-right:1px solid black;
@@ -38,6 +18,28 @@
     height: 100%;
   }
 
+  /*Styling for leadeboard*/
+  table{
+    width: 90vw;
+  }
+
+  td{
+    border-collapse:separate;
+    border-spacing:5em;
+  }
+
+  tr{
+    margin-bottom: 15px;
+    border-collapse: separate;
+    border-spacing: 0 20px;
+  }
+
+   .list-row{
+    padding-left: 25px;
+    background-color: #25C1A9;
+    border-radius: 8px;
+    height: 50px;
+  }
 
 </style>
 
@@ -76,35 +78,35 @@
   <div class="row justify-content-center">
     <table>
       <% @drivers.each_with_index do |driver, index| %>
-        <tr class="list-row"> <!--  DONT USE TABLE-->
-          <td><%= index + 1 %></td> <td><%= driver[:name] %></td> <td><%= driver[:points] %></td>
+        <tr > <!--  DONT USE TABLE-->
+          <td class="list-row"><%= index + 1 %> <%= driver[:name] %> <%= driver[:points] %></td>
         </tr>
-        <tr class="list-row">
-          <td>2</td> <td>Barkley</td> <td>1100</td>
+        <tr >
+          <td class="list-row"><%= index + 1 %> <%= driver[:name] %> <%= driver[:points] %></td>
         </tr>
-        <tr class="list-row">
-          <td>3</td> <td>Darien </td> <td>900</td>
+        <tr >
+          <td class="list-row"><%= index + 1 %> <%= driver[:name] %> <%= driver[:points] %></td>
         </tr>
-        <tr class="list-row">
-          <td>4</td> <td>Andrew</td> <td>800</td>
+        <tr >
+          <td class="list-row"><%= index + 1 %> <%= driver[:name] %> <%= driver[:points] %></td>
         </tr>
-         <tr class="list-row">
-          <td>5</td> <td>Cierra Vega</td> <td>700</td>
+         <tr >
+          <td class="list-row"><%= index + 1 %> <%= driver[:name] %> <%= driver[:points] %></td>
         </tr>
-        <tr class="list-row">
-          <td>6</td> <td>Alden Cantrell</td> <td>700</td>
+        <tr >
+          <td class="list-row"><%= index + 1 %> <%= driver[:name] %> <%= driver[:points] %></td>
         </tr>
-        <tr class="list-row">
-          <td>7</td> <td>Kierra Gentry</td> <td>600</td>
+        <tr >
+          <td class="list-row"><%= index + 1 %> <%= driver[:name] %> <%= driver[:points] %></td>
         </tr>
-         <tr class="list-row">
-          <td>8</td> <td>Pierre Cox</td> <td>500</td>
+         <tr >
+          <td class="list-row"><%= index + 1 %> <%= driver[:name] %> <%= driver[:points] %></td>
         </tr>
-        <tr class="list-row">
-          <td>9</td> <td>Thomas Crane</td> <td>300</td>
+        <tr >
+          <td class="list-row"><%= index + 1 %> <%= driver[:name] %> <%= driver[:points] %></td>
         </tr>
-        <tr class="list-row">
-          <td>10</td> <td>Miranda Shaffer</td> <td>300</td>
+        <tr >
+          <td class="list-row"><%= index + 1 %> <%= driver[:name] %> <%= driver[:points] %></td>
         </tr>
       <% end %>
     </table>
