@@ -9,6 +9,9 @@ Rails.application.routes.draw do
 
   get "/companies/:id/company_quizzes/new", to: "company_quizzes#new"
   post "/companies/:id/company_quizzes",    to: "company_quizzes#create"
+  get "/companies/:id/company_quizzes/safety-refresher",    to: "company_quizzes#safety_refresher", as: :safety_refresher
+  get "/companies/:id/company_quizzes/incident-minimization",    to: "company_quizzes#incident_minimization", as: :incident_minimization
+  get "/companies/:id/company_quizzes/twilio",    to: "company_quizzes#twilio", as: :twilio
   get "/users/:id/stats",                   to: "users#stats", as: :stats_user
   get "/companies/:id/leaderboard",         to: "companies#leaderboard", as: :leaderboard
   get "/home",                              to: "users#home", as: :home
