@@ -14,20 +14,19 @@ a {
   color: white;
 }
 
-// .btn:hover {
-//   background-color: #AAD9DD;
-//   box-shadow: 2px 2px 4px #F9BC11;
-//   color: white
-// }
+.btn:hover {
+  background-color: #AAD9DD;
+  color: white;
+}
 
 .show-explanation {
-  background-color: white;
   color: #3E505A;
+  background-color: white;
   font-family: Roboto;
   box-shadow: none;
   margin-top: 6px;
-  width: 400px;
-  padding-right: 200px;
+  white-space: nowrap;
+  overflow: auto;
 }
 
 .stats-button {
