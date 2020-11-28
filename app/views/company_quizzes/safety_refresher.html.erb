@@ -1,0 +1,21 @@
+<%= render 'shared/banner' %>
+<div class="container text-center">
+  <h1>Select Safety Refresher</h1>
+</div>
+<div class="container text-center mt-5">
+  <%= form_with url: twilio_path, method: :get do |f| %>
+    <%['pre_trip_inspection', 'post_trip_inspection', 'distraction_driving', 'proper_incident_response'].each do |option| %>
+      <%= f.label "refresher_topic_#{option}", option.humanize %>
+      <%= f.radio_button :refresher_topic, option  %>
+      <br />
+    <% end %>
+    <%= f.submit 'Submit', class: 'btn' %>
+  <% end %>
+</div>
+<div class="container mt-5 text-center">
+  <div class="row">
+    <div class="col-12">
+      <h4><%= link_to '<<', :back, class: 'btn-link' %></h4>
+    </div>
+  </div>
+</div>
