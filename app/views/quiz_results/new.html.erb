@@ -58,7 +58,7 @@
               <%# <%= f.input :score, class="js-value" %> 
               <%# <%= f.submit %> 
             <%# <%= end %> 
-            <%= link_to "See My Results", quiz_results_create_path(score: 2, possible_score: @quiz.questions.count), class: "btn next-button d-none"%>
+            <%= link_to "See My Results", quiz_results_create_path(score: 2), method: :create, class: "btn next-button d-none"%>
           <% else %>
             <button class="btn next-button d-none">Next Question</button>
           <% end %>
