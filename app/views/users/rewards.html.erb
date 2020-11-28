@@ -2,17 +2,19 @@
 <div class="container">
   <h1 class="rewards-header">Rewards</h1>
 
-  <%# <% column-1 = (current_points/(current_points+max_available_points)*12 %>
-  <%# <% column-2 = (max_available_points/(current_points+max_available_points)*12 %>
-  <div class="points-bar" style="height: 60px; width: 300px; margin: 0 auto; display: flex">
+  <div class="points-bar">
     <div class="current-points">
-      <p>Current Points </p>
-      <p><strong><%= @current_points %></strong></p>
+    
+      <h4><strong><%= @current_points %></strong></h4>
     </div>
      <div class="possible-points" style="width: <%= @div_points %>%">
-        <p>Points Available </p>
-        <p><strong><%= @remaining_points %></strong></p>
+        
+        <h4><strong><%= @remaining_points %></strong></h4>
       </div>
+  </div>
+  <div class="points-text d-flex ">
+  <p class="c_point">Current Points</p>
+  <p class="avail_point">Points Available</p>
   </div>
     <div class="points-you-can-earn">
       <h1 class="rewards-header">With 3,000 points you could earn...</h1>
