@@ -8,6 +8,8 @@ class QuizResultsController < ApplicationController
   def index
     @user = current_user
     @quiz_results = QuizResult.where(user: @user)
+    puts @user
+    puts @quiz_results
   end
 
   def show
@@ -16,7 +18,6 @@ class QuizResultsController < ApplicationController
 
   def create
     # how are we caching the instance without finishing this method in js??
-    # does front-end want variables for Qs and As??
     @quiz_result = QuizResult.new(score: @score, possible_score: 300)
     @quiz_result.user = current_user
     @quiz_result.quiz_id = params[:quiz_id]
