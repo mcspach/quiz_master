@@ -14,14 +14,13 @@ document.querySelectorAll(".submit-button").forEach(submitButton => {
     
         const showExplanation = nextButton.nextElementSibling
         showExplanation.classList.toggle("d-none");
-
+    $("#correct-answer").addClass("highlight-correct-answer");
 
     const isCorrect = question.querySelector('input:checked').value == 'true'
     if (isCorrect) {
 
       score = score + 1;
       console.log(score);
-
       const image = event.target.parentElement.parentElement.parentElement.previousElementSibling.previousElementSibling.previousElementSibling 
         image.classList.toggle("d-none");
 
@@ -35,13 +34,12 @@ document.querySelectorAll(".submit-button").forEach(submitButton => {
        message.classList.toggle('d-none');
 
     } else {
-
+      $(question.querySelector('input:checked').parentElement).addClass("highlight-wrong-answer");
       const image = event.target.parentElement.parentElement.parentElement.previousElementSibling.previousElementSibling.previousElementSibling 
         image.classList.toggle("d-none");
       
       const imageNo = event.target.parentElement.parentElement.parentElement.previousElementSibling 
       imageNo.classList.toggle("d-none");
-
       const radio = question.querySelector('input:checked')
         radio.classList.toggle('color-incorrect');
 
