@@ -3,11 +3,11 @@
 <%= render 'shared/banner' %>
   <div class="container">
   <h1 class="today-quiz">Take Today's Quiz</h1>
-  <div class="row justify-content-center">
-    <div class="robot-image question"><%= image_tag("robot_question.gif", class:"robot-gif robot")%></div>
-    <div class="robot-image say_yes d-none"><%= image_tag("say_yes.gif", class:"robot-gif robot")%></div>
-    <div class="robot-image say_no d-none"><%= image_tag("say_no.gif", class:"robot-gif robot")%></div>
-  </div>
+
+    <div class="robot-image question row justify-content-center"><%= image_tag("robot_question.gif", class:"robot-gif robot")%></div>
+    <div class="robot-image say_yes d-none row justify-content-center"><%= image_tag("say_yes.gif", class:"robot-gif robot")%></div>
+    <div class="robot-image say_no d-none row justify-content-center"><%= image_tag("say_no.gif", class:"robot-gif robot")%></div>
+
 
   <div class="question-answers">
     <% @quiz.questions.each_with_index do |question, index| %>
