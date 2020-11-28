@@ -26,7 +26,7 @@ class QuizResultsController < ApplicationController
     @quiz_result = QuizResult.find(params[:id])
   end
 
-  private 
+  private
 
-  params.require(:quiz_result).
+  # params.require(:quiz_result).
 end
