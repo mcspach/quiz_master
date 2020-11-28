@@ -24,9 +24,9 @@ a {
   background-color: white;
   font-family: Roboto;
   box-shadow: none;
-  margin-top: 6px;
   white-space: nowrap;
   overflow: auto;
+  margin: 0 !important;
 }
 
 .stats-button {
