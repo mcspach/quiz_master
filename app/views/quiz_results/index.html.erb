@@ -48,3 +48,8 @@
 <div class="stats-button">
   <%= link_to "See My Statistics", stats_user_path(@user), class: "btn btn-block next-button"%>
 </div>
+
+
+todays quiz : <%= @todays_quiz.score %>
+quiz_results : <%= @quiz_results.count %>
+user : <%= @user.first_name %>

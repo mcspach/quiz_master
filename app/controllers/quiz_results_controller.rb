@@ -19,11 +19,14 @@ class QuizResultsController < ApplicationController
   def index
     @user = current_user
     @quiz_results = QuizResult.where(user: @user)
-    puts @user
-    puts @quiz_results
+    @todays_quiz = @quiz_results.last
   end
 
   def show
     @quiz_result = QuizResult.find(params[:id])
   end
+
+  private 
+
+  params.require(:quiz_result).
 end

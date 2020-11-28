@@ -5,6 +5,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+
 # delete eveything
 # DO NOT CHANGE THE ORDER!!!!!!!!!!
 CompanyQuiz.destroy_all
@@ -786,7 +787,7 @@ puts '12 Quizzes with Q&A Created'
 
 #Create User
 user1 = User.create!(
-  first_name: 'Matthew',
+  first_name: 'Matt',
   last_name: 'Spach',
   password: '123456',
   email: 'matt@example.com',
@@ -796,7 +797,19 @@ user1 = User.create!(
   role: 'driver'
 )
 
-puts 'User Created'
+10.times do User.create!(
+  first_name: Faker::Name.first_name,
+  last_name: Faker::Name.last_name,
+  password: '123456',
+  email: Faker::Internet.unique.email,
+  phone_number: Faker::PhoneNumber.phone_number,
+  company: company,
+  location: 'California',
+  role: 'driver'
+)
+end
+
+puts 'Users Created'
 
 
 #Create Company Quizzes
@@ -809,12 +822,17 @@ end
 puts '8 Company_Quizzes created, week 8 quiz should be available to complete'
 
 #Create Quiz Results
-CompanyQuiz.all.each do |cq|
-  QuizResult.create!(
-    user: user1,
-    quiz: cq.quiz,
-    score: (1..3).to_a.sample,
-    possible_score: 3
-  )
+User.all.each do |user|
+  CompanyQuiz.all.each do |cq|
+    unless cq == CompanyQuiz.last
+      QuizResult.create!(
+        user: user,
+        quiz: cq.quiz,
+        score: (2..3).to_a.sample,
+        possible_score: 3
+      )
+    end
+  end
 end
-puts '8 Q_Results Created for user1, its week 8 in the Quarter'
+
+puts '7 Q_Results Created for each User, its week 8 in the Quarter'
