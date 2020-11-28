@@ -54,14 +54,18 @@
         <%# this entire div needs to stay the same-ish size, but fit either one or two buttons. %>
           <button class="btn submit-button">Submit</button>
           <% if question == @quiz.questions.last %>
-            <%# <%= form_for @quiz_results do |f| %>
-              <%# <%= f.input :score, class="js-value" %> 
-              <%# <%= f.submit %> 
-            <%# <%= end %> 
-            <%= link_to "See My Results", quiz_results_create_path(score: 2, possible_score: @quiz.questions.count), class: "btn next-button d-none"%>
+
+            <%= simple_form_for([@quiz, @quiz_result]) do |f| %>
+            <%= f.input :score, as: :hidden, input_html: { class: 'final_score' } %>
+            <%= f.submit "See My Results"%>
+          <% end %>
+
+          <%# end %>
+            <%# <%= link_to "See My Results", quiz_results_create_path(score: 2, possible_score: @quiz.questions.count), class: "btn next-button d-none"%> 
           <% else %>
             <button class="btn next-button d-none">Next Question</button>
           <% end %>
+
           <button id="video" class="btn btn-block show-explanation d-none" data-toggle="modal" data-target="#explanation-modal-<%= question.id %>">Show Explanation >></button>
         </div>
       </div>
@@ -69,6 +73,8 @@
   <%= javascript_pack_tag 'question_answer' %>
 </div>
 </div>
+
+
 
 
 
