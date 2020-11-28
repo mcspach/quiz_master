@@ -1,12 +1,13 @@
 class CompaniesController < ApplicationController
   def leaderboard
+    
     @company = current_user.company
     drivers = @company.users.where(role: 'driver')
-    @drivers = drivers.map do |driver|
+    @drivers_list = drivers.map do |driver|
       { name: driver.first_name.capitalize + " " + driver.last_name.capitalize,
         points: get_points(driver) }
     end
-    ## we need to seed more users
+    @drivers = @drivers_list.sort_by! { |key| -key[:points] }
     @your_points = get_points(current_user)
   end
 

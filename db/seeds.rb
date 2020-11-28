@@ -828,7 +828,7 @@ User.all.each do |user|
       QuizResult.create!(
         user: user,
         quiz: cq.quiz,
-        score: (2..3).to_a.sample,
+        score: (1..3).to_a.sample,
         possible_score: 3
       )
     end
