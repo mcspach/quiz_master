@@ -10,6 +10,7 @@
   margin:0 auto;
   padding: 2%;
   box-shadow: 2px 2px 4px #444444;
+  font-family: Roboto;
 }
 
 .item{
@@ -25,7 +26,8 @@
   padding-left: 2px;
   padding-top: 4px;
   color:white;
-  box-shadow: 2px 2px 4px #444444
+  box-shadow: 2px 2px 4px #444444;
+  font-family: Roboto;
 }
 
 .subject-text {
@@ -66,7 +68,8 @@ h2{
   box-sizing: border-box;
   width: 95%;
   padding-top: 3%;
-  color:#25C1A9;
+  color:#3E505A;
+  font-family: Roboto;
 }
 
 .percent-group {
@@ -89,4 +92,5 @@ h2{
 
 .butt-leader {
   width: 100%;
+  margin: auto !important;
 }
