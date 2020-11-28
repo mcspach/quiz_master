@@ -7,7 +7,11 @@ class CompanyQuizzesController < ApplicationController
   def create
     @company_quiz = CompanyQuiz.new
     @company_quiz.company = params([:company])
-    @company_quiz.quiz = params([:quiz])
+    if CompanyQuiz.all.empty?
+      @companyquiz.quiz_id = (CompanyQuiz.last.quiz_id + 1)
+    else
+      @companyquiz.quiz_id = Quiz.first
+    end
     @company_quiz.create!
   end
 
