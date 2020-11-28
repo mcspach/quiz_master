@@ -1,5 +1,6 @@
 
-let score = 0
+let score = 0;
+console.log(score);
 
 document.querySelectorAll(".submit-button").forEach(submitButton => {
   submitButton.addEventListener("click", (event) => {
@@ -19,6 +20,7 @@ document.querySelectorAll(".submit-button").forEach(submitButton => {
     if (isCorrect) {
 
       score = score + 1;
+      console.log(score);
 
       const image = event.target.parentElement.parentElement.parentElement.previousElementSibling.previousElementSibling.previousElementSibling 
         image.classList.toggle("d-none");

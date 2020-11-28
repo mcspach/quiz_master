@@ -817,4 +817,4 @@ CompanyQuiz.all.each do |cq|
     possible_score: 3
   )
 end
-puts '7 Q_Results Created for user1, its week 8 in the Quarter'
+puts '8 Q_Results Created for user1, its week 8 in the Quarter'
