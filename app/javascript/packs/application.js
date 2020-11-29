@@ -28,7 +28,43 @@ import "bootstrap";
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
+
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
+const individualRankBtn = document.querySelector('.individual');
+const teamRankBtn = document.querySelector('.team');
+
+// When we click Team Rank button - Individual list dissappears
+teamRankBtn.addEventListener("click", (event) =>{
+  const individualRankList = document.querySelector('.whole-list');
+  individualRankList.classList.toggle('d-none');
+  const teamRankList = document.querySelector('.team-list');
+  teamRankList.classList.toggle('d-none');
 });
+
+// When Individual Button is clicked we want Team Rank to dissappear and Individual to show again
+individualRankBtn.addEventListener("click", (event) =>{
+  // console.log('left button clicked');
+  const teamRankList = document.querySelector('.team-list');
+  teamRankList.classList.toggle('d-none');
+  const individualRankList = document.querySelector('.whole-list');
+  individualRankList.classList.toggle('d-none');
+});
+
+});
+
+
+
+// console.log(individualRankBtn);
+
+
+
+
+
+
+
+
+
+
+
