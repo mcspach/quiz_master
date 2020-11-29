@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get "/companies/:id/company_quizzes/safety-refresher",    to: "company_quizzes#safety_refresher", as: :safety_refresher
   get "/companies/:id/company_quizzes/incident-minimizer",    to: "company_quizzes#incident_minimizer", as: :incident_minimizer
   get "/companies/:id/company_quizzes/twilio",    to: "company_quizzes#twilio", as: :twilio
+  get "/companies/:id/company_quizzes/quiz_selected",    to: "company_quizzes#quiz_selected", as: :quiz_selected
   get "/users/:id/stats",                   to: "users#stats", as: :stats_user
   get "/companies/:id/leaderboard",         to: "companies#leaderboard", as: :leaderboard
   get "/home",                              to: "users#home", as: :home
