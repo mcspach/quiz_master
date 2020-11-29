@@ -2,8 +2,8 @@
 
   /*Styling for split button on top*/
   .individual-team-choice{
-    height: 55px;
-    width: 200px;
+    height: 60px;
+    width: 80vw;
     background-color: #E5F7FF;
     border-radius:25px;
     border: 4px solid #25C1A9;
@@ -15,32 +15,37 @@
 
   .team,
   .individual{
-    height: 100%;
+    height: 52px;
   }
 
   /*Styling for leadeboard*/
-  table{
-    width: 90vw;
-  }
-
-  td{
-    border-collapse:separate;
-    border-spacing:5em;
-  }
-
-  tr{
-    margin-bottom: 15px;
-    border-collapse: separate;
-    border-spacing: 0 20px;
-  }
-
    .list-row{
     padding-left: 25px;
-    background-color: #25C1A9;
+    background-color: #E5F7FF;
     border-radius: 8px;
-    height: 50px;
+    margin-bottom: 15px;
+    box-shadow: 3px 5px 3px grey;
   }
 
+  .whole-list,
+  .team-list{
+    width: 90vw;
+    margin: 0 auto;
+  }
+
+  .name,
+  .driver-points{
+    font-size: 18px;
+    font-family: Roboto;
+  }
+
+  .team-points{
+    font-weight: bold;
+  }
+
+  .name-header{
+    font-size: 28px;
+  }
 </style>
 
 <%= render 'shared/banner' %>
@@ -58,35 +63,48 @@
 </div>
 </div> -->
 <div class="container individual-team-choice">
-  <div class="row justify-content-center text-center">
-    <div class="col individual">
-      Individual Rank
+  <div class="row justify-content-center text-center align-center ">
+    <div class="col individual pt-3">
+      <span>Individual Rank</span>
     </div>
-    <div class="col team">
-      Team Rank
+    <div class="col team pt-3">
+      <span>Team Rank</span>
     </div>
   </div>
 </div>
 
-<div>
-  <div> <p>Your Current Points: <strong><%= @your_points %></strong></p> </div>
-  <div> <p>Your Team Rank: <strong>2nd Place</strong></p></div>
-</div>
-
-
 <div class="container">
-  <div class="row justify-content-center">
-    <table>
+
+  <div class="col-12 py-3" style="font-size:28px;"> <span class="pr-2">Rank</span> <span class="pl-4 name-header">Name </span> <span class="team-points" style="float:right; "> Points</span></div>
+
+  <div class="row whole-list">
+    <!-- THIS PRINTS EVERY DRIVER IN THE DB- NOT JUST THE TOP 10 -->
       <% @drivers.each_with_index do |driver, index| %>
-        <tr > <!--  DONT USE TABLE-->
-          <td class="list-row"><%= index + 1 %> <%= driver[:name] %> <%= driver[:points] %></td>
-        </tr>
+          <div class="list-row col-12 py-3"> <strong class="pr-2"> <%= index + 1 %></strong><span class="pl-4 name"><%= driver[:name]%></span> <span class="driver-points" style="float:right;"> <%= driver[:points]%></span> </div>
       <% end %>
-    </table>
+  </div>
+
+    <div class="row team-list d-none">
+      <!-- FAKE LIST -->
+      <div class="list-row col-12 py-3"> <strong class="pr-2"> 1</strong><span class="pl-3 name"> The Trucking Company </span> <span class="team-points" style="float:right; "> 19800 </span></div>
+      <div class="list-row col-12 py-3"> <strong class="pr-2"> 2</strong><span class="pl-3 name"> Hess Oil </span> <span class="team-points" style="float:right;"> 19200 </span></div>
+      <div class="list-row col-12 py-3"> <strong class="pr-2"> 3</strong><span class="pl-3 name"> Miller </span> <span class="team-points" style="float:right;"> 18700 </span></div>
+      <div class="list-row col-12 py-3"> <strong class="pr-2"> 4</strong><span class="pl-3 name"> Hague Shipping </span> <span class="team-points" style="float:right;"> 18700 </span></div>
+      <div class="list-row col-12 py-3"> <strong class="pr-2"> 5</strong><span class="pl-3 name"> Huawei Mobile </span> <span class="team-points" style="float:right;"> 17800 </span></div>
+      <div class="list-row col-12 py-3"> <strong class="pr-2"> 6</strong><span class="pl-3 name"> Stater Bros </span> <span class="team-points" style="float:right;"> 17700 </span></div>
+      <div class="list-row col-12 py-3"> <strong class="pr-2"> 7</strong><span class="pl-3 name"> Mobil Gas </span> <span class="team-points" style="float:right;"> 17300 </span></div>
+      <div class="list-row col-12 py-3"> <strong class="pr-2"> 8</strong><span class="pl-3 name"> United Shipping Co. </span> <span class="team-points" style="float:right;"> 16600 </span></div>
+      <div class="list-row col-12 py-3"> <strong class="pr-2"> 9</strong><span class="pl-3 name"> Chevron Offshore </span> <span class="team-points" style="float:right;"> 15500 </span></div>
+      <div class="list-row col-12 py-3"> <strong class="pr-2"> 10</strong><span class="pl-3 name"> Kirby Transport </span> <span class="team-points" style="float:right;"> 15400 </span></div>
+      <div class="list-row col-12 py-3"> <strong class="pr-2"> 11</strong><span class="pl-3 name"> LATAM Road</span> <span class="team-points" style="float:right;"> 13000 </span></div>
+  </div>
+
     <div class="btn btn-block row mt-5">
       <%= link_to "Home", home_path %>
     </div>
-  </div>
+
+    <!-- FAKE LIST -->
+
 </div>
 
 
