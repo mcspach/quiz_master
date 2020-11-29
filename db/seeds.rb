@@ -22,7 +22,7 @@ SubjectArea.destroy_all
 
 puts 'deleted everything'
 
-campaign_questions = [
+refresher_questions = [
   {
   question: "What structure supporting the fifth wheel skid plate should be checked for cracks or breaks?",
   explanation: "Sliding pintle",
@@ -658,9 +658,10 @@ campaign_questions = [
   ]},
 ]
 
-burst_questions = [
+minimizer_questions = [
   {
   question: "What should you do if a customer requires you to stop in a spot which is high-risk - for example, on an incline with two way surrounding traffic?",
+  explanation: "No two situations are alike. Your manager will be able to provide further guidance taking into account safety factors, business imperatives as well as communication with the client to work out a safe way to proceed for you.",
   answers: [
     {
       content: "You should go ahead and park there because the customer is always right.",
@@ -672,8 +673,7 @@ burst_questions = [
     },
     {
       content: "You should phone your shift manager, explain the situation and get their instructions of how to proceed.",
-      is_correct: true,
-      explanation: "No two situations are alike. Your manager will be able to provide further guidance taking into account safety factors, business imperatives as well as communication with the client to work out a safe way to proceed for you."
+      is_correct: true
     },
     {
       content: "All of the above.",
@@ -682,6 +682,7 @@ burst_questions = [
   ]},
   {
   question: "When parking in a hazardous area - for example, on an incline - the main cause of an incident will be the hazards you considered before parking there - for example, poor visibility to surrounding drivers.",
+  explanation: "In the majority of cases, there is no single cause of an incident but rather an accumulation of many small factors which led to the incident.",
   answers: [
     {
       content: "True",
@@ -689,12 +690,12 @@ burst_questions = [
     },
     {
       content: "False",
-      is_correct: true,
-      explanation: "In the majority of cases, there is no single cause of an incident but rather an accumulation of many small factors which led to the incident."
+      is_correct: true
     }
   ]},
   {
   question: "When parking in a hazardous area - for example, on an incline - the gear shift should be left in reverse.",
+  explanation: "The gear shift should not be left in reverse when parking on an incline.",
   answers: [
     {
       content: "True",
@@ -702,12 +703,12 @@ burst_questions = [
     },
     {
       content: "False",
-      is_correct: true,
-      explanation: "The gear shift should not be left in reverse when parking on an incline."
+      is_correct: true
     }
   ]},
   {
   question: "Who bears liability for an accident when the driver of the company was at fault?",
+  explanation: "Under state and federal legislation, even if the company driver was at fault, legal liability can extend up the company's chain of command to include other company employees, including its directors.",
   answers: [
     {
       content: "The driver.",
@@ -723,12 +724,12 @@ burst_questions = [
     },
     {
       content: "All of the above.",
-      is_correct: true,
-      explanation: "Under state and federal legislation, even if the company driver was at fault, legal liability can extend up the company's chain of command to include other company employees, including its directors."
+      is_correct: true
     }
   ]},
   {
     question: "You should only think about safety risks in situations which look risky.",
+    explanation: "The data shows that the majority of safety incidents happen in what are perceived as 'safe situations'. This can lead to complacency which is a significant cause of incidents. So, you should also consider risks when everything 'seems right'.",
     answers: [
       {
         content: "True",
@@ -736,14 +737,13 @@ burst_questions = [
       },
       {
         content: "False",
-        is_correct: true,
-        explanation: "The data shows that the majority of safety incidents happen in what are perceived as 'safe situations'. This can lead to complacency which is a significant cause of incidents. So, you should also consider risks when everything 'seems right'."
+        is_correct: true
       }
     ]}
 ]
 
 #Create a company
-company = Company.create!( name: 'The Trucking Guys')
+company = Company.create!( name: 'Trucking USA')
 puts 'Company Created'
 
 
@@ -758,14 +758,14 @@ puts 'Subject Area Created'
 
   # 1. Create a quiz
   quiz = Quiz.create!(
-    quiz_type: 'campaign',
+    quiz_type: 'refresher',
     subject_area: subject_area,
     title: "Week #{number}"
   )
 
   # 2. questions
   3.times do
-    hash_question = campaign_questions.sample
+    hash_question = refresher_questions.sample
     question = Question.create!(
       quiz: quiz,
       content: hash_question[:question],
@@ -783,7 +783,7 @@ puts 'Subject Area Created'
   end
 end
 
-puts '12 Quizzes with Q&A Created'
+puts '12 Refreshers Quizzes with Q&A Created'
 
 #Create User
 user1 = User.create!(
@@ -819,7 +819,7 @@ puts 'Users Created'
     quiz: Quiz.all.sample,
   )
 end
-puts '8 Company_Quizzes created, week 8 quiz should be available to complete'
+puts '8 Refresher Company_Quizzes created, week 8 quiz should be available to complete'
 
 #Create Quiz Results
 User.all.each do |user|
@@ -835,4 +835,96 @@ User.all.each do |user|
   end
 end
 
-puts '7 Q_Results Created for each User, its week 8 in the Quarter'
+puts '7 Refresher Q_Results Created for each User, its week 8 in the Quarter'
+
+puts 'Creating refresher quizzes'
+
+    # 1. Create a subject area
+    subject_area = SubjectArea.create!(
+      title: 'Checking Brakes',
+      content: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.'
+    )
+    puts 'Subject Area Created'
+    
+    20.times do |number|
+    
+      # 1. Create a quiz
+      quiz = Quiz.create!(
+        quiz_type: 'minimizer',
+        subject_area: subject_area,
+        title: "Quiz Minimizer #{number}"
+      )
+    
+      # 2. questions
+      5.times do
+        hash_question = minimizer_questions.sample
+        question = Question.create!(
+          quiz: quiz,
+          content: hash_question[:question],
+          explanation: hash_question[:explanation]
+        )
+    
+        # 3. answers
+        hash_question[:answers].each do |answer_attributes|
+          Answer.create!(
+            content: answer_attributes[:content],
+            is_correct: answer_attributes[:is_correct],
+            question: question
+          )
+        end
+      end
+    end
+    
+    puts '20 Minimizer Quizzes with Q&A Created'
+    
+    #Create User
+    user1 = User.create!(
+      first_name: 'Andy',
+      last_name: 'Yang',
+      password: '123456',
+      email: 'andy@example.com',
+      phone_number: '1-667-221-0338',
+      company: company,
+      location: 'California',
+      role: 'driver'
+    )
+    
+    20.times do User.create!(
+      first_name: Faker::Name.first_name,
+      last_name: Faker::Name.last_name,
+      password: '123456',
+      email: Faker::Internet.unique.email,
+      phone_number: Faker::PhoneNumber.phone_number,
+      company: company,
+      location: 'California',
+      role: 'driver'
+    )
+    end
+    
+    puts 'Minimizer Users Created'
+    
+    
+    #Create Company Quizzes
+    20.times do
+      CompanyQuiz.create!(
+        company: company,
+        quiz: Quiz.all.sample,
+      )
+    end
+    puts '20 Minimizer Company_Quizzes created, week 8 quiz should be available to complete'
+    
+    #Create Quiz Results
+    User.all.each do |user|
+      CompanyQuiz.all.each do |cq|
+        unless cq == CompanyQuiz.last
+          QuizResult.create!(
+            user: user,
+            quiz: cq.quiz,
+            score: (1..5).to_a.sample,
+            possible_score: 5
+          )
+        end
+      end
+    end
+    
+    puts '20 Q_Results Created for each User, its week 8 in the Quarter'

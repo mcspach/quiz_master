@@ -29,6 +29,10 @@ class QuizResultsController < ApplicationController
     @quiz_result = QuizResult.find(params[:id])
   end
 
+  def minimizer_new
+    @minimizer_quiz = Quiz.find(params[:quiz_id])
+  end 
+
   private
 
   # params.require(:quiz_result).
