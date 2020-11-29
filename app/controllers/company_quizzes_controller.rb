@@ -53,10 +53,10 @@ class CompanyQuizzesController < ApplicationController
 
     if form_type == 'safety_refresher'
       url = home_url
-    # else
-    #   # 
+    else
+      url = minimizer_new_url
+      # url = url_for(action: 'home', controller: 'users', host: 'http://43fa0b04db42.ngrok.io') 
     end
-
     return "Please take your weekly safety refresher test: #{url}"
   end
 end

@@ -24,6 +24,11 @@ class QuizResultsController < ApplicationController
   def show
     @quiz_result = QuizResult.find(params[:id])
   end
+
+  def minimizer_new
+    @minimizer_quiz = Quiz.find(params[:quiz_id])
+  end 
+
   private 
 
   def quiz_result_params
