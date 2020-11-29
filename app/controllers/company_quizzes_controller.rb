@@ -17,7 +17,7 @@ class CompanyQuizzesController < ApplicationController
 
   def safety_refresher; end
 
-  def incident_minimization; end
+  def incident_minimizer; end
 
   def twilio
     client = Twilio::REST::Client.new
