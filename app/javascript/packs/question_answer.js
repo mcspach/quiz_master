@@ -55,6 +55,10 @@ document.querySelectorAll(".submit-button").forEach(submitButton => {
 
 document.querySelectorAll(".next-button").forEach(nextButton => {
   nextButton.addEventListener("click", (event) => {
+
+    const inputScore = document.querySelector('.final_score');
+    inputScore.value = score;
+
     const question = event.target.parentElement.parentElement 
       question.classList.toggle("d-none");
     const nextQuestion = question.nextElementSibling
@@ -80,3 +84,4 @@ document.querySelectorAll(".next-button").forEach(nextButton => {
 
   })
 })
+
