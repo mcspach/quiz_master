@@ -54,7 +54,6 @@
         <%# this entire div needs to stay the same-ish size, but fit either one or two buttons. %>
           <button class="btn submit-button">Submit</button>
           <% if question == @quiz.questions.last %>
-
             <%= simple_form_for([@quiz, @quiz_result]) do |f| %>
             <%= f.input :score, as: :hidden, input_html: { class: 'final_score' } %>
             <%= f.submit "See My Results"%>

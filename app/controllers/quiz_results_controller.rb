@@ -25,6 +25,7 @@ class QuizResultsController < ApplicationController
     @quiz_result = QuizResult.find(params[:id])
   end
   private 
+
   def quiz_result_params
     params.require(:quiz_result).permit(:quiz_id, :score, :possible_score, :user_id)
   end
