@@ -12,10 +12,10 @@
   <div class="question-answers">
     <% @quiz.questions.each_with_index do |question, index| %>
       <div class="question-success <%= "d-none" if index != 0 %>" >
-        <div class="content mb-4 py-3 pl-3">
-          <p><%= question.content %></p>
-          <div class="q-message correct-message d-none pr-3"><p style="background-color: rgba(32, 199, 79, 0.6);border-radius: 8px; color: white; box-shadow: 3px 5px 3px grey">That's correct!</p></div>
-          <div class="q-message incorrect-message d-none pr-3"><p style="background-color: #CC3F36;border-radius: 8px; color: white; box-shadow: 3px 5px 3px grey">Sorry, that's not correct.</p></div>
+        <div class="content mb-4">
+          <p class="py-3 pl-3"><%= question.content %></p>
+          <div class="q-message correct-message d-none"><p style="background-color: rgba(32, 199, 79, 0.6);border-radius: 8px; color: white; box-shadow: 3px 5px 3px grey; text-align: center">That's correct!</p></div>
+          <div class="q-message incorrect-message d-none"><p style="background-color: #CC3F36;border-radius: 8px; color: white; box-shadow: 3px 5px 3px grey; text-align: center">Sorry, that's not correct.</p></div>
         </div>
         <div class="modal fade" id="explanation-modal-<%= question.id %>" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
           <div class="modal-dialog">

@@ -4,34 +4,40 @@
 
   <div class="points-bar">
     <div class="current-points">
-    
       <h4><strong><%= @current_points %></strong></h4>
     </div>
      <div class="possible-points" style="width: <%= @div_points %>%">
-        
         <h4><strong><%= @remaining_points %></strong></h4>
       </div>
   </div>
+
   <div class="points-text d-flex ">
-  <p class="c_point">Current Points</p>
-  <p class="avail_point">Points Available</p>
+    <p class="c_point">Current Points</p>
+    <p class="avail_point">Points Available</p>
   </div>
     <div class="points-you-can-earn">
       <h1 class="rewards-header">With 3,000 points you could earn...</h1>
     </div>
+
     <div class="row prizes-box">
       <div class="col-6">
         <%= image_tag("coffee.png", class: "reward-img") %>
+          <h6>$50 Hardware Voucher</h6>
       </div>
       <div class="col-6">
-        <%= image_tag("donut.png", class: "reward-img") %>
+          <%= image_tag("donut.png", class: "reward-img") %>
+          <h6>1 carton of Dunkin Donuts</h6>
       </div>
       <div class="col-6 pt-4">
-       <%= image_tag("beer.png", class: "reward-img") %>
-     </div>
-     <div class="col-6 pt-4">
-      <%= image_tag("hammer.png", class: "reward-img") %>
+        <%= image_tag("beer.png", class: "reward-img") %>
+        <h6>1 case of Bud Light</h6>
+      </div>
+      <div class="col-6 pt-4">
+          <%= image_tag("hammer.png", class: "reward-img") %>
+          <h6>$50 Hardware Voucher</h6>
+      </div>
     </div>
+
     <div class="btn reward-btn"> <%= link_to "Home", home_path %></div>
   </div>
 
@@ -40,6 +46,3 @@
 <%# current_possible_points: <%= @current_possible_points %>
 <%# remaining_points: <%= @remaining_points %>
 <%# div_points: <%= @div_points %>
-
-</div>
-
