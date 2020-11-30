@@ -3,7 +3,7 @@
   <h1>Select Incident Minimizer</h1>
 </div>
 <div class="container text-center mt-5">
-  <%= form_with url: twilio_path, method: :get do |f| %>
+  <%= form_with url: twilio_path, method: :get, local: true do |f| %>
     <%['turning_left', 'stopping_safely', 'checking_brakes', 'load_restraint'].each do |option| %>
       <%= f.label "minimizer_topic_#{option}", option.humanize %>
       <%= f.radio_button :minimizer_topic, option  %>
@@ -19,3 +19,4 @@
     </div>
   </div>
 </div>
+<div class="container text-center">
