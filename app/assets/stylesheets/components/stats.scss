@@ -58,11 +58,13 @@ h2{
 .bub-green {
   background-color: rgb(60, 225, 60);
   // flex-basis: 90px;
+  max-width: 80px;
 }
 
 .bub-red {
   background-color: rgb(242, 95, 95);
   // flex-basis: 90px;
+  max-width: 80px;
 }
 
 .flex-percentage {
