@@ -59,7 +59,7 @@
 
           <button class="btn minimizer-submit-button">Submit</button>
           <% if question == @minimizer_quiz.questions.last %>
-          <button class="btn finish-minimizer d-none"> <%= link_to 'Finish', root_path %> </button>
+          <button class="btn finish-minimizer d-none"> <%= link_to 'Finish', thankyou_path(current_user) %> </button>
           <% else %>
           <button class="btn minimizer-next-button d-none">Next Question</button>
           <% end %>
