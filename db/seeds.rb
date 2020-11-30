@@ -797,6 +797,18 @@ user1 = User.create!(
   role: 'driver'
 )
 
+#Create User
+user2 = User.create!(
+  first_name: 'Andy',
+  last_name: 'Yang',
+  password: '123456',
+  email: 'andy@example.com',
+  phone_number: '1-667-221-0338',
+  company: company,
+  location: 'California',
+  role: 'driver'
+)
+
 10.times do User.create!(
   first_name: Faker::Name.first_name,
   last_name: Faker::Name.last_name,
@@ -846,7 +858,7 @@ puts 'Creating refresher quizzes'
     )
     puts 'Subject Area Created'
     
-    20.times do |number|
+    3.times do |number|
     
       # 1. Create a quiz
       quiz = Quiz.create!(
@@ -875,56 +887,44 @@ puts 'Creating refresher quizzes'
       end
     end
     
-    puts '20 Minimizer Quizzes with Q&A Created'
+    puts '3 Minimizer Quizzes with Q&A Created'
     
-    #Create User
-    user1 = User.create!(
-      first_name: 'Andy',
-      last_name: 'Yang',
-      password: '123456',
-      email: 'andy@example.com',
-      phone_number: '1-667-221-0338',
-      company: company,
-      location: 'California',
-      role: 'driver'
-    )
     
-    20.times do User.create!(
-      first_name: Faker::Name.first_name,
-      last_name: Faker::Name.last_name,
-      password: '123456',
-      email: Faker::Internet.unique.email,
-      phone_number: Faker::PhoneNumber.phone_number,
-      company: company,
-      location: 'California',
-      role: 'driver'
-    )
-    end
+    # 20.times do User.create!(
+    #   first_name: Faker::Name.first_name,
+    #   last_name: Faker::Name.last_name,
+    #   password: '123456',
+    #   email: Faker::Internet.unique.email,
+    #   phone_number: Faker::PhoneNumber.phone_number,
+    #   company: company,
+    #   location: 'California',
+    #   role: 'driver'
+    # )
+    # end
     
-    puts 'Minimizer Users Created'
+    # puts 'Minimizer Users Created'
     
     
     #Create Company Quizzes
-    20.times do
+    3.times do
       CompanyQuiz.create!(
         company: company,
-        quiz: Quiz.all.sample,
+        quiz: Quiz.where("quiz_type = 'minimizer'").sample
       )
     end
-    puts '20 Minimizer Company_Quizzes created, week 8 quiz should be available to complete'
+    puts '3 Minimizer Company_Quizzes created'
     
-    #Create Quiz Results
+    # Create Quiz Results
+  
     User.all.each do |user|
-      CompanyQuiz.all.each do |cq|
-        unless cq == CompanyQuiz.last
+      CompanyQuiz.joins(:quiz).where("quizzes.quiz_type = 'minimizer'").each do |cq|
           QuizResult.create!(
             user: user,
             quiz: cq.quiz,
             score: (1..5).to_a.sample,
             possible_score: 5
           )
-        end
       end
     end
     
-    puts '20 Q_Results Created for each User, its week 8 in the Quarter'
+    puts '3 Minimizer Q_Results Created for each User'

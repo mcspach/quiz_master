@@ -1,6 +1,5 @@
 class CompaniesController < ApplicationController
   def leaderboard
-
     @company = current_user.company
     drivers = @company.users.where(role: 'driver')
     @drivers_list = drivers.map do |driver|
