@@ -23,6 +23,7 @@ Rails.application.routes.draw do
   get "/users/:id/rewards",                                   to: "users#rewards", as: :rewards_user
   get "/companies/:id/company_quizzes",                       to: "companies#company_quizzes", as: :company_quizzes
   get "quiz/:quiz_id/minimizer",                              to: "quiz_results#minimizer_new", as: :minimizer_new
+  get "/users/:id/finished",                                  to: "users#finished", as: :finished
 
 resources :quiz do 
   resources :quiz_results, only: [:create]

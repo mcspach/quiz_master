@@ -45,6 +45,10 @@ class UsersController < ApplicationController
     @percent_complete = ( QuizResult.where(user: current_user).size * 100 / CompanyQuiz.all.size )
   end
 
+  def finished
+    @user = current_user
+  end
+
   def rewards
     @user = current_user
     @current_points = 0
