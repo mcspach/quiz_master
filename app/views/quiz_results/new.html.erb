@@ -58,9 +58,9 @@
         <div class="actions">
           <button class="btn submit-button">Submit</button>
           <% if question == @quiz.questions.last %>
-            <button class="btn finish-button d-none">See My Results</button>
+          <button class="btn finish-button d-none">See My Results</button>
           <% else %>
-            <button class="btn next-button d-none">Next Question</button>
+           <button class="btn next-button d-none">Next Question</button>
           <% end %>
           <button id="video" class="btn btn-block show-explanation text-center d-none" data-toggle="modal" data-target="#explanation-modal-<%= question.id %>">Show Explanation >></button>
         </div>
