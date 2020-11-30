@@ -22,7 +22,7 @@
 .possible-points {
   padding: 4px 6px;
   background-color: #F9BC11;
-  border-radius: 0 8px 8px 0;
+  border-radius: 8px;
   color: #3E505A;
 }
 
@@ -39,9 +39,9 @@
 .points-bar {
   // padding-top: 12px;
   border-radius: 8px;
-  height: 30px; 
-  width: 90vw; 
-  margin: 0 auto; 
+  height: 8vh;  // height of our points bar
+  width: 90vw;
+  margin: 0 auto; // margin on sides of bar
   display: flex;
   background-color: #E5F7FF;
 }
