@@ -58,7 +58,6 @@ const teamRankList = document.querySelector('.team-list');
     console.log('team rank go byebye');
   }
 });
-
 })
 
 
