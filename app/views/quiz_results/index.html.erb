@@ -26,13 +26,19 @@
       </div>
     </div>
 
-    <div class="col-6 p-1">
-      <div class="result_item">
-        <h2>Week</h2>
-        <span>8 of 12</span>
+    <div class="col-6 p-2">
+      <div class="result_item pt-1">
+        <h2 class="bold-text">Week:</h2>
+        <span class="smaller-txt">8 of 12</span>
       </div>
     </div>
   </div>
+
+  <h3 class="d-block mb-2">Correct answers this quiz</h3>
+  <div class="row justify-content-center">
+    <div class="bubble result-bubble">
+      <h1 class="big-number pl-3 pb-2">66<span class="percent">%</span></h1>
+    </div>
   </div>
   <div class="container">
     <div class="row justify-content-center mb-3">
@@ -42,12 +48,16 @@
           </div>
         </div>
   </div>
- 
- 
 
-<div class="stats-button">
-  <%= link_to "See My Statistics", stats_user_path(@user), class: "btn btn-block next-button"%>
+  <div class="row mt-4">
+    <div class="stats-button col-12">
+      <%= link_to "See My Statistics", stats_user_path(@user), class: "btn btn-block next-button"%>
+    </div>
+  </div>
 </div>
+
+
+
 
 
 todays quiz : <%= @todays_quiz.score %>
