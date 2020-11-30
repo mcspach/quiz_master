@@ -79,7 +79,7 @@
 
   <div class="row whole-list">
     <!-- THIS PRINTS EVERY DRIVER IN THE DB- NOT JUST THE TOP 10 -->
-      <% @drivers.each_with_index do |driver, index| %>
+      <% @drivers.first(10).each_with_index do |driver, index| %>
           <div class="list-row col-12 py-3"> <strong class="pr-2"> <%= index + 1 %></strong><span class="pl-4 name"><%= driver[:name]%></span> <span class="driver-points" style="float:right;"> <%= driver[:points]%></span> </div>
       <% end %>
   </div>
