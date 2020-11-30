@@ -49,6 +49,10 @@ class UsersController < ApplicationController
     @user = current_user
   end
 
+  def thankyou
+    @user = current_user
+  end
+
   def rewards
     @user = current_user
     @current_points = 0
