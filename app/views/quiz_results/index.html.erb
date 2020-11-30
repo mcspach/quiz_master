@@ -2,31 +2,31 @@
 
 <h1>Results</h1>
 
-<div class="container stats-box">
-  <div class="row justify-content-center">
+<div class="container">
+  <div class="row justify-content-center  stats-box">
 
     <div class="col-6 p-1">
       <div class="result_item">
-        <h2>Your Rank</h2>
+        <h2>Your Rank:</h2>
         <span>1st</span>
       </div>
     </div>
 
     <div class="col-6 p-1">
       <div class="result_item">
-        <h2>Team Rank</h2>
+        <h2>Team Rank:</h2>
         <span>2nd</span>
       </div>
     </div>
 
     <div class="col-6 p-1">
       <div class="result_item">
-        <h2>Points Today</h2>
+        <h2>Points Today:</h2>
         <span><%= @points_today %></span>
       </div>
     </div>
 
-    <div class="col-6 p-2">
+    <div class="col-6 p-1">
       <div class="result_item pt-1">
         <h2 class="bold-text">Week:</h2>
         <span class="smaller-txt">8 of 12</span>
@@ -34,23 +34,15 @@
     </div>
   </div>
 
-  <h3 class="d-block mb-2">Correct answers this quiz</h3>
-  <div class="row justify-content-center">
-    <div class="bubble result-bubble">
-      <h1 class="big-number pl-3 pb-2">66<span class="percent">%</span></h1>
+  <h3>Correct Answers This Quiz 📚</h3>
+  <div class="row justify-content-center mt-2">
+    <div class="bubble result-bubble mt-3">
+      <h1 class="big-number pb-2"><%= @quiz_results.last.score %>/<%= @quiz_results.last.possible_score %></h1>
     </div>
-  </div>
-  <div class="container">
-    <div class="row justify-content-center mb-3">
-         <h3>Correct Answers This Quiz</h3>
-          <div class="bubble result-bubble">
-            <h1><%= @quiz_results.last.score %>/<%= @quiz_results.last.possible_score %></h1>
-          </div>
-        </div>
   </div>
 
   <div class="row mt-4">
-    <div class="stats-button col-12">
+    <div class="stats-button col-12 mt-2">
       <%= link_to "See My Statistics", stats_user_path(@user), class: "btn btn-block next-button"%>
     </div>
   </div>
