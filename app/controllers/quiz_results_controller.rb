@@ -3,7 +3,6 @@ class QuizResultsController < ApplicationController
   def new
     @quiz = Quiz.find(params[:quiz_id])
     @quiz_result = QuizResult.new
-    @hammer = "hammer"
   end
 
   def create

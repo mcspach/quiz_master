@@ -64,6 +64,6 @@ class UsersController < ApplicationController
 
   def home
     @user = current_user
-    @quiz_id = CompanyQuiz.last.quiz
+    @quiz_id = CompanyQuiz.joins(:quiz).where("quizzes.quiz_type = 'refresher'").last.quiz.id
   end
 end
