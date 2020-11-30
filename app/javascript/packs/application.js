@@ -30,31 +30,42 @@ import "bootstrap";
 
 
 document.addEventListener('turbolinks:load', () => {
-  // Call your functions here, e.g:
-  // initSelect2();
+
+// select lists
 const individualRankBtn = document.querySelector('.individual');
 const teamRankBtn = document.querySelector('.team');
 
 // When we click Team Rank button - Individual list dissappears
 teamRankBtn.addEventListener("click", (event) =>{
-  const individualRankList = document.querySelector('.whole-list');
-  individualRankList.classList.toggle('d-none');
-  const teamRankList = document.querySelector('.team-list');
-  teamRankList.classList.toggle('d-none');
+const individualRankList = document.querySelector('.whole-list');
+const teamRankList = document.querySelector('.team-list');
+
+  if (teamRankList.classList.contains('d-none')) {
+    teamRankList.classList.remove('d-none');
+    individualRankList.classList.add('d-none');
+    console.log('individual rank go byebye');
+  }
 });
 
 // When Individual Button is clicked we want Team Rank to dissappear and Individual to show again
 individualRankBtn.addEventListener("click", (event) =>{
-  // console.log('left button clicked');
-  const teamRankList = document.querySelector('.team-list');
-  teamRankList.classList.toggle('d-none');
-  const individualRankList = document.querySelector('.whole-list');
-  individualRankList.classList.toggle('d-none');
+const individualRankList = document.querySelector('.whole-list');
+const teamRankList = document.querySelector('.team-list');
+
+  if (individualRankList.classList.contains('d-none')) {
+    individualRankList.classList.remove('d-none');
+    teamRankList.classList.add('d-none');
+    console.log('team rank go byebye');
+  }
 });
 
-});
+})
 
 
+
+ // if teamRankList has d-none class add class of
+
+// element.classList.contains(className)
 
 // console.log(individualRankBtn);
 
