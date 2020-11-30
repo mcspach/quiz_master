@@ -2,26 +2,27 @@
 
 <h1>Results</h1>
 
-<div class="container">
-  <div class="row justify-content-center stats-box">
-    <div class="col-6 p-2">
-      <div class="result_item pt-1">
-        <h2 class="bold-text">Your rank:</h2>
-        <span class="smaller-txt">1st</span>
+<div class="container stats-box">
+  <div class="row justify-content-center">
+
+    <div class="col-6 p-1">
+      <div class="result_item">
+        <h2>Your Rank</h2>
+        <span>1st</span>
       </div>
     </div>
 
-    <div class="col-6 p-2">
-      <div class="result_item pt-1">
-        <h2 class="bold-text">Team rank:</h2>
-        <span class="smaller-txt">2nd</span>
+    <div class="col-6 p-1">
+      <div class="result_item">
+        <h2>Team Rank</h2>
+        <span>2nd</span>
       </div>
     </div>
 
-    <div class="col-6 p-2">
-      <div class="result_item pt-1">
-        <h2 class="bold-text">Points today:</h2>
-        <span class="smaller-txt">200</span>
+    <div class="col-6 p-1">
+      <div class="result_item">
+        <h2>Points Today</h2>
+        <span><%= @points_today %></span>
       </div>
     </div>
 
@@ -38,6 +39,14 @@
     <div class="bubble result-bubble">
       <h1 class="big-number pl-3 pb-2">66<span class="percent">%</span></h1>
     </div>
+  </div>
+  <div class="container">
+    <div class="row justify-content-center mb-3">
+         <h3>Correct Answers This Quiz</h3>
+          <div class="bubble result-bubble">
+            <h1><%= @quiz_results.last.score %>/<%= @quiz_results.last.possible_score %></h1>
+          </div>
+        </div>
   </div>
 
   <div class="row mt-4">

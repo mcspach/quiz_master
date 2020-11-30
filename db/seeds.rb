@@ -840,7 +840,7 @@ User.all.each do |user|
       QuizResult.create!(
         user: user,
         quiz: cq.quiz,
-        score: (1..3).to_a.sample,
+        score: (2..3).to_a.sample,
         possible_score: 3
       )
     end
@@ -921,7 +921,7 @@ puts 'Creating refresher quizzes'
           QuizResult.create!(
             user: user,
             quiz: cq.quiz,
-            score: (1..5).to_a.sample,
+            score: (2..5).to_a.sample,
             possible_score: 5
           )
       end

@@ -54,15 +54,15 @@ class UsersController < ApplicationController
     @current_points = 0
     @user.quiz_results.each do |result|
       points = result.score * 100
-      @current_points += points
+      @current_points += points if result.quiz.quiz_type == 'refresher'
     end
     @current_possible_points = 0
     @user.quiz_results.each do |possible|
       possible_points = possible.possible_score * 100
-      @current_possible_points += possible_points
+      @current_possible_points += possible_points if possible.quiz.quiz_type == 'refresher'
     end
 
-    @remaining_points = (@current_possible_points - @current_points)
+    @remaining_points = (3600 - @current_points)
     @div_points = @remaining_points * 100 / 3600
   end
 
