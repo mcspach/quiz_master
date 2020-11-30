@@ -5,14 +5,29 @@ class CompanyQuizzesController < ApplicationController
   end
 
   def create
-    @company_quiz = CompanyQuiz.new
-    @company_quiz.company = params([:company])
-    if CompanyQuiz.all.empty?
-      @company_quiz.quiz_id = Quiz.first
+      @company_quiz = CompanyQuiz.new
+      @company_quiz.company = params([:company])
+     
+      @refreshers = CompanyQuiz.where(quiz.quiz_type == 'refresher')
+      @minimizers = CompanyQuiz.where(quiz.quiz_type == 'minimizer')
+
+    if @companyquiz.quiz.quiz_type == 'refresher'
+      if @refreshers.empty?
+        # assign it the first possible Quiz ID
+        @company_quiz.quiz_id = Quiz.where(quiz_type == 'refresher').first
+      else
+        @company_quiz.quiz_id = (@refreshers.last.quiz_id + 1)
+      end
+      @company_quiz.save!
     else
-      @company_quiz.quiz_id = (CompanyQuiz.last.quiz_id + 1)
+      if @minimizers.empty?
+        # assign it the first possible Quiz ID
+        @company_quiz.quiz_id = Quiz.where(quiz_type == 'minimizer').first
+      else
+        @company_quiz.quiz_id = (@minimizers.last.quiz_id + 1)
+      end
+        @company_quiz.save!
     end
-    @company_quiz.save!
   end
 
   def safety_refresher; end
