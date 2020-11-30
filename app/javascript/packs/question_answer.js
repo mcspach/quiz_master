@@ -21,6 +21,10 @@ document.querySelectorAll(".submit-button").forEach(submitButton => {
 
       score = score + 1;
       console.log(score);
+
+      const inputScore = document.querySelector('.final_score');
+      inputScore.value = score;
+
       const image = event.target.parentElement.parentElement.parentElement.previousElementSibling.previousElementSibling.previousElementSibling
         image.classList.toggle("d-none");
 
@@ -43,7 +47,6 @@ document.querySelectorAll(".submit-button").forEach(submitButton => {
       const radio = question.querySelector('input:checked')
         radio.classList.toggle('color-incorrect');
 
-      // Toggle d-none on the 'message-incorrect'
       const message = question.querySelector('.incorrect-message')
        message.classList.toggle('d-none');
     };
@@ -54,14 +57,11 @@ document.querySelectorAll(".submit-button").forEach(submitButton => {
 document.querySelectorAll(".next-button").forEach(nextButton => {
   nextButton.addEventListener("click", (event) => {
 
-    const inputScore = document.querySelector('.final_score');
-    inputScore.value = score;
-
     const question = event.target.parentElement.parentElement
       question.classList.toggle("d-none");
     const nextQuestion = question.nextElementSibling
       nextQuestion.classList.toggle("d-none");
-    // add d-none on all message
+    
     const message = question.querySelector('.q-message')
       message.classList.add('d-none');
 
@@ -80,6 +80,12 @@ document.querySelectorAll(".next-button").forEach(nextButton => {
     const imageNo = event.target.parentElement.parentElement.parentElement.previousElementSibling
     imageNo.classList.add("d-none");
 
+  })
+})
+
+document.querySelectorAll(".finish-button").forEach(finishButton => {
+  finishButton.addEventListener("click", (event) => {
+    document.querySelector('#new_quiz_result').submit()
   })
 })
 

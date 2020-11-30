@@ -12,7 +12,7 @@
   <div class="question-answers">
     <% @quiz.questions.each_with_index do |question, index| %>
       <div class="question-success <%= "d-none" if index != 0 %>" >
-
+      
         <div class="content mb-4 py-3 pl-3">
           <p><%= question.content %></p>
           <div class="q-message correct-message d-none pr-3"><p style="background-color: rgba(32, 199, 79, 0.6);border-radius: 8px; color: white; box-shadow: 3px 5px 3px grey">That's correct!</p></div>
@@ -56,23 +56,23 @@
         </div>
 
         <div class="actions">
-        <%# this entire div needs to stay the same-ish size, but fit either one or two buttons. %>
           <button class="btn submit-button">Submit</button>
           <% if question == @quiz.questions.last %>
-            <%= simple_form_for([@quiz, @quiz_result]) do |f| %>
-            <%= f.input :score, as: :hidden, input_html: { class: 'final_score' } %>
-            <%= f.submit "See My Results"%>
-          <% end %>
-          <%# end %>
-            <%# <%= link_to "See My Results", quiz_results_create_path(score: 2, possible_score: @quiz.questions.count), class: "btn next-button d-none"%>
+            <button class="btn finish-button d-none">See My Results</button>
           <% else %>
             <button class="btn next-button d-none">Next Question</button>
           <% end %>
           <button id="video" class="btn btn-block show-explanation text-center d-none" data-toggle="modal" data-target="#explanation-modal-<%= question.id %>">Show Explanation >></button>
         </div>
-
+      
       </div>
     <% end %>
+    <div class="d-none"><%= simple_form_for([@quiz, @quiz_result]) do |f| %>
+              <%= f.input :score, as: :hidden, input_html: { class: 'final_score' } %>
+              <%= f.submit "See My Results" %>
+    <% end %>
+    </div>
+    
   <%= javascript_pack_tag 'question_answer' %>
   </div>
 </div>

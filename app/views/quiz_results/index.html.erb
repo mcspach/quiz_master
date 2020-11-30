@@ -7,22 +7,22 @@
 
     <div class="col-6 p-1">
       <div class="result_item">
-        <h2>Your rank</h2>
+        <h2>Your Rank</h2>
         <span>1st</span>
       </div>
     </div>
 
     <div class="col-6 p-1">
       <div class="result_item">
-        <h2>Team rank</h2>
+        <h2>Team Rank</h2>
         <span>2nd</span>
       </div>
     </div>
 
     <div class="col-6 p-1">
       <div class="result_item">
-        <h2>Points today</h2>
-        <span>200</span>
+        <h2>Points Today</h2>
+        <span><%= @points_today %></span>
       </div>
     </div>
 
@@ -36,9 +36,9 @@
   </div>
   <div class="container">
     <div class="row justify-content-center mb-3">
-         <h3>Correct answers this quiz</h3>
+         <h3>Correct Answers This Quiz</h3>
           <div class="bubble result-bubble">
-            <h1>66%</h1>
+            <h1><%= @quiz_results.last.score %>/<%= @quiz_results.last.possible_score %></h1>
           </div>
         </div>
   </div>
