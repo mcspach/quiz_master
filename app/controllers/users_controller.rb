@@ -36,7 +36,7 @@ class UsersController < ApplicationController
 
     # percentage correct
     percent_array = []
-    QuizResult.all.each do |result|
+    QuizResult.joins(:quiz).where("quizzes.quiz_type = 'refresher'").each do |result|
       percent_array << (result.score * 100 / result.possible_score)
     end
     @percent_correct = ( percent_array.sum / percent_array.size )
@@ -58,12 +58,12 @@ class UsersController < ApplicationController
       @current_possible_points += possible_points
     end
 
-    @remaining_points = (3600 - @current_possible_points)
+    @remaining_points = (@current_possible_points - @current_points)
     @div_points = @remaining_points * 100 / 3600
   end
 
   def home
     @user = current_user
-    @quiz_id = CompanyQuiz.last.quiz
+    @quiz_id = CompanyQuiz.joins(:quiz).where("quizzes.quiz_type = 'refresher'").last.quiz.id
   end
 end

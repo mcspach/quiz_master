@@ -5,45 +5,47 @@
 <div class="container stats-box">
   <div class="row justify-content-center">
 
-    <div class="col-6 p-1">
-      <div class="result_item">
-        <h2>Your rank</h2>
-        <span>1st</span>
+      <div class="col-6 p-2">
+        <div class="result_item pt-1">
+          <h2>Your rank:</h2>
+          <span class="smaller-txt">1st</span>
+        </div>
       </div>
-    </div>
 
-    <div class="col-6 p-1">
-      <div class="result_item">
-        <h2>Team rank</h2>
-        <span>2nd</span>
+      <div class="col-6 p-2">
+        <div class="result_item pt-1">
+          <h2>Team rank:</h2>
+          <span class="smaller-txt">2nd</span>
+        </div>
       </div>
-    </div>
 
-    <div class="col-6 p-1">
-      <div class="result_item">
-        <h2>Points today</h2>
-        <span>200</span>
+      <div class="col-6 p-2">
+        <div class="result_item pt-1">
+          <h2>Points today:</h2>
+          <span class="smaller-txt">200</span>
+        </div>
       </div>
-    </div>
 
-    <div class="col-6 p-1">
-      <div class="result_item">
-        <h2>Week</h2>
-        <span>8 of 12</span>
+      <div class="col-6 p-2">
+        <div class="result_item pt-1">
+          <h2>Week:</h2>
+          <span class="smaller-txt">8 of 12</span>
+        </div>
       </div>
+
     </div>
-  </div>
-  </div>
+</div>
+
   <div class="container">
     <div class="row justify-content-center mb-3">
-         <h3>Correct answers this quiz</h3>
-          <div class="bubble result-bubble">
-            <h1>66%</h1>
-          </div>
-        </div>
+      <h3>Correct answers this quiz</h3>
+      <div class="bubble result-bubble">
+        <h1>66%</h1>
+      </div>
+    </div>
   </div>
- 
- 
+
+
 
 <div class="stats-button">
   <%= link_to "See My Statistics", stats_user_path(@user), class: "btn btn-block next-button"%>
