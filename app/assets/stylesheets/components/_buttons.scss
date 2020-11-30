@@ -32,3 +32,19 @@ a {
 .stats-button {
   justify-content: center;
 }
+
+.home-rewards {
+  color: #3E505A !important;
+  background-color: white;
+  font-family: Roboto !important;
+  box-shadow: none;
+}
+
+.home-rewards:hover {
+  background-color: #ffffff;
+}
+
+a:hover {
+  text-decoration: none;
+  color: white;
+}
