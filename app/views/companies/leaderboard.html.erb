@@ -1,53 +1,3 @@
-<style>
-
-  /*Styling for split button on top*/
-  .individual-team-choice{
-    height: 60px;
-    width: 80vw;
-    background-color: #E5F7FF;
-    border-radius:25px;
-    border: 4px solid #25C1A9;
-  }
-
-  .individual{
-    border-right:1px solid black;
-  }
-
-  .team,
-  .individual{
-    height: 52px;
-  }
-
-  /*Styling for leadeboard*/
-   .list-row{
-    padding-left: 25px;
-    background-color: #E5F7FF;
-    border-radius: 8px;
-    margin-bottom: 15px;
-    box-shadow: 3px 5px 3px grey;
-  }
-
-  .whole-list,
-  .team-list{
-    width: 90vw;
-    margin: 0 auto;
-  }
-
-  .name,
-  .driver-points{
-    font-size: 18px;
-    font-family: Roboto;
-  }
-
-  .team-points{
-    font-weight: bold;
-  }
-
-  .name-header{
-    font-size: 28px;
-  }
-</style>
-
 <%= render 'shared/banner' %>
 
 <h1>Leaderboard</h1>
@@ -64,11 +14,11 @@
 </div> -->
 <div class="container individual-team-choice">
   <div class="row justify-content-center text-center align-center ">
-    <div class="col individual pt-3">
-      <span>Individual Rank</span>
+    <div class="col individual pt-1">
+      <span class="individual-text bolder">Individual Rank</span>
     </div>
-    <div class="col team pt-3">
-      <span>Team Rank</span>
+    <div class="col team pt-1">
+      <span class="team-text gray-out">Team Rank</span>
     </div>
   </div>
 </div>
