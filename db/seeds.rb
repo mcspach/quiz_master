@@ -852,7 +852,7 @@ puts '7 Refresher Q_Results Created for each User, its week 8 in the Quarter'
 puts 'Creating refresher quizzes'
 
     # 1. Create a subject area
-    subject_area = SubjectArea.create!(
+    subject_area2 = SubjectArea.create!(
       title: 'Checking Brakes',
       content: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.'
     )
@@ -863,7 +863,7 @@ puts 'Creating refresher quizzes'
       # 1. Create a quiz
       quiz = Quiz.create!(
         quiz_type: 'minimizer',
-        subject_area: subject_area,
+        subject_area: subject_area2,
         title: "Quiz Minimizer #{number}"
       )
     
@@ -916,15 +916,15 @@ puts 'Creating refresher quizzes'
     
     # Create Quiz Results
   
-    User.all.each do |user|
-      CompanyQuiz.joins(:quiz).where("quizzes.quiz_type = 'minimizer'").each do |cq|
-          QuizResult.create!(
-            user: user,
-            quiz: cq.quiz,
-            score: (2..5).to_a.sample,
-            possible_score: 5
-          )
-      end
-    end
+    # User.all.each do |user|
+    #   CompanyQuiz.joins(:quiz).where("quizzes.quiz_type = 'minimizer'").each do |cq|
+    #       QuizResult.create!(
+    #         user: user,
+    #         quiz: cq.quiz,
+    #         score: (2..5).to_a.sample,
+    #         possible_score: 5
+    #       )
+    #   end
+    # end
     
     puts '3 Minimizer Q_Results Created for each User'
