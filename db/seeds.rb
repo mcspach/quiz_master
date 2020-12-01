@@ -45,7 +45,7 @@ refresher_questions = [
     }
   ]},
   {
-  question: "During a hydraulic brake check you must pump the brake pedal____times and then hold it down for______seconds. The brake pedal should not move (depress) for five seconds.",
+  question: "During a hydraulic brake check you must pump the brake pedal____times and then hold it down for______seconds.",
   explanation: "Sliding pintle",
   answers: [
     {
@@ -67,7 +67,7 @@ refresher_questions = [
   ]},
   {
   question: "Failure to perform an air brake check will result in an automatic failure of the vehicle inspection test.",
-  explanation: "To be inserted",
+  explanation: "An air brake is a serious safety issue but does not result in automatic failure under the legislation",
   answers: [
     {
       content: "True",
@@ -147,7 +147,7 @@ refresher_questions = [
   ]},
   {
     question: "On the steering linkage you must check for joints and sockets that are worn or loose and that there are no missing bolts, nuts, or cotter keys.",
-    explanation: "To be inserted",
+    explanation: "Worn joints and sockets on the steering linkage can result in significant equipment failure and therefore should be checked at regular intervals.",
     answers: [
       {
         content: "True",
@@ -155,7 +155,7 @@ refresher_questions = [
       },
       {
         content: "False",
-        is_correct: true,
+        is_correct: false,
       }
     ]},
     {
@@ -180,7 +180,7 @@ refresher_questions = [
   ]},
   {
   question: "It is unnecessary to check the slack adjusters when checking the brake system.",
-  explanation: "To be inserted",
+  explanation: "It is good practice but unecessary given slack adjusters are not a direct impact on the braking system.",
   answers: [
     {
       content: "True",
@@ -194,7 +194,7 @@ refresher_questions = [
 
   {
   question: "What common errors can cause you to fail a vehicle inspection?",
-  explanation: "To be inserted",
+  explanation: "Statistics show that incorrect paperwork is responsible for 57% of all vehicle inspection failures.",
   answers: [
     {
       content: "Brakes that aren't adjusted properly",
@@ -256,7 +256,7 @@ refresher_questions = [
     }
   ]},
   {
-  question: "You pump the pedal three times and hold it down for five seconds, making sure that the pedal does not move. What are you inspecting?",
+  question: "When pumping the pedal three times and holding it down for five seconds, what are you inspecting?",
   explanation: "If your vehicle has hydraulic brakes, test them by pumping the brake pedal three times and then applying firm pressure to it for five seconds, making sure the pedal does not move during that time. If your vehicle has air brakes, test them by performing the final air brake check as described in the Maine Commercial Driver License Manual.",
   answers: [
     {
@@ -341,7 +341,7 @@ refresher_questions = [
   ]},
   {
   question: "When checking the oil pressure gauge you should make sure that:",
-  explanation: "To be inserted",
+  explanation: "This is good safety behavior that you should check on regular occassions like stopping to refuel for gas.",
   answers: [
     {
       content: "The gauge shows decreasing oil pressure",
@@ -446,7 +446,7 @@ refresher_questions = [
   ]},
   {
   question: "You should never check the reservoir sight glass of the coolant level.",
-  explanation: "To be inserted",
+  explanation: "That is not correct - you should check the reservoir sight glass on regular occasions.",
   answers: [
     {
       content: "True",
@@ -459,7 +459,7 @@ refresher_questions = [
   ]},
   {
   question: "You must check to make sure that the oil pressure gauge is working.",
-  explanation: "To be inserted",
+  explanation: "This is good safety behavior which you should try and make second nature through common practice.",
   answers: [
     {
       content: "True",
@@ -472,7 +472,7 @@ refresher_questions = [
   ]},
   {
   question: "The temperature gauge is unimportant at a pre-trip inspection.",
-  explanation: "To be inserted",
+  explanation: "The tempature gauge is not one of the key elements that a highway patrol officer will be looking for during a roadside vehicle inspection.",
   answers: [
     {
       content: "True",
@@ -506,7 +506,7 @@ refresher_questions = [
   ]},
   {
   question: "Should you be prepared to perform the same brake components inspection of every axle (power unit and trailer, if equipped)?",
-  explanation: "To be inserted",
+  explanation: "Yes, each brake axle has a similar structure and therefore should be checked using the same test.",
   answers: [
     {
       content: "True",
@@ -540,7 +540,7 @@ refresher_questions = [
   ]},
   {
   question: "Listen for air leaks when checking the air/electric lines. Hoses and electrical lines should not be cut but can be spliced.",
-  explanation: "To be inserted",
+  explanation: "That is incorrect - you should not splice hoses and electrical lines when checking for leaks.",
   answers: [
     {
       content: "True",
@@ -750,7 +750,7 @@ puts 'Company Created'
     # 1. Create a subject area
 subject_area = SubjectArea.create!(
   title: 'Pre-Inspection',
-  content: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.'
+  content: 'Pre-Inspection is a major topic for any trucking company. Under state and federal regulations, pre-inspection safety now covers a 37 point test which all drivers should be prepared for. Significant fines and penalties can result from failing a pre-inspection test.'
 )
 puts 'Subject Area Created'
 
@@ -854,7 +854,7 @@ puts 'Creating refresher quizzes'
     # 1. Create a subject area
     subject_area2 = SubjectArea.create!(
       title: 'Checking Brakes',
-      content: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.'
+      content: 'Brake Failure is a significant, common cause in trucking accidents. This usually occurs in combination with other risk factors.'
     )
     puts 'Subject Area Created'
     
