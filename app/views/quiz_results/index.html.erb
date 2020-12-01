@@ -8,7 +8,7 @@
     <div class="col-6 p-1">
       <div class="result_item">
         <h2>Your Rank:</h2>
-        <span>1st</span>
+        <span><%= @your_rank %><%= @your_rank.ordinal %></span>
       </div>
     </div>
 
@@ -28,8 +28,8 @@
 
     <div class="col-6 p-1">
       <div class="result_item pt-1">
-        <h2 class="bold-text">Week:</h2>
-        <span class="smaller-txt">8 of 12</span>
+        <h2>Week:</h2>
+        <span><%= @user.quiz_results.count %> of <%= @refreshers.size %></span>
       </div>
     </div>
   </div>
@@ -47,4 +47,3 @@
     </div>
   </div>
 </div>
-
