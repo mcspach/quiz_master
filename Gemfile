@@ -40,7 +40,8 @@ gem 'bcrypt'
 gem 'unirest'
 
 gem 'faker'
-gem 'dotenv-rails', groups: [:development, :test]
+
+gem 'dotenv-rails', groups: [:development, :test]  # need to add :production also?
 gem 'cloudinary', '~> 1.16.0'
 
 group :development, :test do  gem 'pry-byebug'
