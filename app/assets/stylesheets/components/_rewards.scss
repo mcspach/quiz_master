@@ -20,11 +20,17 @@
 }
 
 .possible-points {
+  display:flex;
   padding: 4px 6px;
   background-color: #F9BC11;
   border-radius: 8px;
   color: #3E505A;
-  margin: 0 auto;
+  // margin: 0 auto;
+
+}
+
+.remaining{
+
 }
 
 // .yellow-box {
