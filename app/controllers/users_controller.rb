@@ -43,4 +43,23 @@ class UsersController < ApplicationController
     @user = current_user
     @quiz_id = CompanyQuiz.joins(:quiz).where("quizzes.quiz_type = 'refresher'").last.quiz.id
   end
+
+  def analytics
+    @safely_incident_column_one = []
+    @safely_incident_column_two = []
+    @column_incorrect_answers = []
+    @column_cost_savings = []
+
+    xlsx = Roo::Excelx.new("./config/analytics.xlsx")
+    xlsx.each_row_streaming do |row|
+      @column_cost_savings << row[4].value
+      @safely_incident_column_one << row[1].value
+      @safely_incident_column_two << row[2].value
+      @column_incorrect_answers << row[3].value
+    end
+    @safely_incident_column_one = @safely_incident_column_one.drop(1)
+    @safely_incident_column_two = @safely_incident_column_two.drop(1)
+    @column_incorrect_answers  =   @column_incorrect_answers.drop(1)
+  end
+
 end
