@@ -1,5 +1,3 @@
-
-
 <%= render 'shared/banner' %>
   <div class="container">
   <h1 class="today-quiz">Take Today's Quiz</h1>
@@ -15,8 +13,8 @@
 
         <div class="content mb-4">
           <p class="py-3 pl-3 pr-3"><%= question.content %></p>
-          <div class="q-message correct-message d-none"><p style="background-color: rgba(32, 199, 79, 0.6);border-radius: 8px; color: white; box-shadow: 3px 5px 3px grey; text-align: center">That's correct!</p></div>
-          <div class="q-message incorrect-message d-none"><p style="background-color: #CC3F36;border-radius: 8px; color: white; box-shadow: 3px 5px 3px grey; text-align: center">Sorry, that's not correct.</p></div>
+          <div class="q-message correct-message d-none bounce"><p style="background-color: rgba(32, 199, 79, 0.6);border-radius: 8px; color: white;  text-align: center">That's correct!</p></div>
+          <div class="q-message incorrect-message d-none shake"><p style="background-color: #CC3F36;border-radius: 8px; color: white; box-shadow: 3px 5px 3px grey; text-align: center">Sorry, that's not correct.</p></div>
         </div>
 
         <div class="modal fade" id="explanation-modal-<%= question.id %>" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -64,7 +62,7 @@
           <% end %>
           <button id="video" class="btn btn-block show-explanation text-center d-none" data-toggle="modal" data-target="#explanation-modal-<%= question.id %>">Show Explanation >></button>
         </div>
-      
+
       </div>
     <% end %>
     <div class="d-none"><%= simple_form_for([@quiz, @quiz_result]) do |f| %>
@@ -72,7 +70,7 @@
               <%= f.submit "See My Results" %>
     <% end %>
     </div>
-    
+
   <%= javascript_pack_tag 'question_answer' %>
   </div>
 </div>
