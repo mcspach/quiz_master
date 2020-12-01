@@ -40,10 +40,21 @@ teamRankBtn.addEventListener("click", (event) =>{
 const individualRankList = document.querySelector('.whole-list');
 const teamRankList = document.querySelector('.team-list');
 
+const teamText = document.querySelector('.team-text');
+const individualText = document.querySelector('.individual-text');
+
   if (teamRankList.classList.contains('d-none')) {
     teamRankList.classList.remove('d-none');
     individualRankList.classList.add('d-none');
-    console.log('individual rank go byebye');
+
+    individualText.classList.add('gray-out');
+    teamText.classList.remove('gray-out');
+
+    teamText.classList.add('bolder');
+    individualText.classList.remove('bolder');
+
+
+
   }
 });
 
@@ -52,10 +63,18 @@ individualRankBtn.addEventListener("click", (event) =>{
 const individualRankList = document.querySelector('.whole-list');
 const teamRankList = document.querySelector('.team-list');
 
+const individualText = document.querySelector('.individual-text');
+const teamText = document.querySelector('.team-text');
+
   if (individualRankList.classList.contains('d-none')) {
     individualRankList.classList.remove('d-none');
     teamRankList.classList.add('d-none');
-    console.log('team rank go byebye');
+
+    individualText.classList.remove('gray-out');
+    teamText.classList.add('gray-out');
+
+    individualText.classList.add('bolder');
+    teamText.classList.remove('bolder');
   }
 });
 })
