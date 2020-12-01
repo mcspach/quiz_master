@@ -28,6 +28,17 @@
     height: fit-content;
   }
 
-  .today-quiz{
+  .today-quiz {
     height: fit-content;
+  }
+
+  .highlight-correct-answer {
+    background-color: rgb(177, 228, 177);
+    color: white;
+  
+  }
+  
+  .highlight-incorrect-answer {
+    background-color: #d19792;
+    color: white;
   }

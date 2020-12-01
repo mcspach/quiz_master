@@ -7,14 +7,15 @@ document.querySelectorAll(".submit-button").forEach(submitButton => {
 
     const question = event.target.parentElement.parentElement
 
-        event.currentTarget.classList.toggle('d-none');
+    event.currentTarget.classList.toggle('d-none');
 
-        const nextButton = event.currentTarget.nextElementSibling
-          nextButton.classList.toggle("d-none");
+    const nextButton = event.currentTarget.nextElementSibling
+      nextButton.classList.toggle("d-none");
 
-        const showExplanation = nextButton.nextElementSibling
-        showExplanation.classList.toggle("d-none");
-    $("#correct-answer").addClass("highlight-correct-answer");
+    const showExplanation = nextButton.nextElementSibling
+    showExplanation.classList.toggle("d-none");
+
+    question.querySelector("#correct-answer").classList.toggle("highlight-correct-answer");
 
     const isCorrect = question.querySelector('input:checked').value == 'true'
     if (isCorrect) {
@@ -23,7 +24,7 @@ document.querySelectorAll(".submit-button").forEach(submitButton => {
       console.log(score);
 
       const inputScore = document.querySelector('.final_score');
-      inputScore.value = score;
+        inputScore.value = score;
 
       const image = event.target.parentElement.parentElement.parentElement.previousElementSibling.previousElementSibling.previousElementSibling
         image.classList.toggle("d-none");
@@ -31,21 +32,22 @@ document.querySelectorAll(".submit-button").forEach(submitButton => {
       const imageYes = event.target.parentElement.parentElement.parentElement.previousElementSibling.previousElementSibling
       imageYes.classList.toggle("d-none");
 
-      const radio = question.querySelector('input:checked')
-        radio.classList.toggle('color-correct');
+      // const radio = question.querySelector('input:checked')
+      //   radio.classList.toggle('color-correct');
 
       const message = question.querySelector('.correct-message')
        message.classList.toggle('d-none');
 
     } else {
-      $(question.querySelector('input:checked').parentElement).addClass("highlight-wrong-answer");
+
       const image = event.target.parentElement.parentElement.parentElement.previousElementSibling.previousElementSibling.previousElementSibling
         image.classList.toggle("d-none");
 
       const imageNo = event.target.parentElement.parentElement.parentElement.previousElementSibling
       imageNo.classList.toggle("d-none");
-      const radio = question.querySelector('input:checked')
-        radio.classList.toggle('color-incorrect');
+
+      const wrong = question.querySelector('input:checked').parentElement
+        wrong.classList.add('highlight-incorrect-answer');
 
       const message = question.querySelector('.incorrect-message')
        message.classList.toggle('d-none');
