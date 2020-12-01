@@ -1,6 +1,8 @@
 
 let score = 0;
 console.log(score);
+let correctSound = new Audio ('https://res.cloudinary.com/duj93wpnu/video/upload/v1606842266/Correct_Answer_aalpwh.mp3');
+let wrongsound = new Audio ('https://res.cloudinary.com/duj93wpnu/video/upload/v1606843161/Negative-sound-effect_g2nodn.mp3');
 
 document.querySelectorAll(".submit-button").forEach(submitButton => {
   submitButton.addEventListener("click", (event) => {
@@ -18,7 +20,7 @@ document.querySelectorAll(".submit-button").forEach(submitButton => {
 
     const isCorrect = question.querySelector('input:checked').value == 'true'
     if (isCorrect) {
-
+      correctSound.play();
       score = score + 1;
       console.log(score);
 
@@ -33,6 +35,7 @@ document.querySelectorAll(".submit-button").forEach(submitButton => {
 
       const radio = question.querySelector('input:checked')
         radio.classList.toggle('color-correct');
+
 
       const message = question.querySelector('.correct-message')
        message.classList.toggle('d-none');
@@ -49,6 +52,7 @@ document.querySelectorAll(".submit-button").forEach(submitButton => {
 
       const message = question.querySelector('.incorrect-message')
        message.classList.toggle('d-none');
+       wrongsound.play();
     };
   });
 })
@@ -61,7 +65,7 @@ document.querySelectorAll(".next-button").forEach(nextButton => {
       question.classList.toggle("d-none");
     const nextQuestion = question.nextElementSibling
       nextQuestion.classList.toggle("d-none");
-    
+
     const message = question.querySelector('.q-message')
       message.classList.add('d-none');
 

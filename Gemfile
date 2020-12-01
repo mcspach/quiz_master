@@ -39,8 +39,8 @@ gem 'cloudinary', '~> 1.16.0'
 gem 'bcrypt'
 gem 'unirest'
 
-gem'faker'
-
+gem 'faker'
+gem 'dotenv-rails', groups: [:development, :test]
 
 group :development, :test do  gem 'pry-byebug'
   gem 'pry-rails'
