@@ -21,12 +21,16 @@
 <div class="container mt-5 text-center">
   <div class="row">
     <div class="col-4">
-      <%= image_tag 'quiz.png', class: 'img-thumbnail manager-icons' %>
-      <p class="manager-icon-text">All Quizzes Created</p>
+      <%= link_to  library_path do%>
+        <%= image_tag("bookshelf.png", class: "book-img")%>
+        <p class="pl-4 text-dark">Library</p>
+      <% end %>
     </div>
     <div class="col-4">
-      <%= image_tag 'research.png', class: 'img-thumbnail manager-icons' %>
-      <p class="manager-icon-text">Results in Progress</p>
+      <%= link_to  leaderboard_path(current_user.company) do%>
+        <%= image_tag("research.png", class: "trophy-img")%>
+        <p class="pl-1 text-dark">Results In Progress</p>
+    <% end %>
     </div>
     <div class="col-4">
       <%= image_tag 'machine-learning.png', class: 'img-thumbnail manager-icons' %>
