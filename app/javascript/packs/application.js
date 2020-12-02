@@ -36,6 +36,12 @@ document.addEventListener('turbolinks:load', () => {
 // select lists
 const individualRankBtn = document.querySelector('.individual');
 const teamRankBtn = document.querySelector('.team');
+const managerSubmitBtn = document.querySelector('.manager-submit');
+let mgrSubmitSound = new Audio ('https://res.cloudinary.com/duj93wpnu/video/upload/v1606924040/Fast-cinematic-whoosh-sound-effect_loc8og.mp3');
+
+managerSubmitBtn.addEventListener("click", (event) =>{
+  mgrSubmitSound.play();
+});
 
 // When we click Team Rank button - Individual list dissappears
 teamRankBtn.addEventListener("click", (event) =>{
@@ -82,12 +88,12 @@ const teamText = document.querySelector('.team-text');
 
 
 // When manager selects refresher quiz topic - play this sound.
-const managerSubmitBtn = document.querySelector('.manager-submit');
-console.log(managerSubmitBtn);
-let mgrSubmitSound = new Audio ('hhttps://res.cloudinary.com/duj93wpnu/video/upload/v1606924040/Fast-cinematic-whoosh-sound-effect_loc8og.mp3');
-managerSubmitBtn.addEventListener("click", (event) => {
-  mgrSubmitSound.play();
-});
+// const managerSubmitBtn = document.querySelector('.manager-submit');
+// console.log(managerSubmitBtn);
+// let mgrSubmitSound = new Audio ('https://res.cloudinary.com/duj93wpnu/video/upload/v1606924040/Fast-cinematic-whoosh-sound-effect_loc8og.mp3');
+// managerSubmitBtn.addEventListener("click", (event) => {
+//   mgrSubmitSound.play();
+// });
 
 
 
