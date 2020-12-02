@@ -53,8 +53,6 @@ const individualText = document.querySelector('.individual-text');
     teamText.classList.add('bolder');
     individualText.classList.remove('bolder');
 
-
-
   }
 });
 
@@ -81,18 +79,13 @@ const teamText = document.querySelector('.team-text');
 
 
 
- // if teamRankList has d-none class add class of
-
-// element.classList.contains(className)
-
-// console.log(individualRankBtn);
-
-
-
-
-
-
-
+// When manager selects refresher quiz topic - play this sound.
+const managerSubmitBtn = document.querySelector('.manager-submit');
+console.log(managerSubmitBtn);
+let mgrSubmitSound = new Audio ('hhttps://res.cloudinary.com/duj93wpnu/video/upload/v1606924040/Fast-cinematic-whoosh-sound-effect_loc8og.mp3');
+managerSubmitBtn.addEventListener("click", (event) => {
+  mgrSubmitSound.play();
+});
 
 
 
