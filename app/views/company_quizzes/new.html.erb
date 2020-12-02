@@ -19,24 +19,27 @@
   </div>
 </div>
 <div class="container mt-5 text-center">
-  <div class="row">
-    <div class="col-4">
+  <div class="row d-flex justify-content-center">
+    <div class="col-4 d-flex justify-content-center">
       <%= link_to  library_path do%>
-        <%= image_tag("bookshelf.png", class: "book-img")%>
+        <lottie-player src="https://assets5.lottiefiles.com/datafiles/5FFwoVNq8EcKMH4/data.json"  background="transparent"  speed=".5"  style="width: 110px; height: 110px;"  autoplay></lottie-player>
         <p class="pl-4 text-dark">Library</p>
       <% end %>
     </div>
-    <div class="col-4">
+    <div class="col-4 d-flex justify-content-center">
       <%= link_to  leaderboard_path(current_user.company) do%>
-        <%= image_tag("research.png", class: "trophy-img")%>
+          <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_aBYmBC.json" mode="bounce" background="transparent"  speed=".6"  style="width: 110px; height: 110px;"  loop  autoplay></lottie-player>
+        <%#= image_tag("research.png", class: "results-img")%>
         <p class="pl-1 text-dark">Results In Progress</p>
     <% end %>
     </div>
-    <div class="col-4">
+    <div class="col-4 d-flex justify-content-center">
       <%= link_to analytics_path do%>  
-        <%= image_tag 'machine-learning.png', class: 'img-thumbnail manager-icons' %>
+        <%#= image_tag 'machine-learning.png', class: 'img-thumbnail manager-icons' %>
+          <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_E3BfOE.json" mode="bounce" background="transparent"  speed=".6"  style="width: 110px; height: 110px;"  loop  autoplay></lottie-player>
         <p class="pl-1 text-dark">Analytics Report</p>
     <% end %>
     </div>
   </div>
 </div>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
