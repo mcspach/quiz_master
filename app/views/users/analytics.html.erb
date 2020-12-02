@@ -3,7 +3,7 @@
   <h1 class="analytics-heading">Analytics Report</h1>
   <h1 class="analytics-title">$ Saved This Month</h1>
   <h1 class="analytics-saved_amount"> $<%= @column_cost_savings[@column_cost_savings.length - 2 ]*5000 %></h1>
-  <h1 class="analytics-safe-per-month">Number of Safety Incidents Per Month</h1>
+  <h1 class="analytics-safe-per-month"><strong>Number of Safety Incidents Per Month</strong></h1>
   <div>
     <figure class="highcharts-figure">
       <div id="container"></div>
@@ -86,7 +86,7 @@
         }],
         legend: {
             layout: 'vertical',
-            align: 'left',
+            align: 'center',
             x: 120,
             verticalAlign: 'top',
             y: 100,
