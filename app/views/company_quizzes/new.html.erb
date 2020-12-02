@@ -33,8 +33,10 @@
     <% end %>
     </div>
     <div class="col-4">
-      <%= image_tag 'machine-learning.png', class: 'img-thumbnail manager-icons' %>
-      <p class="manager-icon-text">Analytics Report</p>
+      <%= link_to analytics_path do%>  
+        <%= image_tag 'machine-learning.png', class: 'img-thumbnail manager-icons' %>
+        <p class="pl-1 text-dark">Analytics Report</p>
+    <% end %>
     </div>
   </div>
 </div>

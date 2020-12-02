@@ -1,0 +1,98 @@
+<%= render 'shared/banner' %>
+<div class="container text-center">
+  <h1 class="analytics-heading">Analytics Report</h1>
+  <h1 class="analytics-title">$ Saved This Month</h1>
+  <h1 class="analytics-saved_amount"> $<%= @column_cost_savings[@column_cost_savings.length - 2 ]*5000 %></h1>
+  <h1 class="analytics-safe-per-month">Number of Safety Incidents Per Month</h1>
+  <div>
+    <figure class="highcharts-figure">
+      <div id="container"></div>
+      <p class="highcharts-description">
+      </p>
+    </figure>
+    <div class="text-center mt-5 mb-3">
+      <%= link_to 'Home', :manager_home, class: 'btn' %>
+    </div>
+  </div>
+</div>
+<%= javascript_pack_tag 'highchart' %>
+<script>
+    Highcharts.chart('container', {
+        chart: {
+            zoomType: 'xy'
+        },
+        title: {
+            text: 'Analytics Report'
+        },
+        subtitle: {
+            text: '$ Saved This Month'
+        },
+        xAxis: [{
+            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+                'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+            crosshair: true
+        }],
+        yAxis: [
+            { // Primary yAxis
+                title: {
+                    text: '2020 % Incorrect Answers',
+                    style: {
+                        color: Highcharts.getOptions().colors[0]
+                    }
+                },
+                labels: {
+                    format: '{value} %',
+                    style: {
+                        color: Highcharts.getOptions().colors[0]
+                    }
+                },
+                opposite: true
+            },
+            { // Secondary yAxis
+            labels: {
+                format: '{value}',
+                style: {
+                    color: Highcharts.getOptions().colors[1]
+                }
+            },
+            title: {
+                text: 'Safety Incidents',
+                style: {
+                    color: Highcharts.getOptions().colors[1]
+                }
+            }
+        }
+
+        ],
+        tooltip: {
+            shared: true
+        },
+
+        series: [{
+            name: '2020 Safety Incidents',
+            type: 'column',
+            yAxis: 1,
+            data: <%= @safely_incident_column_two %>,
+            tooltip: {
+                valueSuffix: ' incidents'
+            }
+        }, {
+            name: '2020 % Incorrect Answers',
+            type: 'spline',
+            data: <%= @column_incorrect_answers %>,
+            tooltip: {
+                valueSuffix: '°%'
+            }
+        }],
+        legend: {
+            layout: 'vertical',
+            align: 'left',
+            x: 120,
+            verticalAlign: 'top',
+            y: 100,
+            floating: true,
+            backgroundColor:
+                Highcharts.defaultOptions.legend.backgroundColor || // theme
+                'rgba(255,255,255,0.25)'
+        }});
+</script>

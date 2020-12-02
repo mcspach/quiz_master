@@ -25,6 +25,7 @@ Rails.application.routes.draw do
   get "quiz/:quiz_id/minimizer",                              to: "quiz_results#minimizer_new", as: :minimizer_new
   get "/users/:id/finished",                                  to: "users#finished", as: :finished
   get "/users/:id/thankyou",                                  to: "users#thankyou", as: :thankyou
+  get "/users/:id/analytics",                                  to: "users#analytics", as: :analytics
 
 resources :quiz do 
   resources :quiz_results, only: [:create]
