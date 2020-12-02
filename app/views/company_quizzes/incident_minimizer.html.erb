@@ -5,9 +5,11 @@
 <div class="container text-center mt-5">
   <%= form_with url: twilio_path, method: :get, local: true do |f| %>
     <%['turning_left', 'stopping_safely', 'checking_brakes', 'load_restraint'].each do |option| %>
-      <%= f.label "minimizer_topic_#{option}", option.humanize %>
+    <div class="answer-item py-2 pl-4 pr-1">
+      <%= f.label "minimizer_topic_#{option}", option.humanize, class: "answer-content pt-1" %>
       <%= f.radio_button :minimizer_topic, option  %>
-      <br />
+    </div>
+      <!-- <br /> -->
     <% end %>
     <%= f.submit 'Submit', class: 'btn manager-submit' %>
   <% end %>
@@ -20,3 +22,4 @@
   </div>
 </div>
 <div class="container text-center">
+
