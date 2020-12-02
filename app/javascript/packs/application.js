@@ -33,15 +33,20 @@ import "bootstrap";
 
 document.addEventListener('turbolinks:load', () => {
 
+// event listener for manager submit button
+const managerSubmitBtn = document.querySelector('.manager-submit');
+let mgrSubmitSound = new Audio ('https://res.cloudinary.com/duj93wpnu/video/upload/v1606924040/Fast-cinematic-whoosh-sound-effect_loc8og.mp3');
+if(managerSubmitBtn){
+  managerSubmitBtn.addEventListener("click", (event) =>{
+  mgrSubmitSound.play();
+});
+}
+
+
+
 // select lists
 const individualRankBtn = document.querySelector('.individual');
 const teamRankBtn = document.querySelector('.team');
-const managerSubmitBtn = document.querySelector('.manager-submit');
-let mgrSubmitSound = new Audio ('https://res.cloudinary.com/duj93wpnu/video/upload/v1606924040/Fast-cinematic-whoosh-sound-effect_loc8og.mp3');
-
-managerSubmitBtn.addEventListener("click", (event) =>{
-  mgrSubmitSound.play();
-});
 
 // When we click Team Rank button - Individual list dissappears
 teamRankBtn.addEventListener("click", (event) =>{
@@ -64,6 +69,7 @@ const individualText = document.querySelector('.individual-text');
   }
 });
 
+
 // When Individual Button is clicked we want Team Rank to dissappear and Individual to show again
 individualRankBtn.addEventListener("click", (event) =>{
 const individualRankList = document.querySelector('.whole-list');
@@ -84,17 +90,3 @@ const teamText = document.querySelector('.team-text');
   }
 });
 })
-
-
-
-// When manager selects refresher quiz topic - play this sound.
-// const managerSubmitBtn = document.querySelector('.manager-submit');
-// console.log(managerSubmitBtn);
-// let mgrSubmitSound = new Audio ('https://res.cloudinary.com/duj93wpnu/video/upload/v1606924040/Fast-cinematic-whoosh-sound-effect_loc8og.mp3');
-// managerSubmitBtn.addEventListener("click", (event) => {
-//   mgrSubmitSound.play();
-// });
-
-
-
-
