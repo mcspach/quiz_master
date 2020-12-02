@@ -8,7 +8,7 @@
 }
 
 .medal-img {
-  height: 120px;
+  height: 110px;
 }
 
 a:link {
@@ -17,6 +17,16 @@ a:link {
   .heart {
   animation: heart-pulse ease-out;
   animation-duration: 6s;
+}
+
+.manager-icons {
+  height: 80px;
+  width: 80px;
+}
+
+.results-img {
+  height: 80px;
+  width: 80px;
 }
 
 @keyframes heart-pulse {
