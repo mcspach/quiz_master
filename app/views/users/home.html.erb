@@ -1,4 +1,3 @@
-
 <%= render 'shared/banner' %>
 <div class="container">
   <h1>Welcome, <%= @user.first_name.capitalize %>!</h1>
@@ -7,31 +6,35 @@
     <div class="btn"> <%= link_to "Start Quiz", quiz_results_new_path(@quiz_id) %></div>
   </div>
 </div>
-
+<!-- #F9BC11 -->
 <%# <div class="btn mb-4" style="background-color: #25c1a9; color: white; font-size: 20px">
   <p><strong>Good Work!</strong></p><p>You don't have any quizzes right now.</p> %>
 
 
-<div class="container mt-5">
+<div class="container mt-4">
   <div class="row justify-content-around">
   <%# flexbox with direction: row and evenly spaced %>
     <%= link_to  rewards_user_path(current_user) do%>
       <div >
-        <%= image_tag("medal.png", class: "medal-img")%>
-        <p class="pl-3 text-dark">Rewards</p>
+        <%= image_tag("https://res.cloudinary.com/duj93wpnu/image/upload/v1606869520/icon-2.6s-194px_foaxas.png", class: "medal-img heart")%>
+        <p class="text-dark text-center">Rewards</p>
       </div>
     <% end %>
     <%= link_to  leaderboard_path(current_user.company) do%>
       <div>
-        <%= image_tag("competition.png", class: "trophy-img")%>
-        <p class="pl-1 text-dark">Leaderboard</p>
+        <%#= image_tag("https://res.cloudinary.com/duj93wpnu/image/upload/v1606870192/winner-1.1s-194px_cwvyho.png", class: "trophy-img")%>
+        <lottie-player src="https://assets7.lottiefiles.com/private_files/lf30_W3J9n9.json"  background="transparent"  speed=".4"  style="width: 130px; height: 130px;"   autoplay></lottie-player> <!--can add 'loop' before autoplay to make it go forever-->
+        <p class="text-center text-dark">Leaderboard</p>
       </div>
     <% end %>
     <%= link_to  library_path do%>
       <div>
-        <%= image_tag("bookshelf.png", class: "book-img")%>
-        <p class="pl-4 text-dark">Library</p>
+        <%#= image_tag("https://res.cloudinary.com/duj93wpnu/image/upload/v1606870539/encyclopedia-1.1s-194px_1_adisfv.png", class: "book-img")%>
+        <lottie-player src="https://assets5.lottiefiles.com/datafiles/5FFwoVNq8EcKMH4/data.json"  background="transparent"  speed=".5"  style="width: 130px; height: 130px;"  autoplay></lottie-player>
+        <p class="text-center text-dark">Library</p>
       </div>
     <% end %>
   </div>
 </div>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
