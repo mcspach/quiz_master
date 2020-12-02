@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   get "/companies/:id/leaderboard",                           to: "companies#leaderboard", as: :leaderboard
   get "/home",                                                to: "users#home", as: :home
   get "/quiz/:quiz_id/quiz_results/new",                      to: "quiz_results#new", as: :quiz_results_new
-  # post "/quiz/:quiz_id/quiz_results",                       to: "quiz_results#create" 
+  # post "/quiz/:quiz_id/quiz_results",                       to: "quiz_results#create"
   get "/subject_areas",                                       to: "subject_areas#index", as: :library
   get "/quiz_results",                                        to: "quiz_results#index", as: :results
   get "/users/:id/rewards",                                   to: "users#rewards", as: :rewards_user
@@ -28,7 +28,7 @@ Rails.application.routes.draw do
   get "/users/:id/thankyou",                                  to: "users#thankyou", as: :thankyou
   get "/users/:id/analytics",                                  to: "users#analytics", as: :analytics
 
-resources :quiz do 
+resources :quiz do
   resources :quiz_results, only: [:create]
 end
 
