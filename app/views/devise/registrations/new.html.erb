@@ -1,39 +1,59 @@
-<%= render 'shared/navbar' %>
-<h2>Sign up</h2>
+<style>
+  .container {
+    justify-content: center;
+  }
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
+  .signup {
+    margin-top: 6px;
+  }
 
-  <div class="form-inputs">
-    <%= f.input :first_name,
+  .form-actions {
+    justify-content:  center;
+    display: flex;
+  }
+
+  .form-control {
+    border-radius: 8px;
+  }
+</style>
+
+<%= render 'shared/banner' %>
+<div class= "container">
+  <h2 class="signup">Sign up</h2>
+
+  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= f.error_notification %>
+
+    <div class="form-inputs">
+      <%= f.input :first_name,
             required: true,
             autofocus: true,
             input_html: { autocomplete: "First name" }%>
-    <%= f.input :last_name,
+      <%= f.input :last_name,
             required: true,
             input_html: { autocomplete: "Last name" }%>
-    <%= f.input :email,
+      <%= f.input :email,
                 required: true,
                 input_html: { autocomplete: "email" }%>
-    <%= f.input :phone_number,
+      <%= f.input :phone_number,
                 required: true,
                 input_html: { autocomplete: "phone number" }%>
-    <%= f.input :password,
+      <%= f.input :password,
                 required: true,
                 hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
                 input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
+      <%= f.input :password_confirmation,
                 required: true,
                 input_html: { autocomplete: "new-password" } %>
-    <%= f.association :company, prompt: 'Select Company'%>
-    <%= f.input :role, :as => :hidden, :input_html => { :value => "driver" }  %>
-  </div>
+      <%= f.association :company, prompt: 'Select Company'%>
+      <%= f.input :role, :as => :hidden, :input_html => { :value => "driver" }  %>
+    </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
-  </div>
-<% end %>
-
+    <div class="form-actions">
+      <%= f.button :submit, "Sign up" %>
+    </div>
+  <% end %>
+</div>
 <%= render "devise/shared/links" %>
 
 
