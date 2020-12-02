@@ -2,14 +2,17 @@
 <div class="container text-center">
   <h1>Select Safety Refresher</h1>
 </div>
-<div class="container text-center mt-5">
+<div class="container answer-box text-center mt-5">
   <%= form_with url: twilio_path, method: :get, local: true do |f| %>
     <%['pre_trip_inspection', 'post_trip_inspection', 'distraction_driving', 'proper_incident_response'].each do |option| %>
-      <%= f.label "safety_refresher_#{option}", option.humanize %>
-      <%= f.radio_button :safety_refresher, option  %>
-      <br />
+      <div class="answer-item py-2 pl-4 pr-1">
+        <%= f.label "safety_refresher_#{option}", option.humanize, class: "answer-content pt-1" %>
+        <%= f.radio_button :safety_refresher, option  %>
+        <!-- <br /> -->
+      </div>
+
     <% end %>
-    <%= f.submit 'Submit', class: 'btn' %>
+    <%= f.submit 'Submit', class: 'btn manager-submit' %>
   <% end %>
 </div>
 <div class="container mt-5 text-center">
@@ -19,3 +22,4 @@
     </div>
   </div>
 </div>
+
