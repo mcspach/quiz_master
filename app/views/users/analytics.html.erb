@@ -1,6 +1,6 @@
 <%= render 'shared/banner' %>
 <div class="container text-center">
-  <h1 class="analytics-heading">Cost Savings Analytics</h1>
+  <h1 class="analytics-heading">Analytics</h1>
   <h1 class="analytics-title">$ Saved This Month</h1>
   <h1 class="analytics-saved_amount"> $<%= @column_cost_savings[@column_cost_savings.length - 2 ]*1000 %></h1>
   <h1 class="analytics-safe-per-month"><strong>Monthly Safety Incidents</strong></h1>
@@ -11,7 +11,7 @@
       </p>
     </figure>
     <div class="text-center mt-5 mb-3">
-      <%= link_to 'Home', :manager_home, class: 'btn' %>
+      <%= link_to 'Home', :home, class: 'btn' %>
     </div>
   </div>
 </div>
