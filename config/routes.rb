@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   # root :to => 'pages#home'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
-
+  
   get "/manager_home/:id",                                     to: "company_quizzes#new", as: :manager_home
   post "/companies/:id/company_quizzes",                      to: "company_quizzes#create"
   get "/companies/:id/company_quizzes/safety-refresher",      to: "company_quizzes#safety_refresher", as: :safety_refresher
