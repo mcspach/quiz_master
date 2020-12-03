@@ -42,8 +42,6 @@ if(managerSubmitBtn){
 });
 }
 
-
-
 // select lists
 const individualRankBtn = document.querySelector('.individual');
 const teamRankBtn = document.querySelector('.team');
