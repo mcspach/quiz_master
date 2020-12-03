@@ -7,7 +7,7 @@
 @import "bootstrap/scss/bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 
 // Your CSS partials
 @import "components/index";
@@ -46,11 +46,7 @@ h3 {
   // z-index: 2;
 }
 
-h5 {
-  font-family: Roboto;
-}
-
-h4 {
+h4, h5 {
   font-family: Roboto;
 }
 
@@ -66,7 +62,6 @@ h4 {
 
 h6 {
   font-family: Roboto;
-  // white-space: nowrap;
   width: 100%vw;
   padding-top: 12px;
   text-align: center;
