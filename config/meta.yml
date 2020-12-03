@@ -1,0 +1,7 @@
+# config/meta.yml
+
+meta_product_name: "Safely.ai"
+meta_title: "Safely.ai - Incentivizing Safety from all Angles"
+meta_description: "Reduce safety incidents, save costs & increase driver engagement through personalized, ‘gamification’ of safety training for trucking companies."
+meta_image: "cover.png" # should exist in `app/assets/images/`
+# twitter_account: "@product_twitter_account"   #required for Twitter Cards
