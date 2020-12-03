@@ -34,7 +34,7 @@
         <p class="text-center text-dark">Library</p>
       </div>
     <% end %>
-    <%= link_to  library_path do%>
+    <%= link_to  analytics_path(current_user) do%>
         <%#= image_tag 'machine-learning.png', class: 'img-thumbnail manager-icons' %>
         <div class="col-12 mini-card mt-3 align-center">
           <lottie-player class="ml-2" src="https://assets1.lottiefiles.com/packages/lf20_E3BfOE.json" mode="bounce" background="transparent"  speed=".4"  style="width: 120px; height: 120px;"  loop  autoplay></lottie-player>
