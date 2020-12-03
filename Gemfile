@@ -49,10 +49,6 @@ gem 'rails_real_favicon'
 gem 'faker'
 
 gem 'dotenv-rails', groups: [:development, :test]  # need to add :production also?
-<<<<<<< HEAD
-=======
-
->>>>>>> 5d7964f25c3c4971e196ab73cb08e5c6a6e493b9
 
 group :development, :test do  gem 'pry-byebug'
   gem 'pry-rails'
