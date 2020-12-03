@@ -46,14 +46,14 @@
             <% question.answers.each do |answer| %>
               <div class="answer-item py-2 pl-4 pr-1" id="<%= "correct-answer" if  answer.is_correct%>">
                 <label class="answer-content" for="question-<%= question.id %>-answer-<%= answer.id %>"><%= answer.content %></label>
-                <input type="radio" name="question-<%= question.id %>" value="<%= answer.is_correct %>" id="question-<%= question.id %>-answer-<%= answer.id %>" />
+                <input class="input-answer" type="radio" name="question-<%= question.id %>" value="<%= answer.is_correct %>" id="question-<%= question.id %>-answer-<%= answer.id %>" />
               </div>
             <% end %>
           </div>
         </div>
 
         <div class="actions">
-          <button class="btn submit-button">Submit</button>
+          <button class="btn submit-button" disabled >Submit</button>
           <% if question == @quiz.questions.last %>
           <button class="btn finish-button d-none">See My Results</button>
           <% else %>
