@@ -20,11 +20,22 @@
   background-color: #25C1A9;
   box-shadow: 2px 3px 2px #444444;
   height: 110px;
-  padding-left: 4px;
+  padding: 4%;
   // padding-top: 8px; // if we uncomment this- the text will flow outside of the div
   color:white;
   font-size: 24px;
   width: 100%;
+}
+
+.result_item h2 {
+  text-decoration: underline;
+  font-weight: 200;
+}
+
+.result_item h2 {
+  text-decoration: underline;
+  font-weight: 200;
+  font-size: 20px;
 }
 
 .smaller-txt{
