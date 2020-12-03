@@ -4,6 +4,18 @@ console.log(score);
 let correctSound = new Audio ('https://res.cloudinary.com/duj93wpnu/video/upload/v1606842266/Correct_Answer_aalpwh.mp3');
 let wrongsound = new Audio ('https://res.cloudinary.com/duj93wpnu/video/upload/v1606843161/Negative-sound-effect_g2nodn.mp3');
 
+const radioButtons = document.querySelectorAll('.input-answer');
+radioButtons.forEach(button => {
+  button.addEventListener('change', event => {
+    console.log("boobs");
+    const submitButton = document.querySelectorAll(".submit-button");
+      submitButton.forEach(button => {
+        button.disabled = false;
+      }) 
+  })
+})
+
+
 document.querySelectorAll(".submit-button").forEach(submitButton => {
   submitButton.addEventListener("click", (event) => {
 
@@ -60,8 +72,15 @@ document.querySelectorAll(".submit-button").forEach(submitButton => {
 })
 
 
+
 document.querySelectorAll(".next-button").forEach(nextButton => {
   nextButton.addEventListener("click", (event) => {
+
+    const submitButton = document.querySelectorAll(".submit-button");
+      submitButton.forEach(button => {
+        button.disabled = true;
+    })
+
 
     const question = event.target.parentElement.parentElement
       question.classList.toggle("d-none");
