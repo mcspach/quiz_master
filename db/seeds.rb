@@ -141,7 +141,7 @@ refresher_questions = [
       is_correct: true
     },
     {
-      content: "Hydraulic braeks",
+      content: "Hydraulic brakes",
       is_correct: false
     }
   ]},
@@ -568,7 +568,7 @@ refresher_questions = [
       is_correct: true
     },
     {
-      content: "PLatform",
+      content: "Platform",
       is_correct: false
     }
   ]},
@@ -857,16 +857,16 @@ puts 'Creating refresher quizzes'
       content: 'Brake Failure is a significant, common cause in trucking accidents. This usually occurs in combination with other risk factors.'
     )
     puts 'Subject Area Created'
-    
+
     3.times do |number|
-    
+
       # 1. Create a quiz
       quiz = Quiz.create!(
         quiz_type: 'minimizer',
         subject_area: subject_area2,
         title: "Quiz Minimizer #{number}"
       )
-    
+
       # 2. questions
       5.times do
         hash_question = minimizer_questions.sample
@@ -875,7 +875,7 @@ puts 'Creating refresher quizzes'
           content: hash_question[:question],
           explanation: hash_question[:explanation]
         )
-    
+
         # 3. answers
         hash_question[:answers].each do |answer_attributes|
           Answer.create!(
@@ -886,10 +886,10 @@ puts 'Creating refresher quizzes'
         end
       end
     end
-    
+
     puts '3 Minimizer Quizzes with Q&A Created'
-    
-    
+
+
     # 20.times do User.create!(
     #   first_name: Faker::Name.first_name,
     #   last_name: Faker::Name.last_name,
@@ -901,10 +901,10 @@ puts 'Creating refresher quizzes'
     #   role: 'driver'
     # )
     # end
-    
+
     # puts 'Minimizer Users Created'
-    
-    
+
+
     #Create Company Quizzes
     3.times do
       CompanyQuiz.create!(
@@ -913,9 +913,9 @@ puts 'Creating refresher quizzes'
       )
     end
     puts '3 Minimizer Company_Quizzes created'
-    
+
     # Create Quiz Results
-  
+
     # User.all.each do |user|
     #   CompanyQuiz.joins(:quiz).where("quizzes.quiz_type = 'minimizer'").each do |cq|
     #       QuizResult.create!(
@@ -926,5 +926,5 @@ puts 'Creating refresher quizzes'
     #       )
     #   end
     # end
-    
+
     puts '3 Minimizer Q_Results Created for each User'
