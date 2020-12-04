@@ -38,9 +38,15 @@ a {
   background-color: white;
   font-family: Roboto !important;
   box-shadow: none;
-  text-decoration: underline 3px solid #25c1a9 ;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  padding-right: 16px;
 }
 
+// a .home-rewards {
+//   padding-left: 10px;
+// }
 
 
 .home-rewards:hover {
