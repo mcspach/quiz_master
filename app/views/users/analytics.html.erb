@@ -1,9 +1,9 @@
 <%= render 'shared/banner' %>
 <div class="container text-center">
   <h1 class="analytics-heading">Analytics</h1>
-  <h1 class="analytics-title">$ Saved This Month</h1>
-  <h1 class="analytics-saved_amount"> $<%= @column_cost_savings[@column_cost_savings.length - 2 ]*1000 %></h1>
-  <h1 class="analytics-safe-per-month"><strong>Monthly Safety Incidents</strong></h1>
+  <h1 class="analytics-title">Accidents Avoided This Month</h1>
+  <h1 class="analytics-saved_amount"> <%= @column_cost_savings[@column_cost_savings.length - 2 ] %></h1>
+  <h1 class="analytics-safe-per-month"><strong>Year To Date Safety Incidents</strong></h1>
   <div>
     <figure class="highcharts-figure">
       <div id="container"></div>
