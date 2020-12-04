@@ -19,15 +19,17 @@
   // background-color: #E5F7FF;
   border-radius: 8px 0 0 8px;
   color: #3E505A;
+  align-items: center;
 }
 
 .possible-points {
   display:flex;
-  padding: 4px 6px;
+  // padding: 4px 6px;
   background-color: #F9BC11;
   border-radius: 8px;
   color: #3E505A;
   // margin: 0 auto;
+  align-items: center;
 
 }
 
@@ -35,8 +37,8 @@
 .points-bar {
   // padding-top: 12px;
   border-radius: 8px;
-  height: 8vh;  // height of our points bar
-  width: 90vw;
+  height: 6vh;  // height of our points bar
+  width: 100%;
   margin: 0 auto; // margin on sides of bar
   display: flex;
   background-color: #E5F7FF;
@@ -44,8 +46,8 @@
 }
 
 .points-you-can-earn {
-  margin-top: 60px;
-  margin-bottom: 60px;
+  margin-top: 15px;
+  margin-bottom: 30px;
 }
 
 .reward-img {
