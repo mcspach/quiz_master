@@ -4,6 +4,7 @@
     background-color: #E5F7FF;
     border-radius:25px;
     border: 4px solid #25C1A9;
+
   }
 
   .individual{
@@ -13,6 +14,9 @@
   .team,
   .individual{
     height: 52px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
   }
 
   /*Styling for leadeboard*/
@@ -52,7 +56,8 @@
 
 
   .bolder{
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    font-weight: 1000;
   }
 
   .driver-points {
