@@ -7,28 +7,28 @@
 
     <div class="col-6 p-1">
       <div class="result_item">
-        <h2>Your Rank</h2>
+        <h2 class="result-item-2">Your Rank</h2>
         <span><%= @your_rank %><%= @your_rank.ordinal %></span>
       </div>
     </div>
 
     <div class="col-6 p-1">
       <div class="result_item">
-        <h2>Team Rank</h2>
+        <h2 class="result-item-2">Team Rank</h2>
         <span>2nd</span>
       </div>
     </div>
 
     <div class="col-6 p-1">
       <div class="result_item">
-        <h2>Points Today</h2>
+        <h2 class="result-item-2">Points Today</h2>
         <span><%= @points_today %></span>
       </div>
     </div>
 
     <div class="col-6 p-1">
       <div class="result_item">
-        <h2>Week</h2>
+        <h2 class="result-item-2">Week</h2>
         <span><%= @user.quiz_results.count %> of <%= @refreshers.size %></span>
       </div>
     </div>
