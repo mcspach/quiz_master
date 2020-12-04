@@ -28,9 +28,22 @@
     box-shadow: 3px 5px 3px grey;
   }
 
+   .header-row{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Roboto;
+    margin: 0 auto;
+  }
+
+
   .whole-list,
   .team-list{
     width: 80vw;
+    margin: 0 auto;
+  }
+
+  .header{
+    width: 85vw;
     margin: 0 auto;
   }
 
