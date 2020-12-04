@@ -24,13 +24,14 @@
 </div>
 
 <div class="container">
-
-  <div class="col-12 py-3" style="font-size:28px; font-weight: bold;"> <span class="pr-2">Rank</span> <span class="pl-4 name-header">Name </span> <span class="team-points pr-3" style="float:right; font-size:28px;"> Points</span></div>
+<div class="row header">
+  <div class="header-row col-12 pt-3"> <span class="pr-2 header-row">Rank</span> <span class="header-row pl-2">Name </span> <span class="header-row" style="float:right;"> Points</span></div>
+</div>
 
   <div class="row whole-list">
     <!-- THIS PRINTS EVERY DRIVER IN THE DB- NOT JUST THE TOP 10 -->
       <% @drivers.first(10).each_with_index do |driver, index| %>
-          <div class="list-row col-12 py-3"> <span class="pr-2" style="font-weight: bolder"> <%= index + 1 %></span><span class="pl-4 name"><%= driver[:name]%></span> <span class="driver-points" style="float:right;"> <%= driver[:points]%></span> </div>
+          <div class="list-row col-12 py-3"> <span class="pr-2" style="font-weight: bolder"> <%= index + 1 %></span><span class="pl-4 name"><%= driver[:name]%></span> <span class="header-row" style="float:right;"> <%= driver[:points]%></span> </div>
       <% end %>
   </div>
 
