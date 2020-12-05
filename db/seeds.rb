@@ -803,13 +803,25 @@ user2 = User.create!(
   last_name: 'Yang',
   password: '123456',
   email: 'andy@example.com',
-  phone_number: '1-667-221-0338',
+  phone_number: '1-667-444-0338',
   company: company,
   location: 'California',
   role: 'driver'
 )
 
-10.times do User.create!(
+#Create User
+user2 = User.create!(
+  first_name: 'Frank',
+  last_name: 'Jones',
+  password: '123456',
+  email: 'frank@example.com',
+  phone_number: '1-617-448-5001',
+  company: company,
+  location: 'California',
+  role: 'driver'
+)
+
+9.times do User.create!(
   first_name: Faker::Name.first_name,
   last_name: Faker::Name.last_name,
   password: '123456',
@@ -821,7 +833,7 @@ user2 = User.create!(
 )
 end
 
-puts 'Users Created'
+puts '12 Users Created'
 
 
 #Create Company Quizzes
