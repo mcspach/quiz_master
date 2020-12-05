@@ -4,7 +4,7 @@
 
   .answer-item{
     margin-bottom: 15px;
-    background-color: #E5F7FF;
+    background-color: #b6e1f2;
     border-radius: 8px;
     box-shadow: 3px 5px 3px grey;
     display: flex;
@@ -12,9 +12,10 @@
   }
 
   .content{
-    box-shadow: 0 16px 16px grey;
+    box-shadow: 0 12px 12px grey;
     border-radius: 8px;
     background-color:white;
+    border: 2px solid #b6e1f2; 
     /*position: absolute;*/
     /*top: 40%;*/
   }
