@@ -2,7 +2,7 @@
 
 
 .rewards-header {
-  color: #3E505A;
+  color: $white;
   text-align: center;
   font-family: Roboto;
   font-size: 40px;
@@ -18,16 +18,16 @@
   padding: 4px 6px;
   // background-color: #E5F7FF;
   border-radius: 8px 0 0 8px;
-  color: #3E505A;
+  color: $blue;
   align-items: center;
 }
 
 .possible-points {
   display:flex;
   // padding: 4px 6px;
-  background-color: #F9BC11;
+  background-color: $yellow;
   border-radius: 8px;
-  color: #3E505A;
+  color: $blue;
   // margin: 0 auto;
   align-items: center;
 
@@ -41,8 +41,8 @@
   width: 100%;
   margin: 0 auto; // margin on sides of bar
   display: flex;
-  background-color: #b6e1f2;
-  box-shadow: 0px 2px 4px #444444;
+  background-color: $whiteblue;
+  box-shadow: 1px 1px 5px $lightgrey;
 }
 
 .points-you-can-earn {

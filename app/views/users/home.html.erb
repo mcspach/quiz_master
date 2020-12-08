@@ -6,14 +6,13 @@
     <div class="btn"> <%= link_to "Start Quiz", quiz_results_new_path(@quiz_id) %></div>
   </div>
 
-  <div class="row mt-4 justify-content-around">
-  <%# flexbox with direction: row and evenly spaced %>
+  <div class="linkbox row mt-4 justify-content-around">
 
     <%= link_to  rewards_user_path(current_user), class: "mini-card heart" do%>
       <div class="align-center">
         <%#= image_tag("https://res.cloudinary.com/duj93wpnu/image/upload/v1606869520/icon-2.6s-194px_foaxas.png", class: "medal-img heart")%>
         <lottie-player class="lottie-home" src="https://assets6.lottiefiles.com/packages/lf20_iYAdl2.json"  background="transparent"  speed=".6"  style=""  autoplay></lottie-player>
-        <p class="text-dark text-center icon-text align-self-end">Rewards</p>
+        <p class=" text-center icon-text align-self-end">Rewards</p>
       </div>
     <% end %>
 
@@ -22,7 +21,7 @@
       <div class="align-center">
         <%#= image_tag("https://res.cloudinary.com/duj93wpnu/image/upload/v1606870192/winner-1.1s-194px_cwvyho.png", class: "trophy-img")%>
          <lottie-player class="pr-1 lottie-home" src="https://assets7.lottiefiles.com/private_files/lf30_W3J9n9.json"  background="transparent"  speed=".4"  style=" "   autoplay></lottie-player> <!-- can add 'loop' before autoplay to make it go forever -->
-        <p class="text-center text-dark icon-text align-self-end">Rank</p>
+        <p class="text-center icon-text align-self-end">Rank</p>
       </div>
     <% end %>
 
@@ -31,18 +30,10 @@
       <div class="align-center">
         <%#= image_tag("https://res.cloudinary.com/duj93wpnu/image/upload/v1606870539/encyclopedia-1.1s-194px_1_adisfv.png", class: "book-img")%>
         <lottie-player class="lottie-home"  src="https://assets5.lottiefiles.com/datafiles/5FFwoVNq8EcKMH4/data.json"  background="transparent"  speed=".5"  style=" "  autoplay></lottie-player>
-        <p class="text-center text-dark icon-text align-self-end">Library</p>
+        <p class="text-center icon-text align-self-end">Library</p>
       </div>
     <% end %>
 
-
-    <%= link_to  analytics_path(current_user), class: "mini-card heart" do%>
-        <%#= image_tag 'machine-learning.png', class: 'img-thumbnail manager-icons' %>
-        <div class="align-center">
-          <lottie-player class="lottie-home"  src="https://assets1.lottiefiles.com/packages/lf20_E3BfOE.json" mode="bounce" background="transparent"  speed=".4"  style=" " autoplay></lottie-player>
-          <p class="text-center text-dark icon-text align-self-end">Analytics</p>
-        </div>
-    <% end %>
   </div>
 </div>
 <!-- #F9BC11 -->

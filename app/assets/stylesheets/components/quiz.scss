@@ -4,18 +4,18 @@
 
   .answer-item{
     margin-bottom: 15px;
-    background-color: #b6e1f2;
+    background-color: $whiteblue;
     border-radius: 8px;
-    box-shadow: 3px 5px 3px grey;
+    box-shadow: 1px 1px 5px $lightgrey;
     display: flex;
     align-items: center;
   }
 
   .content{
-    box-shadow: 0 12px 12px grey;
+    box-shadow: 1px 1px 5px $lightgrey;
     border-radius: 8px;
-    background-color:white;
-    border: 2px solid #b6e1f2; 
+    background-color: $whiteblue;
+    border: 2px solid $lightblue; 
     /*position: absolute;*/
     /*top: 40%;*/
   }
@@ -38,13 +38,13 @@
 
   .highlight-correct-answer {
     background-color: rgb(177, 228, 177);
-    color: white;
+    color: $white;
 
   }
 
   .highlight-incorrect-answer {
     background-color: #d19792;
-    color: white;
+    color: $white;
   }
 
 

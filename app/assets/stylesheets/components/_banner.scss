@@ -1,5 +1,5 @@
 .safely-banner{
-  background-color: #25C1A9;
+  background-color: $blue;
   width: 100%;
   font-family: Comfortaa, Roboto, 'sans-serif';
   font-weight: 500;
@@ -23,7 +23,7 @@
 }
 
 .logout {
-  color: white;
+  color: $white;
 }
 
 .link-home {

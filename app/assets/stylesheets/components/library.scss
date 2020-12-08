@@ -1,6 +1,6 @@
   .topic-library{
     border-radius: 8px;
-    box-shadow: 2px 4px 6px grey;
+    box-shadow: 1px 1px 5px $lightgrey;
     margin-bottom: 15px;
   }
 
@@ -11,7 +11,7 @@
 
   .topic-img{
     font-size: 70px;
-    color:#F9BC11;
+    color: $yellow;
   }
 
   .library-to-home{

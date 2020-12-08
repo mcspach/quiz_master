@@ -1,9 +1,9 @@
 .btn {
-  background: #25c1a9;
+  background: $blue;
   border-radius: 8px;
-  box-shadow: 2px 2px 4px #444444;
+  box-shadow: 1px 1px 5px $lightgrey;
   padding: 20px 45px;
-  color:#ffffff;
+  color: $white;
   text-align: center;
   width: 80%;
   margin: 4px auto;
@@ -11,17 +11,17 @@
  }
 
 a {
-  color: white;
+  color: $white;
 }
 
 .btn:hover {
-  background-color: #AAD9DD;
-  color: white;
+  background-color: $lightblue;
+  color: $white;
 }
 
 .show-explanation {
-  color: #3E505A;
-  background-color: white;
+  color: $white;
+  background-color: $black;
   font-family: Roboto;
   box-shadow: none;
   white-space: nowrap;
@@ -30,8 +30,8 @@ a {
 }
 
 .modal-button {
-  color: #3E505A;
-  background-color: white;
+  color: $white;
+  background-color: $black;
   font-family: Roboto;
   box-shadow: none;
   white-space: nowrap;
@@ -44,8 +44,8 @@ a {
 }
 
 .home-rewards {
-  color: #3E505A !important;
-  background-color: white;
+  color: $white !important;
+  background-color: $black;
   font-family: Roboto !important;
   box-shadow: none;
   text-decoration: none;
@@ -60,10 +60,10 @@ a {
 
 
 .home-rewards:hover {
-  background-color: #ffffff;
+  background-color: $whiteblue;
 }
 
 a:hover {
   text-decoration: none;
-  color: white;
+  color: $white;
 }

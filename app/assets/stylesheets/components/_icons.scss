@@ -1,9 +1,19 @@
+.linkbox {
+  width: 80%;
+  margin: 0 auto;
+}
 .mini-card{
-  border: 1px solid #25C1A9;
+  border: 1px solid $blue;
+  color: $white;
   border-radius: 8px;
-  box-shadow: 2px 2px 4px #939090;
+  box-shadow: 1px 1px 5px $lightgrey;
   width: 20%;
   height: 18vh;
+}
+
+.mini-card:hover {
+  border: 1px solid $lightblue;
+  transform: scale(1.03);
 }
 
 .lottie-home{
