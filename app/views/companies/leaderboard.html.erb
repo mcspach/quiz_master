@@ -29,32 +29,30 @@
 </div>
 
   <div class="row whole-list">
-    <!-- THIS PRINTS EVERY DRIVER IN THE DB- NOT JUST THE TOP 10 -->
-      <% @drivers.first(10).each_with_index do |driver, index| %>
-          <div class="list-row col-12 py-3"> <span class="pr-2" style="font-weight: bolder"> <%= index + 1 %></span><span class="pl-4 name"><%= driver[:name]%></span> <span class="header-row" style="float:right;"> <%= driver[:points]%></span> </div>
+    <!-- THIS PRINTS TOP TEN POINTS PEOPLE -->
+      <% @drivers.first(10).each_with_index do |user, index| %>
+          <div class="list-row col-12 py-3"> <span class="pr-2" style="font-weight: bolder"> <%= index + 1 %></span><span class="pl-4 name"><%= user[:name]%></span> <span class="header-row" style="float:right;"> <%= user[:points]%></span> </div>
       <% end %>
   </div>
 
     <div class="row team-list d-none">
       <!-- FAKE LIST -->
-      <div class="list-row col-12 py-3"> <span class="pr-2" style="font-weight: bold"> 1</span><span class="pl-3 name"> Hess Oil </span> <span class="team-points" style="float:right; "> 19800 </span></div>
-      <div class="list-row col-12 py-3"> <span class="pr-2" style="font-weight: bold"> 2</span><span class="pl-3 name"> The Trucking Co. </span> <span class="team-points" style="float:right;"> 19200 </span></div>
-      <div class="list-row col-12 py-3"> <span class="pr-2" style="font-weight: bold"> 3</span><span class="pl-3 name"> Miller </span> <span class="team-points" style="float:right;"> 18700 </span></div>
-      <div class="list-row col-12 py-3"> <span class="pr-2" style="font-weight: bold"> 4</span><span class="pl-3 name"> Hague Shipping </span> <span class="team-points" style="float:right;"> 18700 </span></div>
-      <div class="list-row col-12 py-3"> <span class="pr-2" style="font-weight: bold"> 5</span><span class="pl-3 name"> Huawei Mobile </span> <span class="team-points" style="float:right;"> 17800 </span></div>
-      <div class="list-row col-12 py-3"> <span class="pr-2" style="font-weight: bold"> 6</span><span class="pl-3 name"> Stater Bros </span> <span class="team-points" style="float:right;"> 17700 </span></div>
-      <div class="list-row col-12 py-3"> <span class="pr-2" style="font-weight: bold"> 7</span><span class="pl-3 name"> Mobil Gas </span> <span class="team-points" style="float:right;"> 17300 </span></div>
-      <div class="list-row col-12 py-3"> <span class="pr-2" style="font-weight: bold"> 8</span><span class="pl-3 name"> United Shipping </span> <span class="team-points" style="float:right;"> 16600 </span></div>
-      <div class="list-row col-12 py-3"> <span class="pr-2" style="font-weight: bold"> 9</span><span class="pl-3 name"> Chevron Offshore </span> <span class="team-points" style="float:right;"> 15900 </span></div>
-      <div class="list-row col-12 py-3"> <span class="pr-2" style="font-weight: bold"> 10</span><span class="pl-3 name"> Kirby Transport </span> <span class="team-points" style="float:right;"> 15400 </span></div>
+      <div class="list-row col-12 py-3"> <span class="pr-2" style="font-weight: bold"> 1</span><span class="pl-3 name"> Dogs </span> <span class="team-points" style="float:right; "> 19800 </span></div>
+      <div class="list-row col-12 py-3"> <span class="pr-2" style="font-weight: bold"> 2</span><span class="pl-3 name"> Grizzlies </span> <span class="team-points" style="float:right;"> 19200 </span></div>
+      <div class="list-row col-12 py-3"> <span class="pr-2" style="font-weight: bold"> 3</span><span class="pl-3 name"> Hyenas </span> <span class="team-points" style="float:right;"> 18700 </span></div>
+      <div class="list-row col-12 py-3"> <span class="pr-2" style="font-weight: bold"> 4</span><span class="pl-3 name"> Cheese Curds </span> <span class="team-points" style="float:right;"> 18700 </span></div>
+      <div class="list-row col-12 py-3"> <span class="pr-2" style="font-weight: bold"> 5</span><span class="pl-3 name"> Rowdy Boys </span> <span class="team-points" style="float:right;"> 17800 </span></div>
+      <div class="list-row col-12 py-3"> <span class="pr-2" style="font-weight: bold"> 6</span><span class="pl-3 name"> Puppies </span> <span class="team-points" style="float:right;"> 17700 </span></div>
+      <div class="list-row col-12 py-3"> <span class="pr-2" style="font-weight: bold"> 7</span><span class="pl-3 name"> Ruffles </span> <span class="team-points" style="float:right;"> 17300 </span></div>
+      <div class="list-row col-12 py-3"> <span class="pr-2" style="font-weight: bold"> 8</span><span class="pl-3 name"> Kittens </span> <span class="team-points" style="float:right;"> 16600 </span></div>
+      <div class="list-row col-12 py-3"> <span class="pr-2" style="font-weight: bold"> 9</span><span class="pl-3 name"> Elderberries </span> <span class="team-points" style="float:right;"> 15900 </span></div>
+      <div class="list-row col-12 py-3"> <span class="pr-2" style="font-weight: bold"> 10</span><span class="pl-3 name"> Hedgehogs </span> <span class="team-points" style="float:right;"> 15400 </span></div>
   </div>
 
     <div class="btn btn-block row mt-5">
       <%= link_to "Next", rewards_user_path %>
     </div>
       <button class="btn btn-block home-rewards text-center"> <%= link_to "Home >>", home_path, class: "home-rewards" %></button>
-
-    <!-- FAKE LIST -->
 
 </div>
 

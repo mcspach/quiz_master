@@ -52,6 +52,11 @@ h3 {
   margin: 20px auto;
 }
 
+.lottie img {
+  height: 200px;
+  width: 200px;
+}
+
 h4, h5 {
   font-family: Roboto;
 }
@@ -63,7 +68,7 @@ h4, h5 {
 }
 
 .teal-text {
-  color: $blue;
+  color: $lightblue;
 }
 
 h6 {
@@ -77,6 +82,8 @@ h6 {
   background-color: $black;
   box-shadow: 0 4px 6px $lightgrey;
   border-radius: 8px;
+  border: 2px solid $lightblue;
+  margin-top: 4%;
 }
 
 // .finished-robot{
