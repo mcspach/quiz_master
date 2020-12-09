@@ -1,9 +1,12 @@
 <%= render 'shared/banner_quiz' %>
   <div class="container">
 
-    <div class="robot-image question row justify-content-center"><%= image_tag("robot_question.gif", class:"robot-gif robot")%></div>
-    <div class="robot-image say_yes d-none row justify-content-center"><%= image_tag("say_yes.gif", class:"robot-gif robot")%></div>
-    <div class="robot-image say_no d-none row justify-content-center"><%= image_tag("say_no.gif", class:"robot-gif robot")%></div>
+    <div class="lottie question row justify-content-center">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <lottie-player src="https://assets8.lottiefiles.com/private_files/lf30_nianlkcb.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player>
+    </div>
+    <div class="lottie say_yes d-none row justify-content-center"><%= image_tag("quizmaster1.png", class:"robot-gif robot")%></div>
+    <div class="lottie say_no d-none row justify-content-center"><%= image_tag("quizmaster1.png", class:"robot-gif robot")%></div>
 
 
   <div class="question-answers">
@@ -73,21 +76,4 @@
   <%= javascript_pack_tag 'question_answer' %>
   </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

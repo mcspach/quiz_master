@@ -2,7 +2,8 @@
 <div class="container">
   <h1>Welcome, <%= @user.first_name.capitalize %>!</h1>
   <div class="row justify-content-center pt-3 robot">
-    <%= image_tag("say_hi.gif") %>
+    <%# <%= image_tag("quizmaster1.png") %>
+    <lottie-player src="https://assets6.lottiefiles.com/private_files/lf30_9czxyepk.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player>
     <div class="btn"> <%= link_to "Start Quiz", quiz_results_new_path(@quiz_id) %></div>
   </div>
 
