@@ -19,6 +19,7 @@ class CompanyQuizzesController < ApplicationController
     end
     @company_quiz.save!
   end
+  #comment
 
   def safety_refresher; end
 

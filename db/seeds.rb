@@ -743,14 +743,16 @@ minimizer_questions = [
 ]
 
 #Create a company
-company = Company.create!( name: 'Trucking USA')
+company = Company.create!( name: 'Food Fighters')
+end
+  
 puts 'Company Created'
 
 
     # 1. Create a subject area
 subject_area = SubjectArea.create!(
-  title: 'Pre-Inspection',
-  content: 'Pre-Inspection is a major topic for any trucking company. Under state and federal regulations, pre-inspection safety now covers a 37 point test which all drivers should be prepared for. Significant fines and penalties can result from failing a pre-inspection test.'
+  title: 'Math',
+  content: 'Math is that thing with numbers and symbols and is hard.'
 )
 puts 'Subject Area Created'
 
@@ -760,7 +762,7 @@ puts 'Subject Area Created'
   quiz = Quiz.create!(
     quiz_type: 'refresher',
     subject_area: subject_area,
-    title: "Week #{number}"
+    title: "Quiz Numero #{number}"
   )
 
   # 2. questions
@@ -787,8 +789,8 @@ puts '12 Refreshers Quizzes with Q&A Created'
 
 #Create User
 user1 = User.create!(
-  first_name: 'Matt',
-  last_name: 'Spach',
+  first_name: 'Mott',
+  last_name: 'Pock',
   password: '123456',
   email: 'matt@example.com',
   phone_number: '1-559-355-0338',
@@ -800,7 +802,7 @@ user1 = User.create!(
 #Create User
 user2 = User.create!(
   first_name: 'Andy',
-  last_name: 'Yang',
+  last_name: 'Wang',
   password: '123456',
   email: 'andy@example.com',
   phone_number: '1-667-444-0338',
@@ -812,7 +814,7 @@ user2 = User.create!(
 #Create User
 user2 = User.create!(
   first_name: 'Frank',
-  last_name: 'Jones',
+  last_name: 'Yones',
   password: '123456',
   email: 'frank@example.com',
   phone_number: '1-617-448-5001',
@@ -861,45 +863,45 @@ end
 
 puts '7 Refresher Q_Results Created for each User, its week 8 in the Quarter'
 
-puts 'Creating refresher quizzes'
+# puts 'Creating refresher quizzes'
 
-    # 1. Create a subject area
-    subject_area2 = SubjectArea.create!(
-      title: 'Checking Brakes',
-      content: 'Brake Failure is a significant, common cause in trucking accidents. This usually occurs in combination with other risk factors.'
-    )
-    puts 'Subject Area Created'
+    # # 1. Create a subject area
+    # subject_area2 = SubjectArea.create!(
+    #   title: 'Checking Brakes',
+    #   content: 'Brake Failure is a significant, common cause in trucking accidents. This usually occurs in combination with other risk factors.'
+    # )
+    # puts 'Subject Area Created'
 
-    3.times do |number|
+    # 3.times do |number|
 
-      # 1. Create a quiz
-      quiz = Quiz.create!(
-        quiz_type: 'minimizer',
-        subject_area: subject_area2,
-        title: "Quiz Minimizer #{number}"
-      )
+    #   # 1. Create a quiz
+    #   quiz = Quiz.create!(
+    #     quiz_type: 'minimizer',
+    #     subject_area: subject_area2,
+    #     title: "Quiz Minimizer #{number}"
+    #   )
 
       # 2. questions
-      5.times do
-        hash_question = minimizer_questions.sample
-        question = Question.create!(
-          quiz: quiz,
-          content: hash_question[:question],
-          explanation: hash_question[:explanation]
-        )
+    #   5.times do
+    #     hash_question = minimizer_questions.sample
+    #     question = Question.create!(
+    #       quiz: quiz,
+    #       content: hash_question[:question],
+    #       explanation: hash_question[:explanation]
+    #     )
 
-        # 3. answers
-        hash_question[:answers].each do |answer_attributes|
-          Answer.create!(
-            content: answer_attributes[:content],
-            is_correct: answer_attributes[:is_correct],
-            question: question
-          )
-        end
-      end
-    end
+    #     # 3. answers
+    #     hash_question[:answers].each do |answer_attributes|
+    #       Answer.create!(
+    #         content: answer_attributes[:content],
+    #         is_correct: answer_attributes[:is_correct],
+    #         question: question
+    #       )
+    #     end
+    #   end
+    # end
 
-    puts '3 Minimizer Quizzes with Q&A Created'
+    # puts '3 Minimizer Quizzes with Q&A Created'
 
 
     # 20.times do User.create!(
@@ -917,14 +919,14 @@ puts 'Creating refresher quizzes'
     # puts 'Minimizer Users Created'
 
 
-    #Create Company Quizzes
-    3.times do
-      CompanyQuiz.create!(
-        company: company,
-        quiz: Quiz.where("quiz_type = 'minimizer'").sample
-      )
-    end
-    puts '3 Minimizer Company_Quizzes created'
+    # #Create Company Quizzes
+    # 3.times do
+    #   CompanyQuiz.create!(
+    #     company: company,
+    #     quiz: Quiz.where("quiz_type = 'minimizer'").sample
+    #   )
+    # end
+    # puts '3 Minimizer Company_Quizzes created'
 
     # Create Quiz Results
 
@@ -939,4 +941,4 @@ puts 'Creating refresher quizzes'
     #   end
     # end
 
-    puts '3 Minimizer Q_Results Created for each User'
+    # puts '3 Minimizer Q_Results Created for each User'
