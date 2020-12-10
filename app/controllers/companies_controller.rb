@@ -21,7 +21,6 @@ class CompaniesController < ApplicationController
   end
 
   def get_points(user)
-    # @user = current_user
     @current_points = 0
     user.quiz_results.each do |result|
       points = result.score * 100
