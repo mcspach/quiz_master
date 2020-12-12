@@ -17,645 +17,310 @@ User.destroy_all
 Company.destroy_all
 SubjectArea.destroy_all
 # DO NOT CHANGE THE ORDER!!!!!!!!!!!
-
-
-
 puts 'deleted everything'
+
+
 
 refresher_questions = [
   {
-  question: "What structure supporting the fifth wheel skid plate should be checked for cracks or breaks?",
-  explanation: "Sliding pintle",
+  question: "What is the longest recorded life of an elephant?",
+  explanation: "That's pretty old for a beast like that.",
   answers: [
     {
-      content: "Kingpin",
+      content: "39 years",
       is_correct: false
     },
     {
-      content: "Platform",
+      content: "86 years",
       is_correct: true,
     },
     {
-      content: "Absence of required emergency kit",
+      content: "104 years",
       is_correct: false
     },
     {
-      content: "Apron",
+      content: "142 years",
       is_correct: false
     }
   ]},
   {
-  question: "During a hydraulic brake check you must pump the brake pedal____times and then hold it down for______seconds.",
-  explanation: "Sliding pintle",
+  question: "How many rings are there on the Olympic flag",
+  explanation: "Three on top, two on bottom.",
   answers: [
     {
-      content: "3, 5",
+      content: "3",
       is_correct: false
     },
     {
-      content: "5, 10",
+      content: "5",
       is_correct: true,
     },
     {
-      content: "7, 12",
+      content: "7",
       is_correct: false
     },
     {
-      content: "10, 15",
-      is_correct: false
-    }
-  ]},
-  {
-  question: "Failure to perform an air brake check will result in an automatic failure of the vehicle inspection test.",
-  explanation: "An air brake is a serious safety issue but does not result in automatic failure under the legislation",
-  answers: [
-    {
-      content: "True",
-      is_correct: true,
-    },
-    {
-      content: "False",
+      content: "11",
       is_correct: false
     }
   ]},
   {
-  question: "An external inspection of the steering box and hoses will include checking that the steering box is securely mounted and not leaking more than 4 ounces of fluid per hour.",
-  explanation: "To be inserted",
-  answers: [
-    {
-      content: "True",
-      is_correct: true
-    },
-    {
-      content: "False",
-      is_correct: true,
-    }
-  ]},
-  {
-  question: "What releases the fifth wheel locking jaws so the trailer can be coupled?",
-  explanation: "The release arm allows you to disengage the fifth-wheel locking jaws so you can uncouple the trailer. During your pre-trip inspection, check that the release arm is in the engaged position and the safety latch (if so equipped) is in place.",
-  answers: [
-    {
-      content: "Apron",
-      is_correct: false
-    },
-    {
-      content: "Drawbar",
-      is_correct: false
-    },
-    {
-      content: "Locking pins",
-      is_correct: false
-    },
-    {
-      content: "Release arms",
-      is_correct: true,
-    }
-  ]},
-  {
-  question: "What do you inspect to make sure that all are present and show no signs of looseness such as rust trails or shiny threads?",
-  explanation: "During your pre-trip inspection, check that all lug nuts are present and accounted for, tightly fastened, and free of cracks or distortions.",
-  answers: [
-    {
-      content: "Lug nuts",
-      is_correct: true
-    },
-    {
-      content: "Rims",
-      is_correct: false
-    },
-  ]},
-    {
-  question: "If the wheel has a sight glass, check that the oil level is adequate. Otherwise, look for leaks around the:",
-  explanation: "As part of your pre-trip inspection of the wheels, check the axle seals and the hub oil/grease seals for leaks. Look for oil or grease on the wheels and any visible evidence of cracks or leaks. If the wheel has a sight glass, you can visually confirm that the oil level is adequate.",
-  answers: [
-    {
-      content: "Rims",
-      is_correct: false
-    },
-    {
-      content: "Battery",
-      is_correct: false      },
-    {
-      content: "Hub oil seals and axle seals",
-      is_correct: true
-    },
-    {
-      content: "Hydraulic brakes",
-      is_correct: false
-    }
-  ]},
-  {
-    question: "On the steering linkage you must check for joints and sockets that are worn or loose and that there are no missing bolts, nuts, or cotter keys.",
-    explanation: "Worn joints and sockets on the steering linkage can result in significant equipment failure and therefore should be checked at regular intervals.",
+    question: "What is a tarsier?",
+    explanation: "🐒",
     answers: [
       {
-        content: "True",
+        content: "A cat",
+        is_correct: false
+      },
+      {
+        content: "A primate",
+        is_correct: true,
+      },
+      {
+        content: "A lizard",
+        is_correct: false
+      },
+      {
+        content: "A bird",
+        is_correct: false
+      }
+    ]},
+  {
+    question: "In a game of darts, what is the most you can score with a single throw?",
+    explanation: "60 points is a Triple 20! Wait, better than a bullseye...",
+    answers: [
+      {
+        content: "25 pts",
+        is_correct: false
+      },
+      {
+        content: "50 pts",
+        is_correct: false
+      },
+      {
+        content: "60 pts",
         is_correct: true
       },
       {
-        content: "False",
-        is_correct: false,
+        content: "100 pts",
+        is_correct: false
+      }
+    ]},
+  {
+    question: "Which of these animals is not in the Chinese Zodiac?",
+    explanation: "Bears aint there. What can I say.",
+    answers: [
+      {
+        content: "Rabbit",
+        is_correct: false
+      },
+      {
+        content: "Bear",
+        is_correct: true,
+      },
+      {
+        content: "Dragon",
+        is_correct: false
+      },
+      {
+        content: "Dog",
+        is_correct: false
+      }
+    ]},
+  {
+    question: "What are Brahmins?",
+    explanation: 'Definition: ',
+    answers: [
+      {
+        content: "Hawaiian local surfers",
+        is_correct: false
+      },
+      {
+        content: "Members of the highest caste in India",
+        is_correct: true,
+      },
+      {
+        content: "A building block of muscle tissue",
+        is_correct: false
+      },
+      {
+        content: "It is a nonsence word",
+        is_correct: false
       }
     ]},
     {
-  question: "_________ should be clean with no dirt, illegal stickers, obstructions, or damage.",
-  explanation: "Windshields and mirrors should be clean and free of damage, illegal stickers, or obstructions that could impede visibility.",
-  answers: [
-    {
-      content: "The lighting indicators",
-      is_correct: false
-    },
-    {
-      content: "The headlights",
-      is_correct: false      },
-    {
-      content: "The windshield and mirrors.",
-      is_correct: true
-    },
-    {
-      content: "None of the above.",
-      is_correct: false
-    }
-  ]},
+      question: "Would a Catholic living in the US ever celebrate Easter in May?",
+      explanation: "The earliest date is March 22nd and the latest is April 25th",
+      answers: [
+        {
+          content: "Yes",
+          is_correct: false
+        },
+        {
+          content: "No",
+          is_correct: true,
+        }
+      ]},
   {
-  question: "It is unnecessary to check the slack adjusters when checking the brake system.",
-  explanation: "It is good practice but unecessary given slack adjusters are not a direct impact on the braking system.",
-  answers: [
+    question: "What are the main two colors on the flag of Spain?",
+    explanation: "🇪🇸",
+    answers: [
+      {
+        content: "Blue and Red",
+        is_correct: false
+      },
+      {
+        content: "Yellow and Red",
+        is_correct: true,
+      },
+      {
+        content: "Yellow and Green",
+        is_correct: false
+      },
+      {
+        content: "Blue and White",
+        is_correct: false
+      }
+    ]},
     {
-      content: "True",
-      is_correct: true
-    },
-    {
-      content: "False",
-      is_correct: false
-    }
-  ]},
-
+      question: "In the nursery rhyme, how many blackbirds were baked in a pie?",
+      explanation: "...Four and twenty blackbirds baked in a pie...",
+      answers: [
+        {
+          content: "4",
+          is_correct: false
+        },
+        {
+          content: "11",
+          is_correct: false
+        },
+        {
+          content: "24",
+          is_correct: true
+        },
+        {
+          content: "40",
+          is_correct: false
+        }
+      ]},
   {
-  question: "What common errors can cause you to fail a vehicle inspection?",
-  explanation: "Statistics show that incorrect paperwork is responsible for 57% of all vehicle inspection failures.",
-  answers: [
-    {
-      content: "Brakes that aren't adjusted properly",
-      is_correct: false
-    },
-    {
-      content: "Lack of correct, up-to-date paperwork",
-      is_correct: true
-    },
-    {
-      content: "Absence of required emergency kit",
-      is_correct: false
-    },
-    {
-      content: "Apron",
-      is_correct: false
-    }
-  ]},
-  {
-  question: "What carries air or hydraulic fluid to the wheel brake assembly?",
-  explanation: "Compressed air (or hydraulic fluid if your vehicle has hydraulic brakes) flows to the brakes through hoses and lines. During your pre-trip inspection, check all hoses and lines for leaks or tangles.",
-  answers: [
-    {
-      content: "Brake linings",
-      is_correct: false
-    },
-    {
-      content: "Brake hoses / lines",
-      is_correct: false
-    },
-    {
-      content: "Brake chambers",
-      is_correct: true
-    },
-    {
-      content: "Slack adjusters",
-      is_correct: false
-    }
-  ]},
-  {
-  question: "What are you looking for on the underside of the engine and transmission?",
-  explanation: "As part of your engine inspection, check the ground below the engine compartment for puddles or dripping liquids.",
-  answers: [
-    {
-      content: "Oil level",
-      is_correct: false
-    },
-    {
-      content: "Power steering fluid",
-      is_correct: false
-    },
-    {
-      content: "Leaks",
-      is_correct: true
-    },
-    {
-      content: "None of the above",
-      is_correct: false
-    }
-  ]},
-  {
-  question: "When pumping the pedal three times and holding it down for five seconds, what are you inspecting?",
-  explanation: "If your vehicle has hydraulic brakes, test them by pumping the brake pedal three times and then applying firm pressure to it for five seconds, making sure the pedal does not move during that time. If your vehicle has air brakes, test them by performing the final air brake check as described in the Maine Commercial Driver License Manual.",
-  answers: [
-    {
-      content: "Hydraulic brakes",
-      is_correct: false
-    },
-    {
-      content: "Air brakes",
-      is_correct: true
-    },
-    {
-      content: "Parking brake",
-      is_correct: false
-    },
-    {
-      content: "All of the above",
-      is_correct: false
-    }
-  ]},
-  {
-  question: "Which tires should have a minimum tread depth of 4/32 inch?",
-  explanation: "The tires on the steering axle should have at least 4/32 inch of tread, and all other tires should have at least 2/32 inch of tread. Inadequate tread on the front tires increases the risk of a front-wheel skid.",
-  answers: [
-    {
-      content: "Steering axle tires",
-      is_correct: true
-    },
-    {
-      content: "Non-drive axle tires",
-      is_correct: false
-    },
-    {
-      content: "Spare tires",
-      is_correct: false
-    },
-    {
-      content: "All of the above",
-      is_correct: false
-    }
-  ]},
-  {
-  question: "Make sure that the _________ are not cut, chafed, spliced, or worn, and not tangled, pinched, or dragged against tractor parts.",
-  explanation: "During your pre-trip inspection, check the electrical lines and air hoses (or hydraulic hoses for hydraulic brakes). Make sure that the lines and hoses are not cut, chafed, spliced, or worn. Also make sure they are not tangled, pinched, or dragging on parts of the tractor.",
-  answers: [
-    {
-      content: "Locking jaws",
-      is_correct: false
-    },
-    {
-      content: "Splash guards",
-      is_correct: false
-    },
-    {
-      content: "Door tiles and lifts",
-      is_correct: false
-    },
-    {
-      content: "Air lines and electrical tires",
-      is_correct: true
-    }
-  ]},
-  {
-  question: "What transmits power from the transmission to the drive axle?",
-  explanation: "During your pre-trip inspection, check the electrical lines and air hoses (or hydraulic hoses for hydraulic brakes). Make sure that the lines and hoses are not cut, chafed, spliced, or worn. Also make sure they are not tangled, pinched, or dragging on parts of the tractor.",
-  answers: [
-    {
-      content: "Air compressor belt",
-      is_correct: false
-    },
-    {
-      content: "Power steering belt",
-      is_correct: false
-    },
-    {
-      content: "Steering play",
-      is_correct: false
-    },
-    {
-      content: "Drive shaft",
-      is_correct: true
-    }
-  ]},
-  {
-  question: "When checking the oil pressure gauge you should make sure that:",
-  explanation: "This is good safety behavior that you should check on regular occassions like stopping to refuel for gas.",
-  answers: [
-    {
-      content: "The gauge shows decreasing oil pressure",
-      is_correct: false
-    },
-    {
-      content: "Shows increasing or normal oil pressure or that the warning light goes off",
-      is_correct: true
-    },
-    {
-      content: "Shows that there is enough gas for your trip",
-      is_correct: false
-    },
-    {
-      content: "All of the above",
-      is_correct: false
-    }
-  ]},
-  {
-  question: "_________ are the brackets, bolts, or bushings that are used to attach the spring or air bag to the axle and vehicle frame.",
-  explanation: "Spring mounts consist of the brackets, bolts, shackles, and bushings used for attaching springs or air bags (for an air ride suspension) to the vehicle frame. During your inspection, check that the spring mounts are secured to the vehicle's frame and axles. Check that no bushings are damaged or missing. Check that there are no broken, loose, or missing bolts or U-bolts.",
-  answers: [
-    {
-      content: "Mounting bolts",
-      is_correct: false
-    },
-    {
-      content: "Shock absorbers",
-      is_correct:false
-    },
-    {
-      content: "Spring mounts",
-      is_correct:  true
-    },
-    {
-      content: "Torque",
-      is_correct: false
-    }
-  ]},
-  {
-  question: "To improve visibility during severe or stormy weather, __________ must be secure, undamaged, and operating smoothly and correctly.",
-  explanation: "Check that the windshield wiper blades are in good condition and press hard enough against the windshield to keep it clean without excessive streaking. Also make sure that the windshield washer mechanism works and there is enough windshield washer fluid in the reservoir.",
-  answers: [
-    {
-      content: "The windshielf wipers and washer",
-      is_correct: true
-    },
-    {
-      content: "The handholds and steps",
-      is_correct:false
-    },
-    {
-      content: "The emergency equipment",
-      is_correct:  false
-    },
-    {
-      content: "The lighting indicators",
-      is_correct: false
-    }
-  ]},
-  {
-  question: "To check for steering play in a non-power steering vehicle you should turn the steering wheel back and forth. Play should not exceed:",
-  explanation: "To be inserted",
-  answers: [
-    {
-      content: "40 degrees",
-      is_correct: false
-    },
-    {
-      content: "30 degrees",
-      is_correct:false
-    },
-    {
-      content: "20 degrees",
-      is_correct:  true
-    },
-    {
-      content: "10 degrees",
-      is_correct: false
-    }
-  ]},
-  {
-  question: "Which of the following can disengage the engine from the drivetrain?",
-  explanation: "To ensure that your vehicle doesn't move once you start the engine, first depress the clutch (unless the vehicle has an automatic transmission) and put the gearshift in neutral (or Park for an automatic transmission). Once the engine has started, slowly release the clutch.",
-  answers: [
-    {
-      content: "Parking brake",
-      is_correct: false
-    },
-    {
-      content: "Clutch and gearshift",
-      is_correct: true
-    },
-    {
-      content: "Drive shaft",
-      is_correct: false
-    },
-    {
-      content: "Water pump",
-      is_correct: false
-    }
-  ]},
-  {
-  question: "You should never check the reservoir sight glass of the coolant level.",
-  explanation: "That is not correct - you should check the reservoir sight glass on regular occasions.",
-  answers: [
-    {
-      content: "True",
-      is_correct: false
-    },
-    {
-      content: "False",
-      is_correct: true
-    }
-  ]},
-  {
-  question: "You must check to make sure that the oil pressure gauge is working.",
-  explanation: "This is good safety behavior which you should try and make second nature through common practice.",
-  answers: [
-    {
-      content: "True",
-      is_correct: true
-    },
-    {
-      content: "False",
-      is_correct: false
-    }
-  ]},
-  {
-  question: "The temperature gauge is unimportant at a pre-trip inspection.",
-  explanation: "The tempature gauge is not one of the key elements that a highway patrol officer will be looking for during a roadside vehicle inspection.",
-  answers: [
-    {
-      content: "True",
-      is_correct: false
-    },
-    {
-      content: "False",
-      is_correct: true
-    }
-  ]},
-  {
-  question: "________ are gas or hydraulic devices that cushion the vehicle's ride and stabilize the vehicle.",
-  explanation: "During your pre-trip inspection, check the shock absorbers on every axle of your vehicle (including the trailers if any) to be sure that they are securely mounted and not leaking.",
-  answers: [
-    {
-      content: "Springs",
-      is_correct: false
-    },
-    {
-      content: "Brakes",
-      is_correct: false
-    },
-    {
-      content: "Mounts",
-      is_correct: false
-    },
-    {
-      content: "Shock absorbers",
-      is_correct: true
-    }
-  ]},
-  {
-  question: "Should you be prepared to perform the same brake components inspection of every axle (power unit and trailer, if equipped)?",
-  explanation: "Yes, each brake axle has a similar structure and therefore should be checked using the same test.",
-  answers: [
-    {
-      content: "True",
-      is_correct: true
-    },
-    {
-      content: "False",
-      is_correct: false
-    }
-  ]},
-  {
-  question: "What transforms steering column action into wheel action?",
-  explanation: "When you turn the steering wheel, the steering box translates this motion into turning the front wheels. During your pre-trip inspection, check that the steering box is in good condition, securely mounted, and not leaking. Also check that no nuts, bolts, or cotter keys are missing.",
-  answers: [
-    {
-      content: "Steering linkage",
-      is_correct: false
-    },
-    {
-      content: "Steering box",
-      is_correct: true
-    },
-    {
-      content: "Suspension",
-      is_correct: false
-    },
-    {
-      content: "Steering play",
-      is_correct: false
-    }
-  ]},
-  {
-  question: "Listen for air leaks when checking the air/electric lines. Hoses and electrical lines should not be cut but can be spliced.",
-  explanation: "That is incorrect - you should not splice hoses and electrical lines when checking for leaks.",
-  answers: [
-    {
-      content: "True",
-      is_correct: false
-    },
-    {
-      content: "False",
-      is_correct: true
-    }
-  ]},
-  {
-  question: "What should you check to be sure it is solid, clear of objects, and securely bolted to the tractor frame?",
-  explanation: "Check that the steps leading up to the cab and catwalk (if any) are clear of obstructions and secured to the tractor frame.",
-  answers: [
-    {
-      content: "Apron",
-      is_correct: false
-    },
-    {
-      content: "Kingpin",
-      is_correct: false
-    },
-    {
-      content: "Catwalk",
-      is_correct: true
-    },
-    {
-      content: "Platform",
-      is_correct: false
-    }
-  ]},
-  {
-  question: "What maintains air pressure in the air brake system?",
-  explanation: "The air compressor maintains air pressure for the air brakes by pumping air into the air storage tanks. If your vehicle's air compressor is belt driven, make sure that its drive belt is snug. A belt that is too loose might slip and not drive the air compressor properly.",
-  answers: [
-    {
-      content: "Alternator",
-      is_correct: false
-    },
-    {
-      content: "Water pump",
-      is_correct: false
-    },
-    {
-      content: "Air compressor",
-      is_correct: true
-    },
-    {
-      content: "Power steering",
-      is_correct: false
-    }
-  ]},
-  {
-  question: "What should be fully engaged with no loose or missing pins in the slide mechanism of the sliding fifth wheel?",
-  explanation: "On many vehicles, the fifth wheel is designed to slide forward and backward on slider rails. If that is so on your vehicle, check the sliding fifth wheel locking pins. Make sure that none of them are loose or missing and that all of them are fully engaged.",
-  answers: [
-    {
-      content: "Locking pins",
-      is_correct: true
-    },
-    {
-      content: "Gap",
-      is_correct: false
-    },
-    {
-      content: "Locking jaws",
-      is_correct: false
-    },
-    {
-      content: "Sliding pintle",
-      is_correct: false
-    }
-  ]},
-  {
-  question: "What is the sliding mechanism and locking device for tandem axles on trailers?",
-  explanation: "If so equipped, make sure that the locking pins are locked in place and the release arm is secured.",
-  answers: [
-    {
-      content: "Frame",
-      is_correct: false
-    },
-    {
-      content: "Tandem release arm / locking pins",
-      is_correct: true
-    },
-    {
-      content: "Landing gear",
-      is_correct: false
-    },
-    {
-      content: "Suspension system",
-      is_correct: false
-    }
-  ]},
-  {
-  question: "If the wheel has a sight glass, check that the oil level is adequate. Otherwise, look for leaks around the:",
-  explanation: "As part of your pre-trip inspection of the wheels, check the axle seals and the hub oil/grease seals for leaks. Look for oil or grease on the wheels and any visible evidence of cracks or leaks. If the wheel has a sight glass, you can visually confirm that the oil level is adequate.",
-  answers: [
-    {
-      content: "Rims",
-      is_correct: false
-    },
-    {
-      content: "Battery",
-      is_correct: false
-    },
-    {
-      content: "Hub oil seals and axle seals",
-      is_correct: true
-    },
-    {
-      content: "Hydraulic breaks",
-      is_correct: false
-    }
-  ]},
+    question: "What is a pomelo?",
+    explanation: "Pomelo is one of the few ancient acestors of all the yummy citrus fruits we have today.",
+    answers: [
+      {
+        content: "An old-fashioned punching bag",
+        is_correct: false
+      },
+      {
+        content: "A large citrus fruit",
+        is_correct: true,
+      },
+      {
+        content: "A Swiss board game played with marbles",
+        is_correct: false
+      },
+      {
+        content: "A dog breed similar to a poodle",
+        is_correct: false
+      }
+    ]},
+    {
+      question: "Who killed Greedo?",
+      explanation: "In the Original Star Wars film. But who shot first?",
+      answers: [
+        {
+          content: "Hannibal Lecter",
+          is_correct: false
+        },
+        {
+          content: "Han Solo",
+          is_correct: true,
+        },
+        {
+          content: "Hercules",
+          is_correct: false
+        },
+        {
+          content: "Prince Humperdink",
+          is_correct: false
+        }
+      ]},
+    {
+      question: "Are giant pandas a type of bear",
+      explanation: "Yes, the giant panda is one of the eight species in the family Ursidae.",
+      answers: [
+        {
+          content: "No",
+          is_correct: false
+        },
+        {
+          content: "Yes",
+          is_correct: true,
+        }
+      ]},
+      {
+        question: "How many points is the letter X worth in Scrabble?",
+        explanation: "8! Which is the highest score any one letter has.",
+        answers: [
+          {
+            content: "8",
+            is_correct: true
+          },
+          {
+            content: "9",
+            is_correct: false
+          },
+          {
+            content: "10",
+            is_correct: false
+          },
+          {
+            content: "11",
+            is_correct: false
+          }
+        ]},
+        {
+          question: "Which part of the tongue tastes sweet stuff?",
+          explanation: "There is a bunch of different receptor areas in the tongue for different tastes.",
+          answers: [
+            {
+              content: "The back, by the throat",
+              is_correct: false
+            },
+            {
+              content: "All your tastebuds are the same",
+              is_correct: false
+            },
+            {
+              content: "The side edges",
+              is_correct: false
+            },
+            {
+              content: "The tip",
+              is_correct: true
+            }
+          ]},
+          {
+            question: "What is the most common color for toilet paper in France?",
+            explanation: "They are so cute.",
+            answers: [
+              {
+                content: "brown",
+                is_correct: false
+              },
+              {
+                content: "pink",
+                is_correct: true
+              },
+              {
+                content: "white",
+                is_correct: false
+              },
+              {
+                content: "blue",
+                is_correct: false
+              }
+            ]}
 ]
 
 minimizer_questions = [
@@ -744,15 +409,14 @@ minimizer_questions = [
 
 #Create a company
 company = Company.create!( name: 'Food Fighters')
-end
   
 puts 'Company Created'
 
 
     # 1. Create a subject area
 subject_area = SubjectArea.create!(
-  title: 'Math',
-  content: 'Math is that thing with numbers and symbols and is hard.'
+  title: 'Random Stuff',
+  content: 'This is a bunch of random quiz questions'
 )
 puts 'Subject Area Created'
 
