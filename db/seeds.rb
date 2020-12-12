@@ -17,10 +17,9 @@ User.destroy_all
 Company.destroy_all
 SubjectArea.destroy_all
 # DO NOT CHANGE THE ORDER!!!!!!!!!!!
-
-
-
 puts 'deleted everything'
+
+
 
 refresher_questions = [
   {
@@ -410,15 +409,14 @@ minimizer_questions = [
 
 #Create a company
 company = Company.create!( name: 'Food Fighters')
-end
   
 puts 'Company Created'
 
 
     # 1. Create a subject area
 subject_area = SubjectArea.create!(
-  title: 'Math',
-  content: 'Math is that thing with numbers and symbols and is hard.'
+  title: 'Random Stuff',
+  content: 'This is a bunch of random quiz questions'
 )
 puts 'Subject Area Created'
 
@@ -529,3 +527,82 @@ end
 
 puts '7 Refresher Q_Results Created for each User, its week 8 in the Quarter'
 
+# puts 'Creating refresher quizzes'
+
+    # # 1. Create a subject area
+    # subject_area2 = SubjectArea.create!(
+    #   title: 'Checking Brakes',
+    #   content: 'Brake Failure is a significant, common cause in trucking accidents. This usually occurs in combination with other risk factors.'
+    # )
+    # puts 'Subject Area Created'
+
+    # 3.times do |number|
+
+    #   # 1. Create a quiz
+    #   quiz = Quiz.create!(
+    #     quiz_type: 'minimizer',
+    #     subject_area: subject_area2,
+    #     title: "Quiz Minimizer #{number}"
+    #   )
+
+      # 2. questions
+    #   5.times do
+    #     hash_question = minimizer_questions.sample
+    #     question = Question.create!(
+    #       quiz: quiz,
+    #       content: hash_question[:question],
+    #       explanation: hash_question[:explanation]
+    #     )
+
+    #     # 3. answers
+    #     hash_question[:answers].each do |answer_attributes|
+    #       Answer.create!(
+    #         content: answer_attributes[:content],
+    #         is_correct: answer_attributes[:is_correct],
+    #         question: question
+    #       )
+    #     end
+    #   end
+    # end
+
+    # puts '3 Minimizer Quizzes with Q&A Created'
+
+
+    # 20.times do User.create!(
+    #   first_name: Faker::Name.first_name,
+    #   last_name: Faker::Name.last_name,
+    #   password: '123456',
+    #   email: Faker::Internet.unique.email,
+    #   phone_number: Faker::PhoneNumber.phone_number,
+    #   company: company,
+    #   location: 'California',
+    #   role: 'driver'
+    # )
+    # end
+
+    # puts 'Minimizer Users Created'
+
+
+    # #Create Company Quizzes
+    # 3.times do
+    #   CompanyQuiz.create!(
+    #     company: company,
+    #     quiz: Quiz.where("quiz_type = 'minimizer'").sample
+    #   )
+    # end
+    # puts '3 Minimizer Company_Quizzes created'
+
+    # Create Quiz Results
+
+    # User.all.each do |user|
+    #   CompanyQuiz.joins(:quiz).where("quizzes.quiz_type = 'minimizer'").each do |cq|
+    #       QuizResult.create!(
+    #         user: user,
+    #         quiz: cq.quiz,
+    #         score: (2..5).to_a.sample,
+    #         possible_score: 5
+    #       )
+    #   end
+    # end
+
+    # puts '3 Minimizer Q_Results Created for each User'
