@@ -11,7 +11,7 @@
       <div class="item col-8">
           <div class="subject-text">
             <h5 class="stats-p">Your Strongest Subject</h5>
-            <p>Pre-Inspection</p>
+            <p>Keep Training for Better Stats</p>
           </div>
       </div>
       <div class="bubble bub-green col-3 mt-3 ">
@@ -26,7 +26,7 @@
       <div class="item col-8">
           <div class="subject-text">
             <h5 class="stats-p">Your Weakest Subject</h5>
-            <p>Fatigue Training</p>
+            <p>Keep Training for Better Stats</p>
           </div>
       </div>
         <div class="bubble bub-red col-3 mt-3">
@@ -41,15 +41,11 @@
       <h5 class="text-center mt-2">Correct answer rate this quarter</h5>
       <div class="percentage">
         <h2><%= @percent_correct %>%</h2>
-     </div>
-    </div>
-    <div class="percent-group d-flex flex-column align-items-center">
-      <h5 class="text-center">Quiz completion rate this quarter</h5>
-      <div class="percentage">
-        <h2><%= @percent_complete %>%</h2>
       </div>
     </div>
   </div>
+
+  
   <div class="butt_leader"><%= link_to "Leaderboard", leaderboard_path, class:"btn btn-large btn-block" %></div>
 </div>
 
