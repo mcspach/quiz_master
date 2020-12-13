@@ -1,7 +1,7 @@
 <%= render 'shared/banner' %>
 <div class="container text-center">
   <div class="b-color p-2">
-  <h1 class="mt-2">Thank You for trying!</h1>
+  <h1 class="mt-2">Thank You, <%= @user.first_name %>!</h1>
     <div class="lottie question row justify-content-center">
       <%= image_tag 'quizmasterQ.png' %>
     </div>
