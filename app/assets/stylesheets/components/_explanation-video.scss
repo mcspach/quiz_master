@@ -2,34 +2,9 @@
     background-color: $black;
   }
 
-  .video-div{
-    background-color: $grey;
-    border-radius:8px;
-  }
-
-  .video{
-    // background-color:#25C1A9;
-    padding: 10px 10px 20px 10px;
-    border-radius: 8px;
-  }
-
-  h2,
-  h3 {
-      font-family: Roboto;
-      font-size: 24px;
-  }
-
-  iframe{
-    width:95%;
-    height:30vh;
-  }
-
   .explanation-background {
     background-color: $black;
-  }
-
-  .modal-footer {
-    justify-content: center !important;
+    color: $white;
   }
 
   .actions {
@@ -41,3 +16,15 @@
     margin: auto;
     text-align: center;
   }
+
+  .modal-content {
+    border: 2px solid $blue;
+    border-radius: 8px;
+    margin: 20% auto;
+    width: 50%;
+  }
+
+  .modal-content h3 {
+    color: $blue;
+  }
+  
